@@ -28,19 +28,19 @@ export const batikHeroContent: BatikHeroContent = {
   badge: {
     iconSrc: "/Assets/Pendhopo Batik.svg",
     iconAlt: "Ikon Pendhapa",
-    label: "Pendhapa Kuliner",
+    label: "Pendhapa Batik",
   },
-  headline: "Batik Jiwa Harmoni",
-  subheadline: "Motif, Filosofi, dan Keindahan Abadi",
+  headline: "Seni Lukisan Kain",
+  subheadline: "Karakter, Cerita, dan Bayangan Kehidupan",
   description:
-    "Di balik setiap goresan motif batik, tersimpan filosofi, keselarasan, dan warisan budaya leluhur masyarakat Jawa. Setiap helai kain menyimpan cerita tentang harmoni alam, spiritualitas, dan kehidupan yang penuh makna.",
+    "Di balik setiap guratan tokoh wayang, tersimpan filosofi mendalam dan nilai kehidupan masyarakat Jawa.",
   actions: [
-    { id: "btn-tentang-kuliner", label: "Tentang Kuliner", variant: "primary" },
-    { id: "btn-jelajahi-koleksi", label: "Jelajahi Koleksi", variant: "secondary" },
+    { id: "btn-tentang-batik", label: "Tentang Batik", variant: "primary" },
+    { id: "btn-jelajahi-motif", label: "Jelajahi Motif", variant: "secondary" },
   ],
   image: {
     src: "/Assets/Batik Section Sejarawan.svg",
-    alt: "Motif Batik Jawa tradisional",
+    alt: "Ilustrasi Seni Lukisan Kain Batik Jawa",
   },
   dots: {
     count: 5,
