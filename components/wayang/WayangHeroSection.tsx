@@ -1,121 +1,171 @@
+"use client";
+
+import { useState, useEffect } from "react";
 import Image from "next/image";
 
-const leftNavItems = ["Beranda", "Museum"];
-const rightNavItems = ["Permainan", "Tentang Kami"];
+const slideImages = [
+  "/Assets/kulinerHeroAsset.avif",
+  "/Assets/wayangHeroAsset.avif",
+  "/Assets/gamelanHeroAsset.avif",
+  "/Assets/batikHeroAsset.avif",
+];
 
 export default function WayangHeroSection() {
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  // Auto-slide every 5 seconds
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % slideImages.length);
+    }, 5000);
+    return () => clearInterval(timer);
+  }, []);
+
   return (
-    <section
-      style={{ background: 'white' }}
-      className="relative flex min-h-0 w-full items-center overflow-hidden px-4 py-6 pb-20 sm:px-6 sm:py-8 sm:pb-24 lg:min-h-[720px] lg:px-8 lg:py-10 lg:pb-28"
-    >
-      <div className="mx-auto flex w-full max-w-[1210px] flex-col gap-6 lg:gap-8">
-        <nav
-          style={{ backgroundColor: 'var(--color-primary)', borderColor: 'var(--color-border)' }}
-          className="relative mx-auto flex h-[71px] w-full max-w-[1210px] items-center justify-center rounded-[100px] border-[6px] px-4 py-3 shadow-[0_18px_45px_rgba(87,44,25,0.25)] sm:px-6 lg:px-8"
-        >
-          <div className="absolute left-1/2 top-1/2 flex h-[50px] w-[50px] -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-white/10 p-1 shadow-sm">
+    <section className="relative flex w-full flex-col items-center bg-white px-4 pt-6 pb-16 sm:px-6 md:pb-20 lg:px-8">
+      {/* Container for content */}
+      <div className="mx-auto flex w-full max-w-[1210px] flex-col gap-10 md:gap-14 lg:gap-16">
+        
+        {/* Navigation Bar */}
+        <nav className="relative mx-auto flex h-[71px] w-full max-w-[1210px] items-center justify-between rounded-[100px] border-[6px] border-[#80472c] bg-[#572c19] px-6 shadow-[0_18px_45px_rgba(87,44,25,0.25)] sm:px-12">
+          {/* Logo Center */}
+          <div className="absolute left-1/2 top-1/2 flex -translate-x-1/2 -translate-y-1/2 items-center justify-center">
             <Image
               src="/Assets/Logo Utama.svg"
               alt="Logo Saka Jawa"
-              width={50}
-              height={50}
-              className="h-full w-full object-contain"
+              width={45}
+              height={45}
+              className="h-11 w-11 object-contain"
             />
           </div>
 
-          <div className="flex w-full items-center justify-between">
-            <div className="hidden items-center gap-7 lg:flex lg:pl-8">
-              {leftNavItems.map((item) => (
-                <a
-                  key={item}
-                  href="#"
-                  className="text-[1.02rem] font-medium text-white/90 transition hover:text-white"
-                >
-                  {item}
-                </a>
-              ))}
-            </div>
+          {/* Left Navigation */}
+          <div className="flex items-center gap-6 sm:gap-10">
+            <a
+              href="/"
+              className="font-['League_Spartan'] text-base font-medium text-white/90 transition hover:text-white sm:text-lg"
+            >
+              Beranda
+            </a>
+            <a
+              href="/wayang"
+              className="relative font-['League_Spartan'] text-base font-medium text-white sm:text-lg"
+            >
+              <span>Museum</span>
+              <span className="absolute -bottom-2 left-0 right-0 h-1 bg-[#ffc832] rounded-full" />
+            </a>
+          </div>
 
-            <div className="hidden items-center gap-7 lg:flex lg:pr-8">
-              {rightNavItems.map((item) => (
-                <a
-                  key={item}
-                  href="#"
-                  className="text-[1.02rem] font-medium text-white/90 transition hover:text-white"
-                >
-                  {item}
-                </a>
-              ))}
-            </div>
+          {/* Right Navigation */}
+          <div className="flex items-center gap-6 sm:gap-10">
+            <a
+              href="/permainan"
+              className="font-['League_Spartan'] text-base font-medium text-white/90 transition hover:text-white sm:text-lg"
+            >
+              Permainan
+            </a>
+            <a
+              href="/tentang-kami"
+              className="font-['League_Spartan'] text-base font-medium text-white/90 transition hover:text-white sm:text-lg"
+            >
+              Tentang Kami
+            </a>
           </div>
         </nav>
 
-        <div className="grid items-center gap-8 px-1 lg:grid-cols-[0.98fr_1.02fr] lg:gap-12 lg:px-0 xl:gap-14">
-          <div className="order-1 relative mx-auto w-full max-w-[620px] lg:order-1 lg:mx-0 lg:max-w-[560px]">
-            <div className="relative overflow-hidden rounded-[42px] border border-[var(--color-border)]/10 bg-[var(--color-panel)] p-2 shadow-[0_28px_80px_rgba(78,11,17,0.16)] sm:p-3 lg:p-4">
-              <div className="aspect-[16/9] w-full overflow-hidden rounded-[32px]">
+        {/* Hero Grid */}
+        <div className="grid items-center gap-8 lg:grid-cols-[1.1fr_0.9fr] lg:gap-12 xl:gap-16">
+          
+          {/* Left Side: Leaf/Semi-Capsule Image Container */}
+          <div className="flex flex-col items-center lg:items-start">
+            <div className="relative w-full max-w-[620px] overflow-hidden rounded-r-[180px] rounded-l-[20px] border border-stone-200/50 bg-stone-50 p-2 shadow-[0_20px_50px_rgba(78,11,17,0.12)]">
+              <div className="relative aspect-[16/10] w-full overflow-hidden rounded-r-[170px] rounded-l-[15px]">
                 <Image
-                  src="/Assets/Kelir Wayang Hero.svg"
-                  alt="Ilustrasi wayang kulit Jawa"
+                  src={slideImages[currentSlide]}
+                  alt="Saka Jawa Museum Slideshow"
                   fill
-                  className="object-cover"
+                  className="object-cover transition-all duration-700 ease-in-out"
+                  priority
                 />
               </div>
             </div>
 
-            <div className="mt-5 flex items-center justify-center gap-3 lg:justify-start">
-              <div className="h-2.5 w-32 rounded-full bg-[var(--color-primary)]" />
-              <div className="h-2.5 w-6 rounded-full bg-[var(--color-primary)]/30" />
-              <div className="h-2.5 w-6 rounded-full bg-[var(--color-primary)]/30" />
-              <div className="h-2.5 w-6 rounded-full bg-[var(--color-primary)]/30" />
+            {/* Slider Dots */}
+            <div className="mt-6 flex items-center justify-center gap-2.5 pl-4">
+              {slideImages.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => setCurrentSlide(index)}
+                  className={`h-2.5 transition-all duration-300 rounded-full ${
+                    currentSlide === index
+                      ? "w-10 bg-[#FFC832]"
+                      : "w-2.5 bg-[#4E0B11]"
+                  }`}
+                  aria-label={`Go to slide ${index + 1}`}
+                />
+              ))}
             </div>
           </div>
 
-          <div className="order-2 flex flex-col items-center gap-6 text-center lg:order-2 lg:items-start lg:text-left">
-            <div className="inline-flex items-center gap-3 rounded-full border border-[var(--color-border)]/15 bg-[var(--color-panel)] px-4 py-2 text-sm font-semibold text-[var(--color-border)] shadow-sm">
+          {/* Right Side: Text & Content */}
+          <div className="flex flex-col items-center text-center lg:items-start lg:text-left">
+            {/* Pendhapa Wayang Badge */}
+            <div className="inline-flex items-center gap-2 rounded-full border border-[#4e0b11] bg-[#fdfaf4] px-4 py-1.5 text-sm font-semibold text-[#4e0b11] shadow-sm">
               <Image
                 src="/Assets/Pendhopo Wayang.svg"
                 alt="Ikon pendhapa wayang"
-                width={28}
-                height={28}
-                className="h-7 w-7"
+                width={20}
+                height={20}
+                className="h-5 w-5 object-contain"
               />
-              <span>Pendhapa Wayang</span>
+              <span className="font-['League_Spartan'] text-base tracking-wide font-medium">Pendhapa Wayang</span>
             </div>
 
-            <div className="space-y-3">
-              <h1 className="text-[2.4rem] font-semibold leading-[1.02] tracking-[-0.02em] text-[var(--color-text)] sm:text-[2.8rem] lg:text-[3.6rem]">
+            {/* Headings */}
+            <div className="mt-5 space-y-2">
+              <h1 className="font-['League_Spartan'] text-4xl font-bold leading-[1.1] tracking-tight text-[#181318] sm:text-5xl lg:text-6xl">
                 Seni Wayang Kulit
               </h1>
-              <p className="text-[1.02rem] font-medium leading-[1.45] text-[var(--color-primary)] sm:text-[1.12rem]">
-                Karakter, cerita, dan bayangan kehidupan
+              <p className="font-['League_Spartan'] text-lg font-semibold tracking-wide text-[#5b0917] sm:text-xl md:text-2xl">
+                Karakter, Cerita, dan Bayangan Kehidupan
               </p>
             </div>
 
-            <p className="max-w-[560px] text-base leading-[1.9] text-[var(--color-muted)] sm:text-[1.02rem]">
+            {/* Description */}
+            <p className="mt-5 max-w-[500px] font-['League_Spartan'] text-base leading-relaxed text-[#4A332B] sm:text-lg">
               Di balik setiap guratan tokoh wayang, tersimpan filosofi mendalam dan nilai kehidupan masyarakat Jawa.
             </p>
 
-            <div className="grid w-full gap-4 sm:grid-flow-col sm:auto-cols-max">
+            {/* Action Buttons */}
+            <div className="mt-8 flex w-full flex-col gap-3 sm:flex-row sm:justify-center lg:justify-start">
               <a
-                href="#"
-                className="inline-flex items-center justify-center rounded-full bg-[var(--color-primary)] px-8 py-3 text-sm font-semibold text-white shadow-lg transition-transform duration-200 hover:-translate-y-1"
+                href="#tentang"
+                className="inline-flex items-center justify-center rounded-full bg-[#5b0917] px-8 py-3.5 font-['League_Spartan'] text-base font-semibold text-white shadow-md transition-all duration-200 hover:bg-[#4E0B11] hover:shadow-lg active:scale-95"
               >
                 Tentang Wayang
               </a>
               <a
-                href="#"
-                className="inline-flex items-center justify-center rounded-full border border-[var(--color-primary)] px-8 py-3 text-sm font-semibold text-[var(--color-primary)] transition hover:bg-[var(--color-primary)]/5"
+                href="#ragam"
+                className="inline-flex items-center justify-center rounded-full border border-[#5b0917] bg-transparent px-8 py-3.5 font-['League_Spartan'] text-base font-semibold text-[#5b0917] transition-all duration-200 hover:bg-[#5b0917]/5 active:scale-95"
               >
                 Jelajahi Tokoh
               </a>
             </div>
           </div>
+
         </div>
       </div>
 
-      {/* decorative batik removed per request */}
+      {/* Decorative Wavy Border at the Bottom */}
+      <div 
+        className="absolute bottom-0 left-0 right-0 h-8 w-full"
+        style={{
+          backgroundImage: "url('/Assets/Batik Sambungan.svg')",
+          backgroundRepeat: 'repeat-x',
+          backgroundPosition: 'bottom center',
+          backgroundSize: 'auto 32px',
+        }}
+      />
     </section>
   );
 }
