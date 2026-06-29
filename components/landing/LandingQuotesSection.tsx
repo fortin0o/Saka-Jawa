@@ -37,6 +37,7 @@ const quotes = [
 
 export default function LandingQuotesSection() {
   const containerRef = useRef<HTMLElement>(null);
+  const timelineRef = useRef<HTMLDivElement>(null);
   
   // Track scroll progress for the parallax clouds
   const { scrollYProgress } = useScroll({
@@ -44,17 +45,23 @@ export default function LandingQuotesSection() {
     offset: ["start end", "end start"],
   });
 
+  // Track scroll progress for the vertical line
+  const { scrollYProgress: lineProgress } = useScroll({
+    target: timelineRef,
+    offset: ["start center", "end center"],
+  });
+
   // Karena section ini sekarang tinggi, awan harus menyingkir lebih cepat (di 30% awal scroll)
   // Kita map 0 sampai 0.4 ke animasi penuh agar awan segera terbuka
-  const xLeft1 = useTransform(scrollYProgress, [0, 0.4], ["0%", "-150%"]);
-  const xLeft2 = useTransform(scrollYProgress, [0, 0.4], ["0%", "-130%"]);
-  const xLeft3 = useTransform(scrollYProgress, [0, 0.4], ["0%", "-115%"]);
-  const xLeft4 = useTransform(scrollYProgress, [0, 0.4], ["0%", "-100%"]);
+  const xLeft1 = useTransform(scrollYProgress, [0, 0.6], ["0%", "-150%"]);
+  const xLeft2 = useTransform(scrollYProgress, [0, 0.6], ["0%", "-130%"]);
+  const xLeft3 = useTransform(scrollYProgress, [0, 0.6], ["0%", "-115%"]);
+  const xLeft4 = useTransform(scrollYProgress, [0, 0.6], ["0%", "-100%"]);
 
-  const xRight1 = useTransform(scrollYProgress, [0, 0.4], ["0%", "150%"]);
-  const xRight2 = useTransform(scrollYProgress, [0, 0.4], ["0%", "130%"]);
-  const xRight3 = useTransform(scrollYProgress, [0, 0.4], ["0%", "115%"]);
-  const xRight4 = useTransform(scrollYProgress, [0, 0.4], ["0%", "100%"]);
+  const xRight1 = useTransform(scrollYProgress, [0, 0.6], ["0%", "150%"]);
+  const xRight2 = useTransform(scrollYProgress, [0, 0.6], ["0%", "130%"]);
+  const xRight3 = useTransform(scrollYProgress, [0, 0.6], ["0%", "115%"]);
+  const xRight4 = useTransform(scrollYProgress, [0, 0.6], ["0%", "100%"]);
 
   return (
     <section 
@@ -117,11 +124,19 @@ export default function LandingQuotesSection() {
         </div>
 
         {/* Timeline Container */}
-        <div className="relative w-full h-full">
+        <div ref={timelineRef} className="relative w-full h-full pb-8">
           {/* Center Vertical Line */}
-          <div className="absolute left-1/2 -translate-x-1/2 top-0 bottom-0 w-[3px] bg-[#61452e]"></div>
+          <motion.div 
+            className="absolute left-1/2 -translate-x-1/2 top-0 bottom-0 w-[3px] bg-[#61452e] origin-top"
+            style={{ scaleY: lineProgress }}
+          ></motion.div>
           {/* Top Circle */}
-          <div className="absolute left-1/2 -translate-x-1/2 top-0 w-5 h-5 rounded-full bg-[#61452e]"></div>
+          <motion.div 
+            initial={{ scale: 0 }}
+            whileInView={{ scale: 1 }}
+            viewport={{ once: false, margin: "0px 0px -50% 0px" }}
+            className="absolute left-1/2 -translate-x-1/2 top-0 w-5 h-5 rounded-full bg-[#61452e] z-10"
+          ></motion.div>
 
           {/* Cards */}
           <div className="flex flex-col gap-12 md:gap-16 pt-16">
@@ -131,13 +146,22 @@ export default function LandingQuotesSection() {
                 <div key={idx} className={`relative flex w-full ${isRight ? 'justify-end' : 'justify-start'}`}>
                   
                   {/* Horizontal Connecting Line */}
-                  {/* On desktop, it spans from the center line to the card. The card is 45% width, so there's a 5% gap. */}
-                  <div 
-                    className={`hidden md:block absolute top-[45px] w-[5%] h-[3px] bg-[#61452e] ${isRight ? 'left-1/2' : 'right-1/2'}`}
-                  ></div>
+                  <motion.div 
+                    initial={{ scaleX: 0 }}
+                    whileInView={{ scaleX: 1 }}
+                    viewport={{ once: false, margin: "0px 0px -40% 0px" }}
+                    transition={{ duration: 0.4, ease: "easeOut" }}
+                    className={`hidden md:block absolute top-[45px] w-[5%] h-[3px] bg-[#61452e] ${isRight ? 'left-1/2 origin-left' : 'right-1/2 origin-right'}`}
+                  ></motion.div>
 
                   {/* Card Element */}
-                  <div className={`relative w-full md:w-[45%] bg-white rounded-[1.5rem] border border-gray-300 shadow-sm p-6 md:p-8 ${isRight ? 'md:ml-auto' : 'md:mr-auto'}`}>
+                  <motion.div 
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: false, margin: "0px 0px -40% 0px" }}
+                    transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
+                    className={`relative w-full md:w-[45%] bg-white rounded-[1.5rem] border border-gray-300 shadow-sm p-6 md:p-8 ${isRight ? 'md:ml-auto' : 'md:mr-auto'}`}
+                  >
                     <div className="flex justify-between items-start mb-4">
                       <div>
                         <h4 className="text-xl md:text-2xl font-bold text-[#111] mb-1">{quote.name}</h4>
@@ -148,7 +172,7 @@ export default function LandingQuotesSection() {
                     <p className="text-[15px] md:text-base text-[#333] leading-relaxed">
                       {quote.quote}
                     </p>
-                  </div>
+                  </motion.div>
                 </div>
               );
             })}
