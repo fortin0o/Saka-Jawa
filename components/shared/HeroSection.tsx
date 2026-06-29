@@ -26,6 +26,7 @@ export interface HeroContent {
     activeIndex: number;
   };
   bottomWaveSrc?: string; // Ditambahkan agar gambar gelombang bawah bisa disesuaikan
+  customImageRender?: () => React.ReactNode;
 }
 
 interface HeroSectionProps {
@@ -50,18 +51,22 @@ export default function HeroSection({ content }: HeroSectionProps) {
         
         {/* Column 1: Image (Flush left) */}
         <div className="flex flex-col items-start w-full gap-5 order-1 lg:gap-6">
-          <div 
-            className="relative w-[92%] sm:w-[90%] md:w-[85%] lg:w-[95%] xl:w-[92%] h-[240px] sm:h-[320px] md:h-[380px] lg:h-[420px] xl:h-[460px] overflow-hidden rounded-r-full rounded-l-none shadow-[0_12px_40px_rgba(78,11,17,0.08),0_4px_12px_rgba(0,0,0,0.04)]"
-          >
-            <Image
-              src={image.src}
-              alt={image.alt}
-              fill
-              className="object-cover"
-              priority
-            />
-            <div className="pointer-events-none absolute inset-0 bg-linear-to-br from-gold/5 via-transparent via-60% to-maroon/3" />
-          </div>
+          {content.customImageRender ? (
+            content.customImageRender()
+          ) : (
+            <div 
+              className="relative w-[92%] sm:w-[90%] md:w-[85%] lg:w-[95%] xl:w-[92%] h-[240px] sm:h-[320px] md:h-[380px] lg:h-[420px] xl:h-[460px] overflow-hidden rounded-r-full rounded-l-none shadow-[0_12px_40px_rgba(78,11,17,0.08),0_4px_12px_rgba(0,0,0,0.04)]"
+            >
+              <Image
+                src={image.src}
+                alt={image.alt}
+                fill
+                className="object-cover"
+                priority
+              />
+              <div className="pointer-events-none absolute inset-0 bg-linear-to-br from-gold/5 via-transparent via-60% to-maroon/3" />
+            </div>
+          )}
           
           {/* Pagination Dots: Centered under the image */}
           <div className="flex w-[92%] sm:w-[90%] md:w-[85%] lg:w-[95%] xl:w-[92%] justify-center items-center gap-2">
