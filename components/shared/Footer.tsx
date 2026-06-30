@@ -60,9 +60,9 @@ export default function Footer() {
           </p>
         </div>
 
-        {/* The Landscape SVG */}
+        {/* The Landscape Image */}
         <Image
-          src="/Assets/Footer Assets.svg"
+          src="/Assets/Footer Assets.webp"
           alt="Footer Landscape"
           width={1920}
           height={1080}
