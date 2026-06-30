@@ -67,15 +67,13 @@ export default function LandingExploreSection() {
           {/* Pendhopo 4: Bottom Right */}
           <Link
             href="/gamelan"
-            className="absolute top-[30%] left-[62%] w-[28%] cursor-pointer hover:-translate-y-2 hover:scale-105 transition-all duration-300 origin-bottom z-20 drop-shadow-2xl"
+            className="absolute top-[44%] left-[62%] w-[28%] aspect-[7/3] cursor-pointer hover:-translate-y-2 hover:scale-105 transition-all duration-300 origin-bottom z-20 drop-shadow-2xl"
           >
             <Image
               src="/Assets/Pendhopo Gamelan.svg"
               alt="Pendhopo Gamelan"
-              width={286}
-              height={51}
-              className="w-full h-auto object-contain"
-              unoptimized
+              fill
+              className="object-contain"
             />
           </Link>
         </div>

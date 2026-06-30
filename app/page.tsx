@@ -4,6 +4,8 @@ import LandingHeritageSection from "@/components/landing/LandingHeritageSection"
 import LandingImportanceSection from "@/components/landing/LandingImportanceSection";
 import LandingExploreSection from "@/components/landing/LandingExploreSection";
 import LandingQuotesSection from "@/components/landing/LandingQuotesSection";
+import LandingChatbotSection from "@/components/landing/LandingChatbotSection";
+import LandingCTASection from "@/components/landing/LandingCTASection";
 
 export default function Home() {
   return (
@@ -14,10 +16,8 @@ export default function Home() {
       <LandingImportanceSection />
       <LandingExploreSection />
       <LandingQuotesSection />
-      <section id="kekayaan-alam" className="min-h-[85svh] bg-white" />
-      <section id="permainan" className="sr-only" aria-label="Permainan" />
-      <section id="tentang-kami" className="sr-only" aria-label="Tentang Kami" />
-      <section id="abdi-dalem" className="sr-only" aria-label="Abdi Dalem" />
+      <LandingChatbotSection />
+      <LandingCTASection />
     </main>
   );
 }
