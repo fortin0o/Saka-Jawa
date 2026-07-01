@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function GamelanInteractiveMapSection() {
   return (
@@ -20,78 +21,98 @@ export default function GamelanInteractiveMapSection() {
           </div>
         </div>
 
-        {/* Interactive Map */}
-        <div className="relative w-full aspect-[21/9] min-h-[300px] md:min-h-[400px] rounded-3xl bg-[#ece3d3] border-4 border-[#80472c]/30 shadow-inner overflow-hidden flex items-center justify-center">
-          {/* Map Islands Base */}
-          <div className="absolute inset-0 z-0">
+                {/* Interactive Map */}
+        <div className="relative w-full max-w-[1000px] aspect-[16/5] mx-auto mt-8 mb-8">
+          {/* Base Map */}
+          <div className="absolute inset-0 w-full h-full">
             <Image
               src="/Assets/Tanah Pendhopo.svg"
               alt="Peta Tanah Pendhopo"
               fill
-              className="object-cover opacity-85"
+              className="object-contain"
+              priority
             />
           </div>
 
-          {/* Interactive Pavilions Overlay */}
-          <div className="absolute inset-0 z-10">
+          <Link
+            href="/batik"
+            className="absolute top-[3%] left-[8%] w-[28%] aspect-[6/3] cursor-pointer hover:-translate-y-2 hover:scale-105 transition-all duration-300 origin-bottom z-10 drop-shadow-2xl group flex flex-col items-center"
+          >
+            <div className="relative w-full h-full">
+              <Image
+                src="/Assets/Pendhopo Batik.svg"
+                alt="Pendhopo Batik"
+                fill
+                className="object-contain"
+              />
+            </div>
+            <div className="absolute -bottom-8 left-1/2 -translate-x-1/2 whitespace-nowrap z-30 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
+               <span className="font-['League_Spartan'] text-sm sm:text-base font-bold bg-[#5b0917] text-white px-3 py-1 rounded-full shadow">
+                  Pendhapa Batik
+               </span>
+            </div>
+          </Link>
 
-            {/* Batik Pavilion (Left) */}
-            <a
-              href="/batik"
-              className="absolute left-[15%] top-[45%] -translate-y-1/2 group flex flex-col items-center gap-2 hover:scale-110 transition-transform duration-300"
-            >
-              <div className="relative w-24 h-24 sm:w-32 sm:h-32 drop-shadow-lg">
-                <Image src="/Assets/Pendhopo Batik.svg" alt="Pendhopo Batik" fill className="object-contain" />
-              </div>
-              <span className="font-['League_Spartan'] text-sm sm:text-base font-bold bg-[#5b0917] text-white px-3 py-1 rounded-full opacity-0 group-hover:opacity-100 transition-opacity shadow">
-                Pendhapa Batik
-              </span>
-            </a>
+          <Link
+            href="/kuliner"
+            className="absolute top-[-5%] left-[42%] w-[28%] aspect-[6/3] cursor-pointer hover:-translate-y-2 hover:scale-105 transition-all duration-300 origin-bottom z-10 drop-shadow-2xl group flex flex-col items-center"
+          >
+            <div className="relative w-full h-full">
+              <Image
+                src="/Assets/Pendhopo Kuliner.svg"
+                alt="Pendhopo Kuliner"
+                fill
+                className="object-contain"
+              />
+            </div>
+            <div className="absolute -bottom-8 left-1/2 -translate-x-1/2 whitespace-nowrap z-30 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
+               <span className="font-['League_Spartan'] text-sm sm:text-base font-bold bg-[#5b0917] text-white px-3 py-1 rounded-full shadow">
+                  Pendhapa Kuliner
+               </span>
+            </div>
+          </Link>
 
-            {/* Gamelan Pavilion (Center-Right) — Active */}
-            <a
-              href="/gamelan"
-              className="absolute right-[25%] top-[55%] -translate-y-1/2 group flex flex-col items-center gap-2 hover:scale-110 transition-transform duration-300"
-            >
-              {/* User Location Marker hovering above active Gamelan location */}
-              <div className="absolute -top-10 left-1/2 -translate-x-1/2 w-8 h-8 animate-bounce z-20">
-                <Image src="/Assets/User Location.svg" alt="Lokasi Anda" fill className="object-contain" />
-              </div>
-              <div className="relative w-24 h-24 sm:w-32 sm:h-32 drop-shadow-lg border-2 border-[#ffc832] rounded-full p-2 bg-[#ffc832]/20">
-                <Image src="/Assets/Pendhopo Gamelan.svg" alt="Pendhopo Gamelan" fill className="object-contain" />
-              </div>
-              <span className="font-['League_Spartan'] text-sm sm:text-base font-bold bg-[#ffc832] text-[#4e0b11] px-3 py-1 rounded-full shadow">
-                Pendhapa Gamelan (Anda di Sini)
-              </span>
-            </a>
+          <Link
+            href="/wayang"
+            className="absolute top-[35%] left-[29%] w-[28%] aspect-[6/3] cursor-pointer hover:-translate-y-2 hover:scale-105 transition-all duration-300 origin-bottom z-10 drop-shadow-2xl group flex flex-col items-center"
+          >
+            <div className="relative w-full h-full">
+              <Image
+                src="/Assets/Pendhopo Wayang.svg"
+                alt="Pendhopo Wayang"
+                fill
+                className="object-contain"
+              />
+            </div>
+            <div className="absolute -bottom-8 left-1/2 -translate-x-1/2 whitespace-nowrap z-30 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
+               <span className="font-['League_Spartan'] text-sm sm:text-base font-bold bg-[#5b0917] text-white px-3 py-1 rounded-full shadow">
+                  Pendhapa Wayang
+               </span>
+            </div>
+          </Link>
 
-            {/* Kuliner Pavilion (Bottom-Left) */}
-            <a
-              href="/kuliner"
-              className="absolute left-[38%] bottom-[10%] group flex flex-col items-center gap-2 hover:scale-110 transition-transform duration-300"
-            >
-              <div className="relative w-24 h-24 sm:w-32 sm:h-32 drop-shadow-lg">
-                <Image src="/Assets/Pendhopo Kuliner.svg" alt="Pendhopo Kuliner" fill className="object-contain" />
-              </div>
-              <span className="font-['League_Spartan'] text-sm sm:text-base font-bold bg-[#5b0917] text-white px-3 py-1 rounded-full opacity-0 group-hover:opacity-100 transition-opacity shadow">
-                Pendhapa Kuliner
-              </span>
-            </a>
+          <Link
+            href="/gamelan"
+            className="absolute top-[44%] left-[62%] w-[28%] aspect-[6/3] cursor-pointer hover:-translate-y-2 hover:scale-105 transition-all duration-300 origin-bottom z-20 drop-shadow-2xl group flex flex-col items-center"
+          >
+            <div className="absolute -top-[50%] left-1/2 -translate-x-1/2 w-[30%] aspect-square animate-bounce z-30 pointer-events-none">
+              <Image src="/Assets/User Location.svg" alt="Lokasi Anda" fill className="object-contain" />
+            </div>
+            <div className="relative w-full h-full z-10 drop-shadow-[0_0_20px_rgba(255,200,50,0.8)] scale-110">
+              <Image
+                src="/Assets/Pendhopo Gamelan.svg"
+                alt="Pendhopo Gamelan"
+                fill
+                className="object-contain"
+              />
+            </div>
+            <div className="absolute -bottom-10 left-1/2 -translate-x-1/2 whitespace-nowrap z-30 pointer-events-none">
+               <span className="font-['League_Spartan'] text-sm sm:text-base font-bold bg-[#ffc832] text-[#4e0b11] px-3 py-1 rounded-full shadow">
+                  Pendhapa Gamelan (Anda di Sini)
+               </span>
+            </div>
+          </Link>
 
-            {/* Wayang Pavilion (Top-Right) */}
-            <a
-              href="/wayang"
-              className="absolute right-[12%] top-[15%] group flex flex-col items-center gap-2 hover:scale-110 transition-transform duration-300"
-            >
-              <div className="relative w-24 h-24 sm:w-32 sm:h-32 drop-shadow-lg">
-                <Image src="/Assets/Pendhopo Wayang.svg" alt="Pendhopo Wayang" fill className="object-contain" />
-              </div>
-              <span className="font-['League_Spartan'] text-sm sm:text-base font-bold bg-[#5b0917] text-white px-3 py-1 rounded-full opacity-0 group-hover:opacity-100 transition-opacity shadow">
-                Pendhapa Wayang
-              </span>
-            </a>
-
-          </div>
         </div>
       </div>
     </section>
