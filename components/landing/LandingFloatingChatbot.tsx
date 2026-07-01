@@ -9,7 +9,7 @@ export default function LandingFloatingChatbot() {
     >
       <div className="relative flex items-center">
         {/* Yellow Pill */}
-        <div className="rounded-l-full bg-[#ffc62e] pl-8 pr-20 py-3 sm:pl-10 sm:pr-24 sm:py-4 text-left shadow-[-4px_4px_15px_rgba(0,0,0,0.15)]">
+        <div className="rounded-l-full bg-[#ffc62e] pl-8 pr-20 py-3 sm:pl-8 sm:pr-19 sm:py-2 text-left shadow-[-4px_4px_15px_rgba(0,0,0,0.15)]">
           <span className="block text-[0.85rem] sm:text-[1rem] leading-tight font-medium text-black">
             Tanya Kepada
           </span>
@@ -19,7 +19,7 @@ export default function LandingFloatingChatbot() {
         </div>
 
         {/* Mascot */}
-        <div className="absolute right-2 sm:right-6 top-1/3 -translate-y-3/5 h-[80px] w-[40px] sm:h-[110px] sm:w-[60px] z-10">
+        <div className="absolute right-2 sm:right-5 top-1/3 -translate-y-3/5 h-[80px] w-[40px] sm:h-[110px] sm:w-[60px] z-10">
           <Image
             src="/Assets/Chatbot Abdi Dalem.svg"
             alt="Mascot Abdi Dalem"
