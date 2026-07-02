@@ -14,13 +14,15 @@ export const gamelanHeroContent: HeroContent = {
     { id: "btn-tentang-gamelan", label: "Tentang Gamelan", variant: "primary", href: "#tentang" },
     { id: "btn-jelajahi-instrumen", label: "Jelajahi Instrumen", variant: "secondary", href: "#instrumen" },
   ],
-  image: {
-    src: "/Assets/gamelanHeroAsset.avif",
-    alt: "Gamelan Jawa",
-  },
+  images: [
+    { src: "/Assets/Gambar Gamelan/Gamelan 1.jpg", alt: "Gamelan Jawa 1" },
+    { src: "/Assets/Gambar Gamelan/Gamelan 2.jpg", alt: "Gamelan Jawa 2" },
+    { src: "/Assets/Gambar Gamelan/Gamelan 3.jpg", alt: "Gamelan Jawa 3" },
+    { src: "/Assets/Gambar Gamelan/Gamelan 4.jpg", alt: "Gamelan Jawa 4" },
+  ],
   dots: {
     count: 4,
-    activeIndex: 2,
+    activeIndex: 0,
   },
   imagePosition: "right",
 };
