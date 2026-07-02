@@ -1,28 +1,34 @@
+"use client";
+
 import Image from "next/image";
+import { useState } from "react";
 
 const gamelanStories = [
   {
     id: 1,
     title: "Gamelan Sekaten",
     desc: "Gamelan yang dibunyikan saat perayaan Maulid Nabi di Keraton Yogyakarta dan Surakarta, penuh dengan doa dan harapan luhur.",
-    image: "/Assets/Sambut Tamu About.svg",
+    image: "/Assets/Gambar%20Gamelan/Sekaten.jpg",
+    videoUrl: "https://www.youtube.com/embed/SDXKs-QrF_M",
   },
   {
     id: 2,
     title: "Gamelan Kodhok Ngorek",
     desc: "Gamelan kuno milik Keraton yang hanya dimainkan pada upacara adat tertentu, melambangkan kesakralan budaya Jawa.",
-    image: "/Assets/Sambut Tamu About.svg",
+    image: "/Assets/Gambar%20Gamelan/Kodok%20Ngorek.jpeg",
   },
   {
     id: 3,
     title: "Gamelan Carabalen",
     desc: "Ansambel gamelan yang mengiringi tari klasik Jawa, menciptakan harmoni sempurna antara gerak tubuh dan lantunan musik.",
-    image: "/Assets/Sambut Tamu About.svg",
+    image: "/Assets/Gambar%20Gamelan/Carabalen.jpg",
   },
 ];
 
 
 export default function GamelanCeritaSection() {
+  const [activeVideo, setActiveVideo] = useState<string | null>(null);
+
   return (
     <section className="relative z-40 py-20 px-6 md:px-12 lg:px-24 bg-[#3e0b10] text-white">
       <div className="mx-auto w-full max-w-[var(--container-lg)]">
@@ -77,9 +83,12 @@ export default function GamelanCeritaSection() {
                 {/* Actions inside card */}
                 <div className="mt-4 pt-4 border-t border-stone-200 flex items-center justify-between">
                   <span className="font-['League_Spartan'] text-sm font-semibold text-[#4e0b11]">
-                    Lihat Ringkasan
+                    {story.videoUrl ? "Lihat Video" : "Lihat Ringkasan"}
                   </span>
-                  <button className="w-8 h-8 rounded-full bg-[#4e0b11] text-white flex items-center justify-center transition-transform hover:scale-110">
+                  <button 
+                    onClick={() => story.videoUrl ? setActiveVideo(story.videoUrl) : null}
+                    className="w-8 h-8 rounded-full bg-[#4e0b11] text-white flex items-center justify-center transition-transform hover:scale-110"
+                  >
                     <svg className="w-4 h-4 fill-current ml-0.5" viewBox="0 0 24 24">
                       <path d="M8 5v14l11-7z" />
                     </svg>
@@ -91,6 +100,39 @@ export default function GamelanCeritaSection() {
 
         </div>
       </div>
+
+      {/* Video Modal */}
+      {activeVideo && (
+        <div 
+          className="fixed inset-0 z-[100] flex items-center justify-center bg-black/80 px-4" 
+          onClick={() => setActiveVideo(null)}
+        >
+          <div 
+            className="relative w-full max-w-4xl aspect-video rounded-lg overflow-hidden bg-black shadow-2xl" 
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button 
+              onClick={() => setActiveVideo(null)}
+              className="absolute top-4 right-4 z-10 w-10 h-10 flex items-center justify-center bg-white/20 hover:bg-white/40 rounded-full text-white backdrop-blur-sm transition"
+            >
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+            <iframe
+              width="100%"
+              height="100%"
+              src={`${activeVideo}?autoplay=1`}
+              title="YouTube video player"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerPolicy="strict-origin-when-cross-origin"
+              allowFullScreen
+              className="absolute top-0 left-0 w-full h-full"
+            ></iframe>
+          </div>
+        </div>
+      )}
     </section>
   );
 }

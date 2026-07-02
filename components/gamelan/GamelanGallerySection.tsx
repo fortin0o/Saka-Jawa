@@ -5,9 +5,9 @@ import Image from "next/image";
 import GalleryModal from "@/components/shared/GalleryModal";
 
 const gamelanGallery = [
-  { id: 1, title: "Perangkat Gamelan Keraton", image: "/Assets/gamelanHeroAsset.avif" },
-  { id: 2, title: "Penabuh Gong Ageng", image: "/Assets/Gamelan Hero.svg" },
-  { id: 3, title: "Pementasan Gamelan", image: "/Assets/gamelanHeroAsset.avif" },
+  { id: 1, title: "Perangkat Gamelan Keraton", image: "/Assets/Gambar Gamelan/Gamelan 1.jpg" },
+  { id: 2, title: "Penabuh Gong Ageng", image: "/Assets/Gambar Gamelan/Gamelan 2.jpg" },
+  { id: 3, title: "Pementasan Gamelan", image: "/Assets/Gambar Gamelan/Gamelan 3.jpg" },
 ];
 
 export default function GamelanGallerySection() {
