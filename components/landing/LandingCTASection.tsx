@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { useLenis } from "lenis/react";
 
 export default function LandingCTASection() {
@@ -45,15 +46,15 @@ export default function LandingCTASection() {
           <p className="text-white/95 text-xs md:text-sm lg:text-base max-w-[480px] font-medium leading-relaxed mt-2">
             Temukan Cerita, Filosofi, Dan Warisan Yang Hidup <br className="hidden md:block" /> Dalam Setiap Pendhapa.
           </p>
-          <button
-            onClick={handleScrollToExplore}
-            className="mt-6 bg-[#ffc832] text-[#3e0b10] font-bold px-6 lg:px-8 py-2.5 lg:py-3 rounded-full flex items-center justify-between gap-8 hover:bg-[#e6b42d] transition-all text-sm lg:text-base shadow-lg w-fit cursor-pointer"
+          <Link
+            href="#explore-section"
+            className="mt-6 bg-[#ffc832] text-[#3e0b10] font-bold px-6 lg:px-8 py-2.5 lg:py-3 rounded-full flex items-center justify-between gap-8 hover:bg-[#e6b42d] transition-all text-sm lg:text-base shadow-lg w-fit"
           >
             <span>Mulai Jelajahi</span>
             <span className="bg-[#3e0b10] text-[#ffc832] rounded-full p-2 flex items-center justify-center">
-               <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><path d="M7 17L17 7" /><path d="M7 7h10v10" /></svg>
             </span>
-          </button>
+          </Link>
         </div>
 
         {/* Right Wayang Image */}
