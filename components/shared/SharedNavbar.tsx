@@ -9,7 +9,7 @@ const navLeft = [
 ];
 
 const navRight = [
-  { label: "Permainan", href: "/#permainan" },
+  { label: "Permainan", href: "/permainan" },
   { label: "Tentang Kami", href: "/tentang-kami" },
 ];
 

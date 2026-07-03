@@ -11,7 +11,7 @@ const navLeft = [
 ];
 
 const navRight = [
-  { label: "Permainan", href: "/#permainan" },
+  { label: "Permainan", href: "/permainan" },
   { label: "Tentang Kami", href: "/tentang-kami" },
 ];
 
@@ -61,7 +61,7 @@ export default function Navbar() {
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
-      
+
       // Threshold to show the glass navbar (after hero section)
       // If not on home page, show it sooner or just keep same threshold
       const heroHeight = pathname === "/" ? window.innerHeight : 200;
@@ -100,10 +100,9 @@ export default function Navbar() {
       </header>
 
       {/* 2. Glass Navbar (Fixed, shows after scrolling down past hero) */}
-      <header 
-        className={`fixed left-1/2 top-6 z-[100] w-full max-w-[1024px] -translate-x-1/2 px-5 transition-all duration-500 pointer-events-none ${
-          isScrolled && isVisible ? "translate-y-0 opacity-100" : "-translate-y-[150%] opacity-0"
-        }`}
+      <header
+        className={`fixed left-1/2 top-6 z-[100] w-full max-w-[1024px] -translate-x-1/2 px-5 transition-all duration-500 pointer-events-none ${isScrolled && isVisible ? "translate-y-0 opacity-100" : "-translate-y-[150%] opacity-0"
+          }`}
       >
         <nav
           className="bg-black/60 backdrop-blur-md border border-white/10 rounded-[40px] px-8 py-3 drop-shadow-2xl grid grid-cols-[1fr_auto_1fr] items-center gap-8 sm:gap-16 text-[0.8rem] font-bold text-white sm:text-base pointer-events-auto"

@@ -93,7 +93,7 @@ export default function GameProgress({ completed = {} }: { completed?: Record<st
                   {/* Bubble */}
                   <div
                     className={`
-                      relative flex items-center justify-center w-9 h-9 sm:w-10 sm:h-10 rounded-full border-2 transition-all duration-300 shrink-0
+                      relative flex items-center justify-center w-7 h-7 sm:w-8 sm:h-8 rounded-full border-[1.5px] transition-all duration-300 shrink-0
                       ${isDone
                         ? "bg-[#FFC832] border-[#FFC832] text-[#4E0B11]"
                         : isActive

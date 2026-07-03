@@ -1,6 +1,8 @@
+"use client";
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { Mail, MessageCircle } from "lucide-react";
 
 // Lucide-style SVG for Instagram since lucide-react removed brand icons
@@ -41,6 +43,9 @@ const YoutubeIcon = ({ size = 24 }: { size?: number }) => (
 );
 
 export default function Footer() {
+  const pathname = usePathname();
+  if (pathname?.startsWith("/permainan")) return null;
+
   return (
     <footer className="relative w-full overflow-hidden bg-[#F9F1E4] pt-16 lg:pt-24">
       {/* Top Content */}
