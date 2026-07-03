@@ -1,10 +1,10 @@
 "use client";
 
 import Link from "next/link";
-import { useGame } from "../../../context/GameContext";
+import { useGame, Pendhapa } from "../../../context/GameContext";
 import GameProgress from "../../../components/permainan/GameProgress";
 
-const PENDHAPAS_META = [
+const PENDHAPAS_META: { key: Pendhapa; label: string; icon: string; href: string; maxScore: number }[] = [
   { key: "batik", label: "Batik", icon: "🪡", href: "/permainan/batik", maxScore: 100 },
   { key: "wayang", label: "Wayang", icon: "🎭", href: "/permainan/wayang", maxScore: 100 },
   { key: "gamelan", label: "Gamelan", icon: "🎶", href: "/permainan/gamelan", maxScore: 100 },
@@ -13,7 +13,7 @@ const PENDHAPAS_META = [
 
 const MAX_TOTAL = PENDHAPAS_META.reduce((acc, p) => acc + p.maxScore, 0);
 
-function getGrade(pct) {
+function getGrade(pct: number) {
   if (pct >= 90) return { label: "Penjaga Budaya Utama", emoji: "🏆", color: "#FFC832", msg: "Luar biasa! Kamu benar-benar menguasai kekayaan budaya Jawa." };
   if (pct >= 75) return { label: "Penjaga Budaya Jawa", emoji: "⭐", color: "#FFC832", msg: "Hebat! Pengetahuanmu tentang budaya Jawa sangat mengesankan." };
   if (pct >= 50) return { label: "Penjelajah Budaya", emoji: "🌟", color: "#FFC832", msg: "Bagus! Teruslah belajar dan jelajahi kekayaan budaya Jawa." };

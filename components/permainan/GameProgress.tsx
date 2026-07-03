@@ -69,7 +69,7 @@ const STEPS = [
   },
 ];
 
-export default function GameProgress({ completed = {} }) {
+export default function GameProgress({ completed = {} }: { completed?: Record<string, boolean> }) {
   const pathname = usePathname();
 
   // Tentukan index step aktif

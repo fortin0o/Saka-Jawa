@@ -1,6 +1,6 @@
 "use client";
 
-import { createContext, useContext, useState } from "react";
+import { createContext, useContext, useState, ReactNode } from "react";
 
 /**
  * GameContext — menyimpan state game "Petualangan 4 Pendhapa"
@@ -8,26 +8,38 @@ import { createContext, useContext, useState } from "react";
  * Tidak ada localStorage, sessionStorage, atau API call.
  */
 
-const PENDHAPAS = ["batik", "wayang", "gamelan", "kuliner"];
+const PENDHAPAS = ["batik", "wayang", "gamelan", "kuliner"] as const;
+export type Pendhapa = typeof PENDHAPAS[number];
 
-const defaultScores = { batik: 0, wayang: 0, gamelan: 0, kuliner: 0 };
-const defaultCompleted = { batik: false, wayang: false, gamelan: false, kuliner: false };
+const defaultScores: Record<Pendhapa, number> = { batik: 0, wayang: 0, gamelan: 0, kuliner: 0 };
+const defaultCompleted: Record<Pendhapa, boolean> = { batik: false, wayang: false, gamelan: false, kuliner: false };
 
-const GameContext = createContext(null);
+interface GameContextType {
+  scores: Record<Pendhapa, number>;
+  completed: Record<Pendhapa, boolean>;
+  totalScore: number;
+  completedCount: number;
+  updateScore: (pendhapa: Pendhapa, score: number) => void;
+  markCompleted: (pendhapa: Pendhapa) => void;
+  resetGame: () => void;
+  PENDHAPAS: readonly string[];
+}
 
-export function GameProvider({ children }) {
+const GameContext = createContext<GameContextType | null>(null);
+
+export function GameProvider({ children }: { children: ReactNode }) {
   const [scores, setScores] = useState(defaultScores);
   const [completed, setCompleted] = useState(defaultCompleted);
 
   /** Update skor satu pendhapa. Skor baru menggantikan lama (tidak diakumulasi). */
-  const updateScore = (pendhapa, score) => {
-    if (!PENDHAPAS.includes(pendhapa)) return;
+  const updateScore = (pendhapa: Pendhapa, score: number) => {
+    if (!PENDHAPAS.includes(pendhapa as any)) return;
     setScores((prev) => ({ ...prev, [pendhapa]: score }));
   };
 
   /** Tandai pendhapa sebagai selesai. */
-  const markCompleted = (pendhapa) => {
-    if (!PENDHAPAS.includes(pendhapa)) return;
+  const markCompleted = (pendhapa: Pendhapa) => {
+    if (!PENDHAPAS.includes(pendhapa as any)) return;
     setCompleted((prev) => ({ ...prev, [pendhapa]: true }));
   };
 

@@ -3,6 +3,18 @@
 import Link from "next/link";
 import GameProgress from "./GameProgress";
 import { useGame } from "../../context/GameContext";
+import { ReactNode } from "react";
+
+interface GameLayoutProps {
+  title: string;
+  subtitle?: string;
+  pendhapa?: string;
+  nextHref?: string;
+  nextLabel?: string;
+  onNext?: () => void;
+  children: ReactNode;
+  canProceed?: boolean;
+}
 
 /**
  * GameLayout — wrapper konsisten untuk tiap halaman mini-game.
@@ -25,7 +37,7 @@ export default function GameLayout({
   onNext,
   children,
   canProceed = true,
-}) {
+}: GameLayoutProps) {
   const { completed } = useGame();
 
   return (
