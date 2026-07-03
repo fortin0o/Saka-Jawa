@@ -150,7 +150,7 @@ export default function PermainanIntroPage() {
         {/* Info cara bermain */}
         <div className="mt-8 sm:mt-10 bg-white border border-[#4E0B11]/20 rounded-xl sm:rounded-2xl p-5 sm:p-6">
           <h3 className="text-base sm:text-lg font-bold text-[#4E0B11] mb-3 sm:mb-4">
-            📜 Cara Bermain
+            Cara Bermain
           </h3>
           <ol className="space-y-2.5">
             {[
