@@ -57,8 +57,8 @@ const GRID_SIZE = 3;
 const TOTAL_PIECES = GRID_SIZE * GRID_SIZE;
 const PREVIEW_SECONDS = 5; // how long to show the full image
 const TIME_LIMIT = 60;
-const SCORE_FAST = 100;
-const SCORE_SLOW = 50;
+const SCORE_FAST = 34;
+const SCORE_SLOW = 15;
 
 function isSolved(pieces: number[]): boolean {
   return pieces.every((p, i) => p === i);
@@ -185,7 +185,7 @@ export default function BatikGamePage() {
       setMotifIndex(next);
       startPreview(next);
     } else {
-      updateScore("batik", totalScore);
+      updateScore("batik", Math.min(100, totalScore));
       markCompleted("batik");
       setPhase("done");
     }
@@ -231,8 +231,8 @@ export default function BatikGamePage() {
       <GameLayout
         title="Pendhapa Batik — Selesai!"
         pendhapa="batik"
-        nextHref="/permainan/wayang"
-        nextLabel="Lanjut ke Pendhapa Wayang"
+        nextHref="/permainan"
+        nextLabel="Kembali ke Peta Pendhapa"
         canProceed={true}
       >
         <div className="flex flex-col items-center gap-6 py-6 text-center">
@@ -251,8 +251,8 @@ export default function BatikGamePage() {
 
           <div className="bg-[#4E0B11] text-white rounded-2xl px-10 py-5 flex flex-col items-center gap-1 shadow-md">
             <span className="text-xs font-bold uppercase tracking-widest text-[#FFC832]">Skor Batik</span>
-            <span className="text-5xl font-bold tabular-nums">{totalScore}</span>
-            <span className="text-xs text-white/60 font-medium">dari {MOTIFS.length * SCORE_FAST} poin</span>
+            <span className="text-5xl font-bold tabular-nums">{Math.min(100, totalScore)}</span>
+            <span className="text-xs text-white/60 font-medium">dari 100 poin</span>
           </div>
 
           <div className="w-full max-w-sm flex flex-col gap-2">
@@ -279,10 +279,10 @@ export default function BatikGamePage() {
           </p>
           
           <Link
-            href="/permainan/wayang"
+            href="/permainan"
             className="mt-2 inline-flex items-center gap-2 bg-[#4E0B11] text-white font-bold text-sm px-8 py-3 rounded-full shadow-md hover:bg-[#3A0810] hover:-translate-y-0.5 transition-all duration-200"
           >
-            Lanjut ke Pendhapa Wayang
+            Kembali ke Peta Pendhapa
             <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
             </svg>
@@ -491,18 +491,31 @@ export default function BatikGamePage() {
                 onClick={() => handleTap(cellIndex)}
               >
                 <div
-                  className="absolute inset-0"
+                  className="absolute pointer-events-none"
                   style={{
-                    backgroundImage: `url('${currentMotif.gambarSrc}')`,
-                    backgroundSize: `${GRID_SIZE * 100}%`,
-                    backgroundPosition: `${(col / (GRID_SIZE - 1)) * 100}% ${(row / (GRID_SIZE - 1)) * 100}%`,
-                    backgroundRepeat: "no-repeat",
+                    width: `${GRID_SIZE * 100}%`,
+                    height: `${GRID_SIZE * 100}%`,
+                    left: `-${col * 100}%`,
+                    top: `-${row * 100}%`,
                     opacity: isSelected ? 0.7 : 1,
                     transition: "opacity 0.2s",
                   }}
-                />
-                <div className="absolute inset-0 border border-white/30" />
-                <div className="absolute inset-0 hover:bg-white/10 transition-colors duration-100" />
+                >
+                  <Image 
+                    src={currentMotif.gambarSrc} 
+                    alt="" 
+                    fill 
+                    className="object-cover" 
+                    unoptimized 
+                  />
+                </div>
+                <div className="absolute inset-0 border border-white/30 pointer-events-none" />
+                <div className="absolute inset-0 hover:bg-white/10 transition-colors duration-100 pointer-events-none" />
+                
+                {/* Hint number for identical pieces */}
+                <div className="absolute top-1 left-1 bg-black/40 text-white/80 text-[10px] font-bold w-4 h-4 rounded-full flex items-center justify-center pointer-events-none">
+                  {pieceIndex + 1}
+                </div>
 
                 {solved && cellIndex === Math.floor(TOTAL_PIECES / 2) && (
                   <div className="absolute inset-0 flex items-center justify-center pointer-events-none">

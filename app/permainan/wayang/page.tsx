@@ -252,10 +252,10 @@ export default function WayangGamePage() {
             </div>
 
             <Link
-              href="/permainan/gamelan"
+              href="/permainan"
               className="w-full mt-2 inline-flex justify-center items-center gap-2 bg-[#3e2723] text-[#ffb300] font-bold text-sm px-8 py-3 rounded-full shadow-md hover:bg-[#2b1b18] hover:-translate-y-0.5 transition-all duration-200"
             >
-              Lanjut ke Pendhapa Gamelan
+              Kembali ke Peta Pendhapa
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
               </svg>

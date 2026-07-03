@@ -1,6 +1,7 @@
 "use client";
 
 import { usePathname } from "next/navigation";
+import Link from "next/link";
 
 /**
  * GameProgress — stepper 5 langkah: Batik → Wayang → Gamelan → Kuliner → Hasil
@@ -88,59 +89,61 @@ export default function GameProgress({ completed = {} }: { completed?: Record<st
 
             return (
               <li key={step.key} className="flex items-center flex-1 last:flex-none">
-                {/* Step bubble + label */}
-                <div className="flex flex-col items-center gap-1.5">
-                  {/* Bubble */}
-                  <div
-                    className={`
-                      relative flex items-center justify-center w-7 h-7 sm:w-8 sm:h-8 rounded-full border-[1.5px] transition-all duration-300 shrink-0
-                      ${isDone
-                        ? "bg-[#FFC832] border-[#FFC832] text-[#4E0B11]"
-                        : isActive
-                        ? "bg-[#4E0B11] border-[#4E0B11] text-white shadow-lg shadow-[#4E0B11]/30"
-                        : "bg-white border-stone-300 text-stone-400"
-                      }
-                    `}
-                  >
-                    {isDone ? (
-                      <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-                      </svg>
-                    ) : (
-                      step.icon
-                    )}
+                <Link href={step.href} className="flex items-center flex-1 w-full outline-none focus-visible:ring-2 focus-visible:ring-[#FFC832] rounded-full">
+                  {/* Step bubble + label */}
+                  <div className="flex flex-col items-center gap-1.5 hover:scale-105 transition-transform duration-200">
+                    {/* Bubble */}
+                    <div
+                      className={`
+                        relative flex items-center justify-center w-7 h-7 sm:w-8 sm:h-8 rounded-full border-[1.5px] transition-all duration-300 shrink-0
+                        ${isDone
+                          ? "bg-[#FFC832] border-[#FFC832] text-[#4E0B11]"
+                          : isActive
+                          ? "bg-[#4E0B11] border-[#4E0B11] text-white shadow-lg shadow-[#4E0B11]/30"
+                          : "bg-white border-stone-300 text-stone-400"
+                        }
+                      `}
+                    >
+                      {isDone ? (
+                        <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                        </svg>
+                      ) : (
+                        step.icon
+                      )}
 
-                    {/* Pulse ring saat aktif */}
-                    {isActive && (
-                      <span className="absolute inset-0 rounded-full border-2 border-[#4E0B11] animate-ping opacity-20" />
-                    )}
-                  </div>
-
-                  {/* Label */}
-                  <span
-                    className={`text-[10px] sm:text-xs font-semibold tracking-wide whitespace-nowrap transition-colors duration-300 ${
-                      isActive
-                        ? "text-[#4E0B11]"
-                        : isDone
-                        ? "text-[#FFC832]"
-                        : "text-stone-400"
-                    }`}
-                  >
-                    {step.label}
-                  </span>
-                </div>
-
-                {/* Connector line (bukan step terakhir) */}
-                {!isLast && (
-                  <div className="flex-1 mx-1 sm:mx-2 mb-4">
-                    <div className="h-0.5 w-full relative overflow-hidden rounded-full bg-stone-200">
-                      <div
-                        className="absolute inset-y-0 left-0 bg-[#FFC832] transition-all duration-500"
-                        style={{ width: isDone ? "100%" : "0%" }}
-                      />
+                      {/* Pulse ring saat aktif */}
+                      {isActive && (
+                        <span className="absolute inset-0 rounded-full border-2 border-[#4E0B11] animate-ping opacity-20" />
+                      )}
                     </div>
+
+                    {/* Label */}
+                    <span
+                      className={`text-[10px] sm:text-xs font-semibold tracking-wide whitespace-nowrap transition-colors duration-300 ${
+                        isActive
+                          ? "text-[#4E0B11]"
+                          : isDone
+                          ? "text-[#FFC832]"
+                          : "text-stone-400"
+                      }`}
+                    >
+                      {step.label}
+                    </span>
                   </div>
-                )}
+
+                  {/* Connector line (bukan step terakhir) */}
+                  {!isLast && (
+                    <div className="flex-1 mx-1 sm:mx-2 mb-4">
+                      <div className="h-0.5 w-full relative overflow-hidden rounded-full bg-stone-200">
+                        <div
+                          className="absolute inset-y-0 left-0 bg-[#FFC832] transition-all duration-500"
+                          style={{ width: isDone ? "100%" : "0%" }}
+                        />
+                      </div>
+                    </div>
+                  )}
+                </Link>
               </li>
             );
           })}
