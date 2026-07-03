@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useCallback, useRef } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import GameLayout from "../../../components/permainan/GameLayout";
 import { useGame } from "../../../context/GameContext";
 

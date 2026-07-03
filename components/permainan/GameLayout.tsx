@@ -4,6 +4,7 @@ import Link from "next/link";
 import GameProgress from "./GameProgress";
 import { useGame } from "../../context/GameContext";
 import { ReactNode, useState, useEffect } from "react";
+import DeviceOrientationOverlay from "./DeviceOrientationOverlay";
 
 interface GameLayoutProps {
   title: string;
@@ -52,9 +53,24 @@ export default function GameLayout({
 
   return (
     <div className="min-h-screen bg-[#F9F1E4]">
+      <DeviceOrientationOverlay />
+      
+      {/* Small floating back button for mobile where header is hidden */}
+      <div className="fixed top-3 left-3 z-50 lg:hidden">
+        <Link
+          href="/"
+          className="w-8 h-8 flex items-center justify-center bg-white/90 backdrop-blur rounded-full shadow-md text-[#4E0B11] border border-stone-200"
+          title="Kembali ke Beranda"
+        >
+          <svg className="w-4 h-4 pr-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
+            <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
+          </svg>
+        </Link>
+      </div>
+
       {/* Progress Bar Area - Fixed & Auto-hide */}
       <div 
-        className={`w-full bg-white/95 backdrop-blur-md border-b border-stone-200 shadow-sm fixed left-0 right-0 z-50 transition-transform duration-300 ${
+        className={`w-full bg-white/95 backdrop-blur-md border-b border-stone-200 shadow-sm fixed left-0 right-0 z-50 transition-transform duration-300 hidden lg:block ${
           isVisible ? "translate-y-0" : "-translate-y-full"
         }`}
       >
@@ -84,7 +100,7 @@ export default function GameLayout({
       </div>
 
       {/* Spacer for fixed header (approx 85px) */}
-      <div className="h-[85px] sm:h-[90px]" />
+      <div className="h-[85px] sm:h-[90px] hidden lg:block" />
 
       {/* Main Content */}
       <main className="w-full max-w-3xl mx-auto px-4 py-4 sm:px-6 sm:py-6">
