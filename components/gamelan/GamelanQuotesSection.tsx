@@ -20,7 +20,7 @@ export default function GamelanQuotesSection() {
 
         {/* Quote text on the RIGHT side */}
         <div className="flex flex-col text-center md:text-left justify-center px-4 lg:px-16 z-10 py-16 lg:py-0">
-          <blockquote className="font-['League_Spartan'] text-2xl md:text-3xl lg:text-[34px] font-bold text-[#4e0b11] leading-snug">
+          <blockquote className="font-['League_Spartan'] text-lg sm:text-xl md:text-3xl lg:text-[34px] font-bold text-[#4e0b11] leading-snug">
             &ldquo;Gamelan adalah bahasa jiwa yang melampaui kata-kata — menyatukan hati manusia dengan keagungan alam semesta dan leluhur.&rdquo;
           </blockquote>
         </div>

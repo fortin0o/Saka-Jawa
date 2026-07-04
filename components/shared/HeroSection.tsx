@@ -139,12 +139,12 @@ export default function HeroSection({ content }: HeroSectionProps) {
             </div>
 
             {/* Headline */}
-            <h1 className="mt-6 animate-fade-in-up text-[2.5rem] leading-[1.08] font-bold tracking-tight text-black [animation-delay:0.1s] sm:text-[3rem] xl:text-[3.75rem]">
+            <h1 className="mt-6 animate-fade-in-up text-3xl sm:text-[2.5rem] leading-[1.1] font-bold tracking-tight text-black [animation-delay:0.1s] lg:text-[3rem] xl:text-[3.75rem]">
               {headline}
             </h1>
 
             {/* Subheadline */}
-            <p className="mt-3 animate-fade-in-up text-xl leading-snug font-semibold tracking-tight text-[#4E0B11] [animation-delay:0.2s] sm:text-2xl">
+            <p className="mt-3 animate-fade-in-up text-lg sm:text-xl leading-snug font-semibold tracking-tight text-[#4E0B11] [animation-delay:0.2s] md:text-2xl">
               {subheadline}
             </p>
 

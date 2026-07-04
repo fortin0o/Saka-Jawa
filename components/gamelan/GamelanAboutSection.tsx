@@ -15,7 +15,7 @@ export default function GamelanAboutSection() {
 
   return (
     <section
-      className="relative overflow-hidden px-6 py-24 md:px-12 lg:px-24 lg:py-32 bg-linear-to-r from-[#2D0F12] to-[#5B0917]"
+      className="relative overflow-hidden px-4 py-16 sm:px-6 md:px-12 lg:px-24 lg:py-32 bg-linear-to-r from-[#2D0F12] to-[#5B0917]"
       id="tentang"
     >
       {/* Decorative Flowers */}
@@ -85,10 +85,10 @@ export default function GamelanAboutSection() {
 
           {/* Right Column: Gamelan Jawa Text */}
           <div className="lg:col-span-6 flex flex-col text-white pt-10">
-            <h2 className="text-4xl md:text-[42px] font-bold text-[#FFC832] mb-6 text-center lg:text-right">
+            <h2 className="text-3xl sm:text-4xl md:text-[42px] font-bold text-[#FFC832] mb-4 md:mb-6 text-center lg:text-right">
               Gamelan Jawa
             </h2>
-            <p className="text-base md:text-lg leading-relaxed text-gray-100 max-w-lg mb-12 text-center lg:text-right ml-auto">
+            <p className="text-sm sm:text-base md:text-lg leading-relaxed text-gray-100 max-w-lg mb-8 md:mb-12 text-center lg:text-right ml-auto">
               Gamelan adalah ansambel musik Jawa yang telah mengisi jiwa peradaban Nusantara selama berabad-abad. Setiap dentingan dan gong bukan sekadar bunyi — ia adalah doa yang mengalir, menghubungkan manusia dengan alam dan sang pencipta.
             </p>
 

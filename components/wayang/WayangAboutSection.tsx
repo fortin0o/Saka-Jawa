@@ -10,7 +10,7 @@ export default function WayangAboutSection() {
   return (
     <section 
       id="tentang"
-      className="relative overflow-hidden px-6 py-24 md:px-12 lg:px-24 lg:py-32 bg-gradient-to-r from-[#2D0F12] to-[#5B0917]"
+      className="relative overflow-hidden px-4 py-16 sm:px-6 md:px-12 lg:px-24 lg:py-32 bg-gradient-to-r from-[#2D0F12] to-[#5B0917]"
     >
       {/* Decorative Flowers */}
       <div className="absolute top-0 left-0 w-56 h-56 md:w-80 md:h-80 pointer-events-none -translate-x-1/4 -translate-y-1/4 opacity-90">
@@ -35,10 +35,10 @@ export default function WayangAboutSection() {
           
           {/* Left Column */}
           <div className="lg:col-span-6 flex flex-col text-white pt-10">
-            <h2 className="text-4xl md:text-[42px] font-bold text-[#FFC832] mb-6">
+            <h2 className="text-3xl sm:text-4xl md:text-[42px] font-bold text-[#FFC832] mb-4 md:mb-6">
               Wayang Kulit Jawa
             </h2>
-            <p className="text-base md:text-lg leading-relaxed text-gray-100 max-w-lg mb-12">
+            <p className="text-sm sm:text-base md:text-lg leading-relaxed text-gray-100 max-w-lg mb-8 md:mb-12">
               Wayang kulit merupakan bentuk seni adiluhung yang telah diakui UNESCO sebagai Masterpiece of the Oral and Intangible Heritage of Humanity. Setiap guratan karakter memuat makna doa dan tuntunan hidup.
             </p>
 

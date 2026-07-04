@@ -18,12 +18,12 @@ export default function SharedNavbar() {
   return (
     <header className="fixed left-1/2 top-6 z-[100] w-fit -translate-x-1/2">
       <nav
-        className="grid grid-cols-[1fr_auto_1fr] items-center rounded-full bg-[#8b8b8b]/40 backdrop-blur-md border border-white/20 px-10 py-2 shadow-lg text-sm sm:text-[15px] font-semibold text-black"
+        className="grid grid-cols-[1fr_auto_1fr] items-center rounded-full bg-[#8b8b8b]/40 backdrop-blur-md border border-white/20 px-4 sm:px-6 lg:px-10 py-2 shadow-lg text-xs sm:text-[15px] font-semibold text-black"
         aria-label="Navigasi utama shared"
       >
-        <div className="flex items-center justify-end gap-6 sm:gap-16 pr-8 sm:pr-16">
+        <div className="flex items-center justify-end gap-3 sm:gap-8 lg:gap-16 pr-4 sm:pr-8 lg:pr-16">
           {navLeft.map((item) => (
-            <Link key={item.label} href={item.href} className="transition-opacity hover:opacity-75 whitespace-nowrap">
+            <Link key={item.label} href={item.href} className="transition-opacity hover:opacity-75 whitespace-nowrap hidden sm:block">
               {item.label}
             </Link>
           ))}
@@ -46,9 +46,9 @@ export default function SharedNavbar() {
           />
         </Link>
 
-        <div className="flex items-center justify-start gap-6 sm:gap-16 pl-8 sm:pl-16">
+        <div className="flex items-center justify-start gap-3 sm:gap-8 lg:gap-16 pl-4 sm:pl-8 lg:pl-16">
           {navRight.map((item) => (
-            <Link key={item.label} href={item.href} className="transition-opacity hover:opacity-75 whitespace-nowrap">
+            <Link key={item.label} href={item.href} className="transition-opacity hover:opacity-75 whitespace-nowrap hidden sm:block">
               {item.label}
             </Link>
           ))}

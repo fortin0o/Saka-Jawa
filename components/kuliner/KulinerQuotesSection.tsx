@@ -20,7 +20,7 @@ export default function KulinerQuotesSection() {
 
         {/* Quote text on the right side */}
         <div className="flex flex-col text-center md:text-left justify-center px-4 lg:px-16 z-10 py-16 lg:py-0">
-          <blockquote className="font-['League_Spartan'] text-2xl md:text-3xl lg:text-[34px] font-bold text-[#4e0b11] leading-snug">
+          <blockquote className="font-['League_Spartan'] text-lg sm:text-xl md:text-3xl lg:text-[34px] font-bold text-[#4e0b11] leading-snug">
             &quot;Ketupat adalah cerminan luhur dari filosofi ngaku lepat dan laku papat yang senantiasa mengingatkan kita untuk berani mengakui kesalahan, ikhlas berbagi, tulus memaafkan, serta menjaga kesucian hati.&quot;
           </blockquote>
         </div>

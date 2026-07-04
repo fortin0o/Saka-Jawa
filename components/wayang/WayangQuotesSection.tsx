@@ -6,7 +6,7 @@ export default function WayangQuotesSection() {
       <div className="mx-auto w-full max-w-[1400px] grid grid-cols-1 md:grid-cols-2 gap-8 items-center min-h-[450px] lg:min-h-[600px] relative">
         {/* Quote text */}
         <div className="flex flex-col text-center justify-center px-4 lg:px-16 z-10 py-16 lg:py-0">
-          <blockquote className="font-['League_Spartan'] text-3xl md:text-4xl lg:text-[42px] font-bold text-[#4e0b11] leading-snug">
+          <blockquote className="font-['League_Spartan'] text-xl sm:text-2xl md:text-3xl lg:text-[42px] font-bold text-[#4e0b11] leading-snug">
             “Wayang bukan sekadar pertunjukan, melainkan cerminan perjalan manusia dalam memilih antara kebaikan dan keburukan.”
           </blockquote>
         </div>

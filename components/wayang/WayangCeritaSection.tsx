@@ -30,17 +30,17 @@ export default function WayangCeritaSection() {
 
   return (
     <>
-      <section className="relative z-40 py-20 px-6 md:px-12 lg:px-24 bg-[#3e0b10] text-white">
+      <section className="relative z-40 py-14 px-4 sm:px-6 md:px-12 lg:px-24 lg:py-20 bg-[#3e0b10] text-white">
         <div className="mx-auto w-full max-w-[var(--container-lg)]">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
             
             {/* Left Header content */}
             <div className="lg:col-span-4 flex flex-col gap-6 text-left">
               <div>
-                <h3 className="font-['League_Spartan'] text-3xl md:text-4xl font-bold leading-tight">
+                <h3 className="font-['League_Spartan'] text-2xl sm:text-3xl md:text-4xl font-bold leading-tight">
                   Cerita Wayang Penuh Makna
                 </h3>
-                <p className="mt-4 font-['League_Spartan'] text-base text-white/80 leading-relaxed">
+                <p className="mt-3 md:mt-4 font-['League_Spartan'] text-sm sm:text-base text-white/80 leading-relaxed">
                   Kenali kisah-kisah legendaris serta ketokohan para ksatria pewayangan Jawa dan filosofi luhurnya.
                 </p>
               </div>
@@ -58,7 +58,7 @@ export default function WayangCeritaSection() {
             </div>
 
             {/* Right Cards List */}
-            <div className="lg:col-span-8 grid gap-6 sm:grid-cols-3">
+            <div className="lg:col-span-8 grid gap-4 sm:gap-6 grid-cols-1 sm:grid-cols-3">
               {wayangStories.map((story) => (
                 <div key={story.id} className="rounded-xl bg-[#F8F5EE] p-4 text-stone-900 shadow-md flex flex-col justify-between min-h-[350px]">
                   <div>

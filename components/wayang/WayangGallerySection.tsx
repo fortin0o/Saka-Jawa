@@ -20,12 +20,12 @@ export default function WayangGallerySection() {
   }));
 
   return (
-    <section className="bg-[#f9f1e4] py-20 px-6 md:px-12 lg:px-24">
+    <section className="bg-[#f9f1e4] py-14 px-4 sm:px-6 md:px-12 lg:px-24 lg:py-20">
       <div className="mx-auto w-full max-w-[var(--container-lg)]">
         {/* Header Row */}
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-12">
           <div className="text-left space-y-2">
-            <h2 className="font-['League_Spartan'] text-4xl font-bold text-[#4e0b11]">
+            <h2 className="font-['League_Spartan'] text-3xl sm:text-4xl font-bold text-[#4e0b11]">
               Galeri Wayang
             </h2>
             <p className="max-w-[600px] font-['League_Spartan'] text-lg text-stone-700">

@@ -39,16 +39,16 @@ export default function WayangRagamSection() {
 
   return (
     <>
-      <section id="ragam" className="bg-[#f9f1e4] px-4 py-20 sm:px-6 lg:px-8 lg:py-24">
+      <section id="ragam" className="bg-[#f9f1e4] px-4 py-14 sm:px-6 lg:px-8 lg:py-24">
       <div className="mx-auto w-full max-w-[1210px]">
         
         {/* Header Row */}
         <div className="flex flex-col justify-between gap-6 sm:flex-row sm:items-end">
           <div className="space-y-2">
-            <h2 className="font-['League_Spartan'] text-4xl font-bold text-[#4e0b11] sm:text-5xl">
-              Ragam Wayang 
+            <h2 className="font-['League_Spartan'] text-3xl font-bold text-[#4e0b11] sm:text-4xl md:text-5xl">
+              Ragam Wayang
             </h2>
-            <p className="max-w-[700px] font-['League_Spartan'] text-lg text-[#4A332B]">
+            <p className="max-w-[700px] font-['League_Spartan'] text-sm sm:text-lg text-[#4A332B]">
               Kenali macam-macam pewayangan dan karakteristik mereka yang penuh makna
             </p>
           </div>

@@ -135,15 +135,15 @@ export default function KulinerDaerahSection() {
 
   return (
     <>
-      <section className="py-20 px-6 md:px-12 lg:px-24 bg-[#F9F1E4]" id="koleksi">
+      <section className="py-14 px-4 sm:px-6 md:px-12 lg:px-24 lg:py-20 bg-[#F9F1E4]" id="koleksi">
         <div className="mx-auto w-full max-w-[var(--container-lg)] flex flex-col items-center">
 
           {/* Header */}
           <div className="text-center mb-16 max-w-2xl">
-            <h2 className="font-['League_Spartan'] text-3xl md:text-4xl lg:text-[42px] font-bold text-[#4e0b11] mb-4">
+            <h2 className="font-['League_Spartan'] text-2xl sm:text-3xl md:text-4xl lg:text-[42px] font-bold text-[#4e0b11] mb-4">
               Jelajahi Berdasarkan Daerah Bagian
             </h2>
-            <p className="font-['League_Spartan'] text-base md:text-lg text-stone-900 font-medium">
+            <p className="font-['League_Spartan'] text-sm sm:text-base md:text-lg text-stone-900 font-medium">
               Temukan hidangan khas Jawa berdasarkan daerah asalnya
             </p>
           </div>

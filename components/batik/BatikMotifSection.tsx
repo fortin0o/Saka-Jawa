@@ -65,17 +65,17 @@ export default function BatikMotifSection() {
   return (
     <>
       <section
-        className="relative overflow-hidden px-6 py-20 bg-[#F9F1E4] md:px-12 lg:px-24 lg:py-28"
+        className="relative overflow-hidden px-4 py-14 sm:px-6 bg-[#F9F1E4] md:px-12 lg:px-24 lg:py-28"
         id="batik-motif"
       >
         <div className="mx-auto w-full max-w-[var(--container-lg)] relative z-10">
           
           {/* Header */}
           <div className="mb-12">
-            <h2 className="text-4xl md:text-[42px] font-extrabold text-[#4E0B11] mb-3">
+            <h2 className="text-3xl sm:text-4xl md:text-[42px] font-extrabold text-[#4E0B11] mb-3">
               Ragam Motif Batik
             </h2>
-            <p className="text-base font-medium text-gray-800 max-w-2xl">
+            <p className="text-sm sm:text-base font-medium text-gray-800 max-w-2xl">
               Kenali beberapa motif khas dari berbagai daerah di pulau Jawa dan pesonanya dalam menciptakan harmoni budaya
             </p>
           </div>
