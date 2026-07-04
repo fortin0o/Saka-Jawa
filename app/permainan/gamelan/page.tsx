@@ -306,9 +306,9 @@ export default function GamelanGamePage() {
             <span className="text-5xl font-bold text-[#FFC832]">G</span>
           </div>
 
-          <div className="flex flex-col items-center md:items-start text-center md:text-left max-w-md gap-4">
-            <h2 className="text-2xl font-bold text-[#4E0B11]">Cara Bermain</h2>
-            <ul className="text-sm text-[#4A332B] leading-relaxed space-y-2 bg-white border border-[#4E0B11]/20 rounded-xl p-4 shadow-sm w-full text-left">
+          <div className="flex flex-col items-center md:items-start text-center md:text-left max-w-lg gap-4 md:gap-6">
+            <h2 className="text-2xl md:text-3xl font-bold text-[#4E0B11]">Cara Bermain</h2>
+            <ul className="text-sm md:text-base text-[#4A332B] leading-relaxed space-y-2 bg-white border border-[#4E0B11]/20 rounded-xl p-4 md:p-5 shadow-sm w-full text-left">
               <li className="flex gap-2"><span className="text-[#FFC832] font-bold shrink-0">1.</span>Perhatikan instrumen mana yang menyala secara berurutan.</li>
               <li className="flex gap-2"><span className="text-[#FFC832] font-bold shrink-0">2.</span>Setelah selesai, tekan instrumen dalam urutan yang <strong>sama persis</strong>.</li>
               <li className="flex gap-2"><span className="text-[#FFC832] font-bold shrink-0">3.</span>Setiap ronde berhasil, pola bertambah 1 instrumen dan kamu dapat <strong>+20 poin</strong>.</li>
@@ -316,7 +316,7 @@ export default function GamelanGamePage() {
               <li className="flex gap-2"><span className="text-[#FFC832] font-bold shrink-0">5.</span>Capai ronde ke-4 untuk menyelesaikan Pendhapa Gamelan!</li>
             </ul>
 
-            <div className="grid grid-cols-4 gap-2 w-full">
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 sm:gap-3 w-full">
               {INSTRUMEN.map((ins) => (
                 <div key={ins.id} className="flex flex-col items-center gap-1.5 bg-white border border-[#4E0B11]/15 rounded-xl p-2 shadow-sm">
                   <div className="w-10 h-10 rounded-full overflow-hidden border-2 border-[#4E0B11]/20">
@@ -519,7 +519,7 @@ export default function GamelanGamePage() {
                   />
                 )}
 
-                <div className={`relative w-20 h-20 sm:w-24 sm:h-24 rounded-xl overflow-hidden border-2 shadow-sm transition-all duration-150 ${isActive ? "border-white/40 scale-110" : "border-[#4E0B11]/15"}`}>
+                <div className={`relative w-20 h-20 sm:w-24 sm:h-24 md:w-32 md:h-32 rounded-xl overflow-hidden border-2 shadow-sm transition-all duration-150 ${isActive ? "border-white/40 scale-110" : "border-[#4E0B11]/15"}`}>
                   <Image src={ins.gambarSrc} alt={ins.nama} fill className="object-cover" unoptimized />
                   {!isActive && <div className="absolute inset-0 bg-[#4E0B11]/10" />}
                 </div>

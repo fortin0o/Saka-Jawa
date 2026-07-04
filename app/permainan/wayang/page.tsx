@@ -195,9 +195,9 @@ export default function WayangGamePage() {
             </svg>
           </div>
           
-          <div className="flex flex-col items-center md:items-start text-center md:text-left max-w-md">
-            <h2 className="text-2xl font-bold text-[#3e2723] mb-3">Cocokkan Siluet Tokoh</h2>
-            <p className="text-sm text-[#5d4037] font-medium leading-relaxed bg-white border border-[#8d6e63]/30 p-4 rounded-xl shadow-sm mb-4">
+          <div className="flex flex-col items-center md:items-start text-center md:text-left max-w-lg">
+            <h2 className="text-2xl md:text-3xl font-bold text-[#3e2723] mb-3 md:mb-4">Cocokkan Siluet Tokoh</h2>
+            <p className="text-sm md:text-base text-[#5d4037] font-medium leading-relaxed bg-white border border-[#8d6e63]/30 p-4 md:p-5 rounded-xl shadow-sm mb-4 md:mb-6">
               Temukan pasangan yang tepat! Cocokkan <strong className="text-[#3e2723]">Gambar Siluet</strong> dengan <strong className="text-[#3e2723]">Nama & Ciri Khas</strong> tokoh wayangnya. Semakin sedikit tebakan salah, semakin besar bonus skormu!
             </p>
             <button
@@ -288,14 +288,14 @@ export default function WayangGamePage() {
         </div>
 
         {/* Card Grid */}
-        <div className="grid grid-cols-4 gap-2 sm:gap-4 [perspective:1000px]">
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 md:gap-5 [perspective:1000px] max-w-4xl mx-auto w-full">
           {cards.map((card, idx) => {
             const isVisible = card.isFlipped || card.isMatched;
 
             return (
               <div
                 key={card.uid}
-                className="relative h-28 sm:h-40 lg:h-48 cursor-pointer [transform-style:preserve-3d] transition-transform duration-500 ease-out"
+                className="relative h-32 sm:h-40 md:h-44 lg:h-48 cursor-pointer [transform-style:preserve-3d] transition-transform duration-500 ease-out"
                 style={{
                   transform: isVisible ? "rotateY(180deg)" : "rotateY(0deg)",
                 }}

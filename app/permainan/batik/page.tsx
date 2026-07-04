@@ -387,7 +387,7 @@ export default function BatikGamePage() {
           </div>
 
           {/* Full motif image */}
-          <div className="w-full max-w-[280px] aspect-square relative rounded-xl overflow-hidden border-2 border-[#4E0B11]/30 shadow-lg">
+          <div className="w-full max-w-[280px] sm:max-w-[320px] aspect-square relative rounded-xl overflow-hidden border-2 border-[#4E0B11]/30 shadow-lg">
             <Image src={currentMotif.gambarSrc} alt={currentMotif.namaMotif} fill className="object-cover" unoptimized />
             {/* Countdown overlay at bottom */}
             <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-[#4E0B11]/80 to-transparent p-4 flex items-end justify-between">
@@ -474,7 +474,7 @@ export default function BatikGamePage() {
 
         {/* Puzzle grid */}
         <div
-          className="w-full max-w-[280px] mx-auto aspect-square rounded-xl overflow-hidden border-2 border-[#4E0B11]/30 shadow-lg select-none"
+          className="w-full max-w-[280px] sm:max-w-[320px] mx-auto aspect-square rounded-xl overflow-hidden border-2 border-[#4E0B11]/30 shadow-lg select-none"
           style={{ display: "grid", gridTemplateColumns: `repeat(${GRID_SIZE}, 1fr)` }}
         >
           {Array.from({ length: TOTAL_PIECES }, (_, cellIndex) => {

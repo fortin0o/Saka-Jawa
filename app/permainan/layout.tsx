@@ -35,10 +35,10 @@ export default function PermainanLayout({
               />
             </div>
             <div className="leading-tight">
-              <p className="text-[10px] sm:text-[11px] font-bold text-[#4E0B11] uppercase tracking-widest">
+              <p className="text-[10px] sm:text-[11px] md:text-xs font-bold text-[#4E0B11] uppercase tracking-widest">
                 Saka Jawa
               </p>
-              <p className="text-[9px] sm:text-[10px] text-[#4A332B] font-medium hidden xs:block">
+              <p className="text-[9px] sm:text-[10px] md:text-[11px] text-[#4A332B] font-medium hidden sm:block">
                 Petualangan 4 Pendhapa
               </p>
             </div>

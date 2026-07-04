@@ -161,9 +161,9 @@ export default function KulinerGamePage() {
             <span className="text-4xl md:text-5xl font-bold text-[#FFC832]">K</span>
           </div>
           
-          <div className="flex flex-col items-center md:items-start text-center md:text-left max-w-md">
-            <h2 className="text-2xl font-bold text-[#4E0B11] mb-3">Tebak dari Deskripsi</h2>
-            <p className="text-sm text-[#4A332B] font-medium leading-relaxed bg-white border border-[#4E0B11]/20 p-4 rounded-xl shadow-sm mb-4">
+          <div className="flex flex-col items-center md:items-start text-center md:text-left max-w-lg">
+            <h2 className="text-2xl md:text-3xl font-bold text-[#4E0B11] mb-3 md:mb-4">Tebak dari Deskripsi</h2>
+            <p className="text-sm md:text-base text-[#4A332B] font-medium leading-relaxed bg-white border border-[#4E0B11]/20 p-4 md:p-5 rounded-xl shadow-sm mb-4 md:mb-6">
               Pilih satu <strong className="text-[#4E0B11]">Gambar Makanan</strong> dan pasangkan dengan <strong className="text-[#4E0B11]">Nama Makanan</strong> yang tepat! Temukan fakta menarik setiap kali berhasil mencocokkannya.
             </p>
             <button
@@ -268,7 +268,7 @@ export default function KulinerGamePage() {
                 <div
                   key={`img-${item.id}`}
                   onClick={() => handleSelectImage(item.id)}
-                  className={`relative h-28 sm:h-32 w-full rounded-xl border-4 overflow-hidden transition-all duration-300 ${
+                  className={`relative h-28 sm:h-32 md:h-40 lg:h-48 w-full rounded-xl border-4 overflow-hidden transition-all duration-300 ${
                     isMatched
                       ? "border-[#4CAF50] opacity-80 scale-95"
                       : isWrong
@@ -317,7 +317,7 @@ export default function KulinerGamePage() {
                 <div
                   key={`name-${item.id}`}
                   onClick={() => handleSelectName(item.id)}
-                  className={`relative h-28 sm:h-32 w-full rounded-xl border-4 flex items-center justify-center p-4 text-center transition-all duration-300 ${
+                  className={`relative h-28 sm:h-32 md:h-40 lg:h-48 w-full rounded-xl border-4 flex items-center justify-center p-4 text-center transition-all duration-300 ${
                     isMatched
                       ? "border-[#4CAF50] bg-[#4CAF50]/10 opacity-50 scale-95"
                       : isWrong
