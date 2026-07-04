@@ -60,7 +60,7 @@ export default function KulinerCeritaSection() {
           {/* Right Cards List */}
           <div className="lg:col-span-8 grid gap-4 sm:gap-6 grid-cols-1 sm:grid-cols-3">
             {kulinerStories.map((story) => (
-              <div key={story.id} className="rounded-xl bg-[#F8F5EE] p-4 text-stone-900 shadow-md flex flex-col justify-between min-h-[350px]">
+              <div key={story.id} className="group rounded-xl bg-[#F8F5EE] p-4 text-stone-900 shadow-md flex flex-col justify-between min-h-[350px]">
                 <div>
                   {/* Card Image */}
                   <div className="aspect-[4/3] w-full relative rounded-lg overflow-hidden bg-stone-200">
@@ -68,7 +68,7 @@ export default function KulinerCeritaSection() {
                       src={story.image}
                       alt={story.title}
                       fill
-                      className="object-cover"
+                      className="object-cover transition-transform duration-500 group-hover:scale-110"
                     />
                   </div>
                   {/* Title */}

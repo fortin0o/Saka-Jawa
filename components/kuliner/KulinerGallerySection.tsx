@@ -5,9 +5,10 @@ import Image from "next/image";
 import GalleryModal from "@/components/shared/GalleryModal";
 
 const kulinerGallery = [
-  { id: 1, title: "Nasi Liwet Solo", image: "/Assets/kulinerHeroAsset.avif" },
-  { id: 2, title: "Gudeg Yogyakarta", image: "/Assets/kulinerHeroAsset.avif" },
-  { id: 3, title: "Soto Ayam Lamongan", image: "/Assets/kulinerHeroAsset.avif" },
+  { id: 1, title: "Chef Arnold Masak Rawon", image: "/Assets/Gambar Kuliner/galeri/Chef Arnold Masak Rawon.avif" },
+  { id: 2, title: "Pembuatan Kupat Tahu", image: "/Assets/Gambar Kuliner/galeri/Pembuatan Kupat Tahu.avif" },
+  { id: 3, title: "Pembuatan Soto Lamongan", image: "/Assets/Gambar Kuliner/galeri/Pembuatan Soto Lamongan.avif" },
+  { id: 4, title: "Sistem Seblak Prasmanan", image: "/Assets/Gambar Kuliner/galeri/Sistem Seblak Prasmanan.avif" },
 ];
 
 export default function KulinerGallerySection() {
@@ -45,15 +46,15 @@ export default function KulinerGallerySection() {
 
         {/* Cards Grid */}
         <div className="grid gap-6 sm:grid-cols-3">
-          {kulinerGallery.map((gal) => (
-            <div key={gal.id} className="relative aspect-video w-full rounded-2xl overflow-hidden shadow-lg border border-stone-200">
+          {kulinerGallery.slice(0, 3).map((gal) => (
+            <div key={gal.id} className="group relative aspect-video w-full rounded-2xl overflow-hidden shadow-lg border border-stone-200">
               <Image
                 src={gal.image}
                 alt={gal.title}
                 fill
-                className="object-cover transition-transform duration-500 hover:scale-105"
+                className="object-cover transition-transform duration-500 group-hover:scale-105"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-6">
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-6 pointer-events-none">
                 <h4 className="font-['League_Spartan'] text-xl font-bold text-white">
                   {gal.title}
                 </h4>
