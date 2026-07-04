@@ -34,7 +34,7 @@ export default function TentangKamiCeritaSection() {
                 dan menyenangkan.
               </p>
               <p>
-                Nama "Saka Jawa" sendiri bermakna <em>"pilar Jawa"</em> —
+                Nama &ldquo;Saka Jawa&rdquo; sendiri bermakna <em>&ldquo;pilar Jawa&rdquo;</em> &mdash;
                 sebuah harapan bahwa platform ini menjadi tonggak penopang
                 bagi keberlangsungan budaya Jawa di era modern.
               </p>

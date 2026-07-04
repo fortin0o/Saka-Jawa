@@ -64,6 +64,38 @@ function isSolved(pieces: number[]): boolean {
   return pieces.every((p, i) => p === i);
 }
 
+// ─── Progress Dots ────────────────────────────────────────────────────────────
+function ProgressDots({ motifIndex }: { motifIndex: number }) {
+  return (
+    <div className="flex items-center justify-center gap-2">
+      {MOTIFS.map((m, i) => (
+        <div key={m.id} className="flex flex-col items-center gap-1">
+          <div
+            className={`w-7 h-7 rounded-full flex items-center justify-center text-[10px] font-bold transition-all duration-300 ${
+              i < motifIndex
+                ? "bg-[#FFC832] text-[#4E0B11]"
+                : i === motifIndex
+                ? "bg-[#4E0B11] text-white ring-2 ring-[#4E0B11] ring-offset-2"
+                : "bg-stone-200 text-stone-400"
+            }`}
+          >
+            {i < motifIndex ? (
+              <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+              </svg>
+            ) : (
+              i + 1
+            )}
+          </div>
+          <span className={`text-[9px] font-semibold ${i === motifIndex ? "text-[#4E0B11]" : "text-stone-400"}`}>
+            {m.asalDaerah.split(" ")[0]}
+          </span>
+        </div>
+      ))}
+    </div>
+  );
+}
+
 // ─── Component ────────────────────────────────────────────────────────────────
 export default function BatikGamePage() {
   const { updateScore, markCompleted } = useGame();
@@ -135,23 +167,27 @@ export default function BatikGamePage() {
     if (phase !== "puzzle" || solved) return;
     if (isSolved(pieces)) {
       clearInterval(timerRef.current!);
-      setTimerActive(false);
-      setSolved(true);
-      const earned = timeLeft > 0 ? SCORE_FAST : SCORE_SLOW;
-      setScoreHistory((prev) => [...prev, earned]);
-      setTotalScore((prev) => prev + earned);
-      setTimeout(() => setPhase("fact"), 600);
+      setTimeout(() => {
+        setTimerActive(false);
+        setSolved(true);
+        const earned = timeLeft > 0 ? SCORE_FAST : SCORE_SLOW;
+        setScoreHistory((prev) => [...prev, earned]);
+        setTotalScore((prev) => prev + earned);
+        setTimeout(() => setPhase("fact"), 600);
+      }, 0);
     }
   }, [pieces, phase, solved, timeLeft]);
 
   // ── Time ran out ──────────────────────────────────────────────────────────
   useEffect(() => {
     if (phase !== "puzzle" || solved || timerActive || timeLeft !== 0) return;
-    setSolved(true);
-    const earned = SCORE_SLOW;
-    setScoreHistory((prev) => [...prev, earned]);
-    setTotalScore((prev) => prev + earned);
-    setTimeout(() => setPhase("fact"), 400);
+    setTimeout(() => {
+      setSolved(true);
+      const earned = SCORE_SLOW;
+      setScoreHistory((prev) => [...prev, earned]);
+      setTotalScore((prev) => prev + earned);
+      setTimeout(() => setPhase("fact"), 400);
+    }, 0);
   }, [phase, timerActive, solved, timeLeft]);
 
   // ── Swap pieces ───────────────────────────────────────────────────────────
@@ -194,36 +230,6 @@ export default function BatikGamePage() {
   const currentMotif = MOTIFS[motifIndex];
   const timerPct = (timeLeft / TIME_LIMIT) * 100;
   const timerColor = timeLeft > 30 ? "#4E0B11" : timeLeft > 10 ? "#d97706" : "#dc2626";
-
-  // ─── Shared motif progress dots ───────────────────────────────────────────
-  const ProgressDots = () => (
-    <div className="flex items-center justify-center gap-2">
-      {MOTIFS.map((m, i) => (
-        <div key={m.id} className="flex flex-col items-center gap-1">
-          <div
-            className={`w-7 h-7 rounded-full flex items-center justify-center text-[10px] font-bold transition-all duration-300 ${
-              i < motifIndex
-                ? "bg-[#FFC832] text-[#4E0B11]"
-                : i === motifIndex
-                ? "bg-[#4E0B11] text-white ring-2 ring-[#4E0B11] ring-offset-2"
-                : "bg-stone-200 text-stone-400"
-            }`}
-          >
-            {i < motifIndex ? (
-              <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-              </svg>
-            ) : (
-              i + 1
-            )}
-          </div>
-          <span className={`text-[9px] font-semibold ${i === motifIndex ? "text-[#4E0B11]" : "text-stone-400"}`}>
-            {m.asalDaerah.split(" ")[0]}
-          </span>
-        </div>
-      ))}
-    </div>
-  );
 
   // ─── DONE screen ──────────────────────────────────────────────────────────
   if (phase === "done") {
@@ -318,7 +324,7 @@ export default function BatikGamePage() {
             </div>
             
             <div className="hidden md:block">
-              <ProgressDots />
+              <ProgressDots motifIndex={motifIndex} />
             </div>
           </div>
 
@@ -335,7 +341,7 @@ export default function BatikGamePage() {
             </div>
 
             <div className="md:hidden">
-              <ProgressDots />
+              <ProgressDots motifIndex={motifIndex} />
             </div>
 
             <button
@@ -421,7 +427,7 @@ export default function BatikGamePage() {
             Lewati, langsung mulai
           </button>
 
-          <ProgressDots />
+          <ProgressDots motifIndex={motifIndex} />
         </div>
       </GameLayout>
     );
@@ -531,7 +537,7 @@ export default function BatikGamePage() {
           })}
         </div>
 
-        <ProgressDots />
+        <ProgressDots motifIndex={motifIndex} />
 
         {totalScore > 0 && (
           <div className="text-center">

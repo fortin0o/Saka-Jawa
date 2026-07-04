@@ -84,7 +84,6 @@ export default function GameProgress({ completed = {} }: { completed?: Record<st
           {STEPS.map((step, index) => {
             const isDone = completed[step.key] || index < activeIndex;
             const isActive = index === activeIndex;
-            const isPending = !isDone && !isActive;
             const isLast = index === STEPS.length - 1;
 
             return (

@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import { useGame } from "../../context/GameContext";
 import { ReactNode, useState, useEffect } from "react";
 import DeviceOrientationOverlay from "./DeviceOrientationOverlay";
 
@@ -23,13 +22,8 @@ export default function GameLayout({
   title,
   subtitle,
   pendhapa,
-  nextHref,
-  nextLabel = "Lanjut →",
-  onNext,
   children,
-  canProceed = true,
 }: GameLayoutProps) {
-  const { completed } = useGame();
   
   // Auto-hide header on scroll down
   const [isVisible, setIsVisible] = useState(true);

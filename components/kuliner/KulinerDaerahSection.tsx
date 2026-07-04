@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useState } from "react";
-import Image from "next/image";
 import DetailGaleri from "../shared/DetailGaleri";
 
 export default function KulinerDaerahSection() {

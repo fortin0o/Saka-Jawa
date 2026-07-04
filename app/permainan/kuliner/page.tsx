@@ -117,13 +117,15 @@ export default function KulinerGamePage() {
         }, 300);
       } else {
         // NO MATCH (Wrong)
-        setWrongPair({ img: selectedImage, name: selectedName });
         setTimeout(() => {
-          setWrongPair(null);
-          setSelectedImage(null);
-          setSelectedName(null);
-          lockBoard.current = false;
-        }, WRONG_DELAY_MS);
+          setWrongPair({ img: selectedImage, name: selectedName });
+          setTimeout(() => {
+            setWrongPair(null);
+            setSelectedImage(null);
+            setSelectedName(null);
+            lockBoard.current = false;
+          }, WRONG_DELAY_MS);
+        }, 0);
       }
     }
   }, [selectedImage, selectedName]);
@@ -135,8 +137,8 @@ export default function KulinerGamePage() {
       const penalty = Math.max(0, attempts - matches.length) * 2;
       const finalScore = Math.max(0, baseScore - penalty);
 
-      setTotalScore(finalScore);
       setTimeout(() => {
+        setTotalScore(finalScore);
         updateScore("kuliner", finalScore);
         markCompleted("kuliner");
         setPhase("done");

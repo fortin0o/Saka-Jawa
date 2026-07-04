@@ -33,13 +33,11 @@ export function GameProvider({ children }: { children: ReactNode }) {
 
   /** Update skor satu pendhapa. Skor baru menggantikan lama (tidak diakumulasi). */
   const updateScore = (pendhapa: Pendhapa, score: number) => {
-    if (!PENDHAPAS.includes(pendhapa as any)) return;
     setScores((prev) => ({ ...prev, [pendhapa]: score }));
   };
 
   /** Tandai pendhapa sebagai selesai. */
   const markCompleted = (pendhapa: Pendhapa) => {
-    if (!PENDHAPAS.includes(pendhapa as any)) return;
     setCompleted((prev) => ({ ...prev, [pendhapa]: true }));
   };
 

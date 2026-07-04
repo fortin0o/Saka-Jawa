@@ -167,8 +167,8 @@ export default function WayangGamePage() {
       const penalty = Math.max(0, attempts - matches) * 2;
       const finalScore = Math.max(0, baseScore - penalty);
 
-      setTotalScore(finalScore);
       setTimeout(() => {
+        setTotalScore(finalScore);
         updateScore("wayang", finalScore);
         markCompleted("wayang");
         setPhase("done");

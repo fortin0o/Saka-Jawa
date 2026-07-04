@@ -7,13 +7,33 @@ import { useGame } from "../../../context/GameContext";
 
 const MAX_SCORE = 660; // 300 (Batik) + 100 (Wayang) + 160 (Gamelan) + 100 (Kuliner)
 
+interface ConfettiItem {
+  id: number;
+  left: string;
+  animDuration: string;
+  delay: string;
+  bg: string;
+}
+
 export default function HasilAkhirPage() {
   const router = useRouter();
   const { scores, completed, totalScore, resetGame, PENDHAPAS } = useGame();
   const [mounted, setMounted] = useState(false);
+  const [confettiItems, setConfettiItems] = useState<ConfettiItem[]>([]);
 
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setMounted(true);
+
+    // Generate confetti values once after mounting to avoid Math.random in render/hydration mismatch
+    const items = Array.from({ length: 30 }).map((_, i) => ({
+      id: i,
+      left: Math.random() * 100 + "%",
+      animDuration: Math.random() * 3 + 2 + "s",
+      delay: Math.random() * 2 + "s",
+      bg: Math.random() > 0.5 ? "#FFC832" : "#FFF8E7",
+    }));
+    setConfettiItems(items);
   }, []);
 
   if (!mounted) return null; // Prevent hydration mismatch
@@ -77,6 +97,7 @@ export default function HasilAkhirPage() {
     router.push("/permainan");
   };
 
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-[#4E0B11] to-[#2D0F12] relative overflow-hidden flex flex-col items-center justify-center p-4 sm:p-6">
       
@@ -86,26 +107,20 @@ export default function HasilAkhirPage() {
       {/* CSS Confetti (Only for >50%) */}
       {pct >= 0.5 && (
         <div className="absolute inset-0 pointer-events-none overflow-hidden" aria-hidden="true">
-          {Array.from({ length: 30 }).map((_, i) => {
-            const left = Math.random() * 100 + "%";
-            const animDuration = Math.random() * 3 + 2 + "s";
-            const delay = Math.random() * 2 + "s";
-            const bg = Math.random() > 0.5 ? "#FFC832" : "#FFF8E7";
-            return (
-              <div
-                key={i}
-                className="absolute top-[-10%] w-2 h-6 animate-confetti rounded-sm"
-                style={{
-                  left,
-                  backgroundColor: bg,
-                  animationDuration: animDuration,
-                  animationDelay: delay,
-                  animationTimingFunction: "linear",
-                  animationIterationCount: "infinite"
-                }}
-              />
-            );
-          })}
+          {confettiItems.map((item) => (
+            <div
+              key={item.id}
+              className="absolute top-[-10%] w-2 h-6 animate-confetti rounded-sm"
+              style={{
+                left: item.left,
+                backgroundColor: item.bg,
+                animationDuration: item.animDuration,
+                animationDelay: item.delay,
+                animationTimingFunction: "linear",
+                animationIterationCount: "infinite"
+              }}
+            />
+          ))}
         </div>
       )}
 
