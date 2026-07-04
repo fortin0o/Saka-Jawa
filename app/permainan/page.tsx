@@ -4,7 +4,18 @@ import Image from "next/image";
 import Link from "next/link";
 import { useGame } from "../../context/GameContext";
 
-const pendhapas = [
+type PendhapaKey = "batik" | "wayang" | "gamelan" | "kuliner";
+
+type PendhapaInfo = {
+  key: PendhapaKey;
+  label: string;
+  href: string;
+  color: string;
+  desc: string;
+  icon: string;
+};
+
+const pendhapas: PendhapaInfo[] = [
   {
     key: "batik",
     label: "Pendhapa Batik",
