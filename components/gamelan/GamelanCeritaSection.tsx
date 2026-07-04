@@ -83,7 +83,7 @@ export default function GamelanCeritaSection() {
                 {/* Actions inside card */}
                 <div className="mt-4 pt-4 border-t border-stone-200 flex items-center justify-between">
                   <span className="font-['League_Spartan'] text-sm font-semibold text-[#4e0b11]">
-                    {story.videoUrl ? "Lihat Video" : "Lihat Ringkasan"}
+                    Lihat Selengkapnya
                   </span>
                   <button 
                     onClick={() => story.videoUrl ? setActiveVideo(story.videoUrl) : null}

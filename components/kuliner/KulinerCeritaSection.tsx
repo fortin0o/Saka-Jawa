@@ -1,29 +1,36 @@
+"use client";
+
 import Image from "next/image";
+import { useState } from "react";
 
 const kulinerStories = [
   {
     id: 1,
-    title: "Khas Kota Mawar",
-    desc: "Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet",
-    image: "/Assets/kulinerHeroAsset.avif",
+    title: "Selat Solo",
+    desc: "Perpaduan unik budaya Jawa dan Eropa berupa bistik daging sapi dengan kuah manis gurih, disajikan bersama sayuran segar.",
+    image: "/Assets/Gambar Kuliner/Jawa Tengah/selat Solo.avif",
+    videoUrl: "https://www.youtube.com/embed/XLTpNTTc3ac?si=W82LnD7WIat8Zplc",
   },
   {
     id: 2,
-    title: "Kota Gitar Makan",
-    desc: "Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet",
-    image: "/Assets/kulinerHeroAsset.avif",
+    title: "Empal Gentong",
+    desc: "Sajian khas Cirebon berupa daging sapi yang dimasak dalam gentong tanah liat dengan kuah santan kuning yang kaya rempah.",
+    image: "/Assets/Gambar Kuliner/Jawa Barat/empal-gentong.avif",
   },
   {
     id: 3,
-    title: "Kota Gitar Makan",
-    desc: "Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet",
-    image: "/Assets/kulinerHeroAsset.avif",
+    title: "Rawon",
+    desc: "Sup daging sapi khas Jawa Timur yang ikonik dengan kuah hitam pekat dari kluwek, kaya akan cita rasa dan rempah.",
+    image: "/Assets/Gambar Kuliner/Jawa Timur/rawon.avif",
   },
 ];
 
 export default function KulinerCeritaSection() {
+  const [activeVideo, setActiveVideo] = useState<string | null>(null);
+
   return (
-    <section className="relative z-40 py-14 px-4 sm:px-6 md:px-12 lg:px-24 lg:py-20 bg-[#3e0b10] text-white">
+    <>
+      <section className="relative z-40 py-14 px-4 sm:px-6 md:px-12 lg:px-24 lg:py-20 bg-[#3e0b10] text-white">
       <div className="mx-auto w-full max-w-[var(--container-lg)]">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
 
@@ -76,9 +83,12 @@ export default function KulinerCeritaSection() {
                 {/* Actions inside card */}
                 <div className="mt-4 pt-4 border-t border-stone-200 flex items-center justify-between">
                   <span className="font-['League_Spartan'] text-sm font-semibold text-[#4e0b11]">
-                    Lihat Ringkasan
+                    Lihat Selengkapnya
                   </span>
-                  <button className="w-8 h-8 rounded-full bg-[#4e0b11] text-white flex items-center justify-center transition-transform hover:scale-110">
+                  <button 
+                    onClick={() => story.videoUrl ? setActiveVideo(story.videoUrl) : null}
+                    className="w-8 h-8 rounded-full bg-[#4e0b11] text-white flex items-center justify-center transition-transform hover:scale-110"
+                  >
                     <svg className="w-4 h-4 fill-current ml-0.5" viewBox="0 0 24 24">
                       <path d="M8 5v14l11-7z" />
                     </svg>
@@ -91,5 +101,29 @@ export default function KulinerCeritaSection() {
         </div>
       </div>
     </section>
+
+    {/* Video Modal */}
+    {activeVideo && (
+      <div className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/80 backdrop-blur-sm p-4 sm:p-6" onClick={() => setActiveVideo(null)}>
+        <div className="relative w-full max-w-4xl aspect-video bg-black rounded-xl overflow-hidden shadow-2xl" onClick={(e) => e.stopPropagation()}>
+          <button 
+            onClick={() => setActiveVideo(null)}
+            className="absolute top-4 right-4 z-10 w-10 h-10 bg-white/20 hover:bg-white/40 backdrop-blur-md rounded-full flex items-center justify-center text-white transition-colors"
+          >
+            <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+          <iframe 
+            src={`${activeVideo}&autoplay=1`} 
+            title="YouTube video player" 
+            className="w-full h-full"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            allowFullScreen
+          ></iframe>
+        </div>
+      </div>
+    )}
+    </>
   );
 }

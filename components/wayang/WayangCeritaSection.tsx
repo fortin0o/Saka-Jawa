@@ -81,7 +81,10 @@ export default function WayangCeritaSection() {
                     </p>
                   </div>
                   {/* Actions inside card */}
-                  <div className="mt-4 pt-4 border-t border-stone-200 flex items-center justify-end">
+                  <div className="mt-4 pt-4 border-t border-stone-200 flex items-center justify-between">
+                    <span className="font-['League_Spartan'] text-sm font-semibold text-[#4e0b11]">
+                      Lihat Selengkapnya
+                    </span>
                     <button 
                       onClick={() => story.videoUrl ? setActiveVideo(story.videoUrl) : null}
                       className="w-8 h-8 rounded-full bg-[#4e0b11] text-white flex items-center justify-center transition-transform hover:scale-110"
