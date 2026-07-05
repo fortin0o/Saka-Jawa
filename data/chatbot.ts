@@ -11,10 +11,10 @@
   }
 
   export const SURO_GREETING =
-    "Sugeng rawuh! 👋 Aku Suro, pemandu budayamu di SakaJawa. Mau tanya apa hari ini? Pilih salah satu topik di bawah, atau ketik pertanyaanmu ya!";
+    "Sugeng rawuh! Aku Suro, pemandu budayamu di SakaJawa. Mau tanya apa hari ini? Pilih salah satu topik di bawah, atau ketik pertanyaanmu ya!";
 
   export const SURO_FALLBACK =
-    "Waduh, pertanyaanmu di luar kemampuanku nih 😅 Aku cuma paham soal budaya Jawa seperti Batik, Wayang, Gamelan, dan Kuliner. Coba pilih topik dari daftar di bawah ya!";
+    "Waduh, pertanyaanmu di luar kemampuanku... Aku cuma paham soal budaya Jawa seperti Batik, Wayang, Gamelan, dan Kuliner. Coba pilih topik dari daftar di bawah ya!";
 
   export const chatbotData: ChatCategory[] = [
     {

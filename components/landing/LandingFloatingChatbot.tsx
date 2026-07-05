@@ -23,13 +23,17 @@ export default function LandingFloatingChatbot() {
       <button
         onClick={() => setIsOpen((prev) => !prev)}
         aria-label={isOpen ? "Tutup chat Suro" : "Tanya kepada Suro"}
-        className="fixed right-0 bottom-6 sm:bottom-10 z-[99999] flex items-center transition-transform duration-300 hover:scale-105 active:scale-95 cursor-pointer"
+        className={`fixed right-0 bottom-6 sm:bottom-10 z-[99999] flex items-center transition-all duration-500 cursor-pointer ${
+          isOpen 
+            ? "translate-x-[120%] opacity-0 pointer-events-none" 
+            : "translate-x-0 opacity-100 hover:scale-105 active:scale-95"
+        }`}
       >
         <div className="relative flex items-center">
           {/* Yellow Pill */}
           <div className="rounded-l-full bg-[#ffc62e] pl-8 pr-20 py-3 sm:pl-8 sm:pr-19 sm:py-2 text-left shadow-[-4px_4px_15px_rgba(0,0,0,0.15)]">
             <span className="block text-[0.85rem] sm:text-[1rem] leading-tight font-medium text-black">
-              {isOpen ? "Tutup" : "Tanya Kepada"}
+              Tanya Kepada
             </span>
             <span className="block text-[1.3rem] sm:text-[1.6rem] leading-none font-black text-black tracking-wide mt-0.5">
               SURO

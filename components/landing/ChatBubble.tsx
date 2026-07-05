@@ -117,10 +117,10 @@ export default function ChatBubble({
   /* ─── Render ──────────────────────────────────────────────────── */
   return (
     <div
-      className={`fixed bottom-24 right-4 sm:right-6 z-[99998] w-[min(92vw,400px)] transition-all duration-300 origin-bottom-right ${
+      className={`fixed bottom-15 right-4 sm:right-6 z-[99998] w-[min(92vw,400px)] transition-all duration-300 ${
         isOpen
-          ? "scale-100 opacity-100 translate-y-0"
-          : "scale-90 opacity-0 translate-y-4 pointer-events-none"
+          ? "opacity-100 translate-x-0"
+          : "opacity-0 translate-x-8 pointer-events-none"
       }`}
     >
       <div className="flex flex-col h-[min(75vh,560px)] rounded-2xl overflow-hidden shadow-[0_12px_48px_rgba(78,11,17,0.25)] border border-[#4E0B11]/20">
