@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function WayangQuotesSection() {
   return (
-    <section className="relative z-20 bg-[#fdfaf4] py-16 lg:py-0 px-6 md:px-12 lg:px-24">
+    <section className="relative z-20 bg-[#ffffff] py-16 lg:py-0 px-6 md:px-12 lg:px-24">
       <div className="mx-auto w-full max-w-[1400px] grid grid-cols-1 md:grid-cols-2 gap-8 items-center min-h-[450px] lg:min-h-[600px] relative">
         {/* Quote text */}
         <div className="flex flex-col text-center justify-center px-4 lg:px-16 z-10 py-16 lg:py-0">

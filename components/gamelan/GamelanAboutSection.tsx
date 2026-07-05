@@ -15,7 +15,7 @@ export default function GamelanAboutSection() {
 
   return (
     <section
-      className="relative overflow-hidden px-4 py-16 sm:px-6 md:px-12 lg:px-24 lg:py-32 bg-linear-to-r from-[#2D0F12] to-[#5B0917]"
+      className="relative overflow-hidden px-4 py-16 sm:px-6 md:px-12 lg:px-24 lg:py-32 bg-gradient-to-l from-[#2D0F12] to-[#5B0917]"
       id="tentang"
     >
       {/* Decorative Flowers */}
@@ -40,44 +40,42 @@ export default function GamelanAboutSection() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-12 items-center">
 
           {/* Left Column: Tahukah Kamu Card */}
-          <div className="lg:col-span-6 relative w-full max-w-[540px] mx-auto lg:mr-auto mt-8 lg:mt-0">
-            {/* The Yellow Angle Accents */}
-            <div className="absolute -top-3 -left-3 md:-top-4 md:-left-4 w-16 h-16 md:w-24 md:h-24 border-t-[8px] border-l-[8px] md:border-t-[12px] md:border-l-[12px] border-[#FFC832] rounded-tl-xl z-0"></div>
-            <div className="absolute -bottom-3 -right-3 md:-bottom-4 md:-right-4 w-16 h-16 md:w-24 md:h-24 border-b-[8px] border-r-[8px] md:border-b-[12px] md:border-r-[12px] border-[#FFC832] rounded-br-xl z-0"></div>
+          <div className="lg:col-span-6 relative w-full max-w-[540px] mx-auto lg:mr-auto mt-12 lg:mt-4">
+            {/* Yellow Angle Accents (Flipped for left side: top-right and bottom-left) */}
+            <div className="absolute -top-3 -right-3 md:-top-4 md:-right-4 w-16 h-16 md:w-24 md:h-24 border-t-[8px] border-r-[8px] md:border-t-[12px] md:border-r-[12px] border-[#FFC832] rounded-tr-xl z-0"></div>
+            <div className="absolute -bottom-3 -left-3 md:-bottom-4 md:-left-4 w-16 h-16 md:w-24 md:h-24 border-b-[8px] border-l-[8px] md:border-b-[12px] md:border-l-[12px] border-[#FFC832] rounded-bl-xl z-0"></div>
 
             {/* Main Card */}
-            <div className="relative z-10 bg-[#F8F5EE] rounded-xl p-6 md:p-8 shadow-2xl flex gap-4 md:gap-6 items-stretch min-h-[220px]">
+            <div className="relative z-10 bg-[#F8F5EE] rounded-xl p-6 md:p-8 md:pl-[160px] pl-[110px] shadow-2xl flex flex-col justify-center min-h-[260px]">
               
-              {/* Left Content inside Card */}
-              <div className="flex-1 relative flex flex-col justify-center">
-                {/* Top Left Cloud */}
-                <div className="w-16 h-8 md:w-24 md:h-12 relative -ml-2 mb-2">
-                  <Image src="/Assets/Left Mega Mendung.svg" alt="Mega Mendung" fill className="object-contain object-left-top" />
-                </div>
-                
-                <h3 className="text-2xl md:text-[32px] font-bold text-[#4E0B11] mb-3 font-['League_Spartan']">
-                  Tahukah Kamu?
-                </h3>
-                
-                <p className="text-[13px] md:text-[14px] font-medium text-gray-800 leading-relaxed relative z-10 mb-6">
-                  Dalam satu perangkat gamelan, terdapat lebih dari 40 instrumen yang dimainkan secara bersama-sama tanpa seorang konduktor — mencerminkan nilai musyawarah dan kebersamaan.
-                </p>
-
-                {/* Bottom Right Cloud */}
-                <div className="absolute bottom-0 right-0 w-16 h-8 md:w-24 md:h-12 translate-y-1/2 md:translate-y-4">
-                  <Image src="/Assets/Right Mega Mendung.svg" alt="Mega Mendung" fill className="object-contain object-right-bottom" />
-                </div>
-              </div>
-
-              {/* Character Image */}
-              <div className="w-[110px] md:w-[140px] shrink-0 relative flex items-end justify-center">
+              {/* Character Image (Positioned on the Left) */}
+              <div className="absolute top-1/2 -translate-y-1/2 left-6 md:left-4 w-[120px] md:w-[180px] flex items-center justify-center pointer-events-none z-20">
                 <Image 
                   src="/Assets/Sambut Tamu About.svg" 
                   alt="Karakter Mascot" 
-                  width={140} 
-                  height={240} 
-                  className="object-contain object-bottom h-[160px] md:h-[200px] w-auto"
+                  width={200} 
+                  height={320} 
+                  className="object-contain object-center h-[200px] md:h-[280px] w-auto drop-shadow-xl scale-x-[-1]"
                 />
+              </div>
+
+              {/* Right Content inside Card */}
+              <div className="relative z-10 flex flex-col justify-center text-right">
+                <div className="w-16 h-8 md:w-20 md:h-10 relative ml-auto -mr-2 mb-2">
+                  <Image src="/Assets/Right Mega Mendung.svg" alt="Mega Mendung" fill className="object-contain object-right-top" />
+                </div>
+                
+                <h3 className="text-2xl md:text-[32px] font-bold text-[#4E0B11] mb-4 font-['League_Spartan']">
+                  Tahukah Kamu?
+                </h3>
+                
+                <p className="text-[13px] md:text-[14px] font-medium text-gray-800 leading-relaxed mb-4">
+                  Dalam satu perangkat gamelan, terdapat lebih dari 40 instrumen yang dimainkan secara bersama-sama tanpa seorang konduktor — mencerminkan nilai musyawarah dan kebersamaan.
+                </p>
+
+                <div className="w-16 h-8 md:w-20 md:h-10 relative mr-auto ml-4 md:ml-12">
+                  <Image src="/Assets/Left Mega Mendung.svg" alt="Mega Mendung" fill className="object-contain object-left-bottom" />
+                </div>
               </div>
 
             </div>
