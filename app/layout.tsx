@@ -16,7 +16,7 @@ const BASE_URL = "https://sakajawa.vercel.app";
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
   title: {
-    default: "Saka Jawa | Website Kebudayaan Jawa",
+    default: "Saka Jawa | Web Kebudayaan Jawa",
     template: "%s | Saka Jawa",
   },
   applicationName: "Saka Jawa",
@@ -65,15 +65,24 @@ export const metadata: Metadata = {
     locale: "id_ID",
     url: BASE_URL,
     siteName: "Saka Jawa",
-    title: "Saka Jawa | Web Budaya Jawa & Golek Howo",
+    title: "Saka Jawa | Web Kebudayaan Jawa",
     description:
       "Jelajahi kekayaan budaya Jawa: Batik, Wayang, Gamelan, dan Kuliner Tradisional. Warisan Nusantara untuk generasi muda.",
+    images: [
+      {
+        url: "/saka-jawa.webp",
+        width: 1200,
+        height: 630,
+        alt: "Saka Jawa | Web Kebudayaan Jawa",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Saka Jawa | Web Budaya Jawa & Golek Howo",
+    title: "Saka Jawa | Web Kebudayaan Jawa",
     description:
       "Jelajahi kekayaan budaya Jawa: Batik, Wayang, Gamelan, dan Kuliner Tradisional. Warisan Nusantara untuk generasi muda.",
+    images: ["/saka-jawa.webp"],
   },
   icons: {
     icon: "/Assets/logo-utama.svg",
