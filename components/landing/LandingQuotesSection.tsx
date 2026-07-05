@@ -47,7 +47,7 @@ export default function LandingQuotesSection() {
     offset: ["start end", "end start"],
   });
 
-  // Track scroll progress for the vertical line
+  // Track scroll progress for the vertical line.
   const { scrollYProgress: lineProgress } = useScroll({
     target: timelineRef,
     offset: ["start center", "end center"],
