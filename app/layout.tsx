@@ -68,21 +68,12 @@ export const metadata: Metadata = {
     title: "Saka Jawa | Web Budaya Jawa & Golek Howo",
     description:
       "Jelajahi kekayaan budaya Jawa: Batik, Wayang, Gamelan, dan Kuliner Tradisional. Warisan Nusantara untuk generasi muda.",
-    images: [
-      {
-        url: "/Assets/logo-utama.svg",
-        width: 1200,
-        height: 630,
-        alt: "Saka Jawa — Budaya Jawa",
-      },
-    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Saka Jawa | Web Budaya Jawa & Golek Howo",
     description:
       "Jelajahi kekayaan budaya Jawa: Batik, Wayang, Gamelan, dan Kuliner Tradisional. Warisan Nusantara untuk generasi muda.",
-    images: ["/Assets/logo-utama.svg"],
   },
   icons: {
     icon: "/Assets/logo-utama.svg",
