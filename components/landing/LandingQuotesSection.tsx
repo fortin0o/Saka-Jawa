@@ -8,30 +8,31 @@ import { useRef } from "react";
 const quotes = [
   {
     id: 1,
-    name: "Hilmi Azzam",
-    title: "Bukan Ahli Gizi",
-    quote: "Karena jawa adalah kunci kemenangan kayaknya ya, soalnya aku surakarta. bapak ahmad kebelet pipis, anciss",
+    name: "Hamengkubuwono X",
+    title: "Raja Karaton Yogyakarta",
+    quote: "Kekayaan alam Jawa ini bukan warisan nenek moyang untuk dihabiskan, melainkan titipan anak cucu yang harus dirawat. Filosofi 'Hamemayu Hayuning Bawana' menuntut kita untuk menata, memperindah, dan menjaga keseimbangan alam ini agar tetap harmonis.",
     align: "right",
   },
   {
     id: 2,
-    name: "Gusti Moeng",
-    title: "Ibu Suri Karaton",
-    quote: "Asal Hangabehi rajanya, aku tidak akan gentar untuk menjatuhkan purbaya, dasar wanita kampung dan purbaya kemplo",
+    name: "Raden Ngabehi Ronggowar...",
+    title: "Pujangga Besar Karaton Surakarta",
+    quote: "Amenangi zaman edan, ewuh aya ing pambudi... Nanging saresmene, memayu hayuning bawana dadi laku utama amrih slameting urip.",
     align: "left",
+    
   },
   {
     id: 3,
-    name: "Hilmi Azzam",
-    title: "Bukan Ahli Gizi",
-    quote: "Karena jawa adalah kunci kemenangan kayaknya ya, soalnya aku surakarta. bapak ahmad kebelet pipis, anciss",
+    name: "Sujiwo Tedjo",
+    title: "Budayawan dan Seniman Multidimensi",
+    quote: "Membaca alam itu lebih utama daripada sekadar membaca buku. Gunung, sawah, dan lautan di tanah Jawa ini tidak pernah berbohong tentang hukum sebab-akibat. Sawah yang kau rawat akan menghidupimu, hutan yang kau gunduli akan menenggelamkanmu.",
     align: "right",
   },
   {
     id: 4,
-    name: "Gusti Moeng",
-    title: "Ibu Suri Karaton",
-    quote: "Asal Hangabehi rajanya, aku tidak akan gentar untuk menjatuhkan purbaya, dasar wanita kampung dan purbaya kemplo",
+    name: "Emha Ainun Nadjib",
+    title: "Budayawan dan Sastrawan Legendaris",
+    quote: "Manusia itu ibarat suami, sedangkan alam ini adalah istri. Tanah Jawa dan seluruh nusantara ini sudah memberikan segalanya—pangan, air, kesuburan. Tugas 'suami' bukan mengeksploitasi atau menyakiti istrinya, melainkan merawat, mengasihi, dan bersinergi dengannya agar tercipta keharmonisan hidup.",
     align: "left",
   }
 ];

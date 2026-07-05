@@ -22,7 +22,7 @@ export default function LandingFloatingChatbot() {
       {/* Floating Button */}
       <button
         onClick={() => setIsOpen((prev) => !prev)}
-        aria-label={isOpen ? "Tutup chat Suro" : "Tanya kepada Suro"}
+        aria-label={"Tanya kepada Suro"}
         className={`fixed right-0 bottom-6 sm:bottom-10 z-[99999] flex items-center transition-all duration-500 cursor-pointer ${
           isOpen 
             ? "translate-x-[120%] opacity-0 pointer-events-none" 
