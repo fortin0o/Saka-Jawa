@@ -16,7 +16,7 @@ const BASE_URL = "https://sakajawa.vercel.app";
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
   title: {
-    default: "Saka Jawa",
+    default: "Saka Jawa | Website Kebudayaan Jawa",
     template: "%s | Saka Jawa",
   },
   applicationName: "Saka Jawa",
@@ -24,10 +24,12 @@ export const metadata: Metadata = {
     title: "Saka Jawa",
   },
   description:
-    "Saka Jawa — Jelajahi kekayaan budaya Jawa: Batik, Wayang, Gamelan, dan Kuliner Tradisional. Website pelestarian budaya Jawa untuk generasi muda.",
+    "Saka Jawa — Web budaya Jawa terlengkap. Jelajahi kekayaan warisan Nusantara: Batik, Wayang, Gamelan, dan Kuliner Tradisional. Pelestarian budaya bersama Golek Howo untuk generasi muda.",
   keywords: [
     "Saka Jawa",
     "sakajawa",
+    "web budaya jawa",
+    "Golek Howo",
     "budaya Jawa",
     "batik Jawa",
     "wayang kulit",
@@ -40,7 +42,6 @@ export const metadata: Metadata = {
     "wayang Jawa",
     "musik gamelan",
     "makanan tradisional Jawa",
-    "Golek Howo",
     "pelestarian budaya",
   ],
   authors: [{ name: "Tim Saka Jawa", url: BASE_URL }],
@@ -64,12 +65,12 @@ export const metadata: Metadata = {
     locale: "id_ID",
     url: BASE_URL,
     siteName: "Saka Jawa",
-    title: "Saka Jawa — Budaya Jawa",
+    title: "Saka Jawa | Web Budaya Jawa & Golek Howo",
     description:
-      "Jelajahi kekayaan budaya Jawa: Batik, Wayang, Gamelan, dan Kuliner Tradisional.",
+      "Jelajahi kekayaan budaya Jawa: Batik, Wayang, Gamelan, dan Kuliner Tradisional. Warisan Nusantara untuk generasi muda.",
     images: [
       {
-        url: "/Assets/Logo Utama.svg",
+        url: "/Assets/logo-utama.svg",
         width: 1200,
         height: 630,
         alt: "Saka Jawa — Budaya Jawa",
@@ -78,15 +79,15 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Saka Jawa — Budaya Jawa",
+    title: "Saka Jawa | Web Budaya Jawa & Golek Howo",
     description:
-      "Jelajahi kekayaan budaya Jawa: Batik, Wayang, Gamelan, dan Kuliner Tradisional.",
-    images: ["/Assets/Logo Utama.svg"],
+      "Jelajahi kekayaan budaya Jawa: Batik, Wayang, Gamelan, dan Kuliner Tradisional. Warisan Nusantara untuk generasi muda.",
+    images: ["/Assets/logo-utama.svg"],
   },
   icons: {
-    icon: "/Assets/Logo Utama.svg",
-    shortcut: "/Assets/Logo Utama.svg",
-    apple: "/Assets/Logo Utama.svg",
+    icon: "/Assets/logo-utama.svg",
+    shortcut: "/Assets/logo-utama.svg",
+    apple: "/Assets/logo-utama.svg",
   },
   verification: {
     google: "k7S7SzDmRqJDPfk6b6TjVKvcypjfOnKwLQrTaZR72e0",
@@ -159,6 +160,14 @@ const jsonLd = {
           description:
             "Cita rasa kuliner Jawa — resep tradisional, filosofi makan, dan warisan gastronomi.",
           url: `${BASE_URL}/kuliner`,
+        },
+        {
+          "@type": "ListItem",
+          position: 5,
+          name: "Permainan Tradisional",
+          description:
+            "Kenali dan mainkan permainan tradisional Jawa yang penuh dengan nilai edukasi dan kebersamaan.",
+          url: `${BASE_URL}/permainan`,
         },
       ],
     },
