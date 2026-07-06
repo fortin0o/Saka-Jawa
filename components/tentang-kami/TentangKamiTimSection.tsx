@@ -4,7 +4,7 @@ const teamMembers = [
   {
     name: "Donald Terrifortino",
     role: "Frontend Designer",
-    image: "/Assets/Profil Tim/Donald.jpeg",
+    image: "/Assets/Profil Tim/RPL Donald.jpeg",
     bgColor: "#4E0B11",
   },
   {
