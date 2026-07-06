@@ -147,7 +147,7 @@ export default function LandingHeroSection() {
 
 
 
-      <div className="absolute left-1/2 top-[40%] z-0 w-[min(92vw,820px)] -translate-x-1/2 -translate-y-1/2 text-center">
+      <div className="absolute left-1/2 top-[43%] z-0 w-[min(92vw,820px)] -translate-x-1/2 -translate-y-1/2 text-center">
         <div ref={textRef} className="will-change-transform">
           <h1
             id="landing-hero-title"
@@ -159,6 +159,15 @@ export default function LandingHeroSection() {
             <br />
             Yang Hidup
           </h1>
+          
+          <div className="mt-4 flex flex-row items-center justify-center gap-4 sm:gap-6">
+            <button className="rounded-2xl border-2 border-[#512402] px-6 py-3 text-sm font-bold text-[#512402] shadow-sm transition-colors hover:bg-[#512402] hover:text-[#F9F1E4] md:px-8 md:py-2 md:text-base">
+              Jelajahi Kami
+            </button>
+            <button className="rounded-2xl bg-[#FFC436] border-[#FFC436] px-6 py-3 text-sm font-bold text-[#512402] shadow-sm transition-colors hover:bg-[#e6ae2e] md:px-8 md:py-2 md:text-base">
+              Tentang Kami
+            </button>
+          </div>
         </div>
       </div>
 
