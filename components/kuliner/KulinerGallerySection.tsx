@@ -5,10 +5,10 @@ import Image from "next/image";
 import GalleryModal from "@/components/shared/GalleryModal";
 
 const kulinerGallery = [
-  { id: 1, title: "Chef Arnold Masak Rawon", image: "/Assets/Gambar Kuliner/galeri/Chef Arnold Masak Rawon.avif" },
-  { id: 2, title: "Pembuatan Kupat Tahu", image: "/Assets/Gambar Kuliner/galeri/Pembuatan Kupat Tahu.avif" },
-  { id: 3, title: "Pembuatan Soto Lamongan", image: "/Assets/Gambar Kuliner/galeri/Pembuatan Soto Lamongan.avif" },
-  { id: 4, title: "Sistem Seblak Prasmanan", image: "/Assets/Gambar Kuliner/galeri/Sistem Seblak Prasmanan.avif" },
+  { id: 1, title: "Chef Arnold Masak Rawon", image: "/Assets/Gambar-Kuliner/galeri/Chef-Arnold-Masak-Rawon.avif" },
+  { id: 2, title: "Pembuatan Kupat Tahu", image: "/Assets/Gambar-Kuliner/galeri/Pembuatan-Kupat-Tahu.avif" },
+  { id: 3, title: "Pembuatan Soto Lamongan", image: "/Assets/Gambar-Kuliner/galeri/Pembuatan-Soto-Lamongan.avif" },
+  { id: 4, title: "Sistem Seblak Prasmanan", image: "/Assets/Gambar-Kuliner/galeri/Sistem-Seblak-Prasmanan.avif" },
 ];
 
 export default function KulinerGallerySection() {
@@ -19,7 +19,7 @@ export default function KulinerGallerySection() {
     src: g.image,
     alt: g.title,
   }));
-
+  
   return (
     <section className="bg-[#f9f1e4] py-20 px-6 md:px-12 lg:px-24">
       <div className="mx-auto w-full max-w-[var(--container-lg)]">
