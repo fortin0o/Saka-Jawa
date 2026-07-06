@@ -50,7 +50,7 @@ export default function GamelanInstrumenSection() {
   const [showGongGallery, setShowGongGallery] = useState(false);
 
   const handleNext = () => {
-    if (scrollIndex < gamelanInstruments.length - 4) {
+    if (scrollIndex < gamelanInstruments.length - 1) {
       setScrollIndex(scrollIndex + 1);
     }
   };
@@ -102,9 +102,9 @@ export default function GamelanInstrumenSection() {
             </button>
             <button
               onClick={handleNext}
-              disabled={scrollIndex >= gamelanInstruments.length - 4}
+              disabled={scrollIndex >= gamelanInstruments.length - 3}
               className={`flex h-12 w-12 items-center justify-center rounded-lg border border-[#4e0b11] text-xl font-bold transition-all ${
-                scrollIndex >= gamelanInstruments.length - 4
+                scrollIndex >= gamelanInstruments.length - 3
                   ? "border-stone-300 text-stone-400 bg-transparent cursor-not-allowed"
                   : "bg-[#4e0b11] text-white hover:bg-[#3d080d]"
               }`}
@@ -119,32 +119,41 @@ export default function GamelanInstrumenSection() {
         <div className="mt-12 overflow-hidden pb-8 pt-4 -mx-4 px-4">
           <div
             className="flex gap-6 transition-transform duration-500 ease-in-out"
-            style={{ transform: `translateX(-${scrollIndex * 290}px)` }}
+            style={{ transform: `translateX(-${scrollIndex * 344}px)` }}
           >
             {gamelanInstruments.map((item) => (
-              <div
+              <article
                 key={item.id}
-                className="w-[266px] shrink-0 rounded-[15px] border border-[#4e0b11] bg-white p-4 shadow-sm flex flex-col items-center text-center justify-between min-h-[420px]"
+                className="w-[320px] shrink-0 flex flex-col items-center border border-[#4E0B11] rounded-2xl p-5 md:p-6 text-center bg-transparent"
               >
-                <div className="relative aspect-[3/4] w-full overflow-hidden rounded-[10px] bg-[#d9d9d9] flex items-center justify-center">
-                  <Image src={item.image} alt={item.name} fill className="object-cover" />
+                {/* Image Container */}
+                <div className="w-full aspect-[4/3] bg-[#D9D9D9] rounded-xl overflow-hidden mb-6 relative">
+                  <Image
+                    src={item.image}
+                    alt={item.name}
+                    fill
+                    className="object-cover"
+                    unoptimized={item.image.endsWith('.webp') || item.image.endsWith('.jpg') || item.image.endsWith('.png')}
+                  />
                 </div>
 
-                <h3 className="mt-6 font-['League_Spartan'] text-2xl font-bold text-[#4e0b11]">
+                {/* Text Details */}
+                <h3 className="text-xl font-bold text-[#4E0B11] mb-3">
                   {item.name}
                 </h3>
-
-                <p className="mt-3 font-['League_Spartan'] text-sm leading-relaxed text-stone-600">
+                
+                <p className="text-[13px] md:text-[14px] font-medium text-gray-800 leading-relaxed mb-8 px-2">
                   {item.desc}
                 </p>
 
+                {/* Detail Button */}
                 <button 
                   onClick={() => { if (item.id === 1) setShowGongGallery(true); }}
-                  className="mt-6 w-full rounded-full border border-[#4e0b11] py-2 font-['League_Spartan'] text-base font-semibold text-[#4e0b11] transition-all hover:bg-[#4e0b11] hover:text-white active:scale-95"
+                  className="mt-auto px-8 py-2.5 border border-[#4E0B11] text-[#4E0B11] font-bold rounded-full text-sm hover:bg-[#4E0B11] hover:text-[#F9F1E4] transition-colors"
                 >
                   Lihat Detail
                 </button>
-              </div>
+              </article>
             ))}
           </div>
         </div>
