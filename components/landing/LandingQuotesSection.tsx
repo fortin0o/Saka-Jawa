@@ -82,7 +82,7 @@ export default function LandingQuotesSection() {
       </div>
 
       {/* --- MEGA MENDUNG PARALLAX OVERLAY --- */}
-      <div className="absolute top-0 left-0 w-full h-[40vh] md:h-[50vh] lg:h-[60vh] z-30 pointer-events-none">
+      <div className="absolute top-0 left-0 w-full h-[40vh] md:h-[50vh] lg:h-[62vh] z-30 pointer-events-none">
         {/* --- LEFT CLOUDS --- */}
         <motion.div style={{ x: xLeft1 }} className="absolute top-[0%] left-[-5%] w-[65%] h-[73%] z-10">
           <Image src="/Assets/Left%20Mega%20Mendung.svg" alt="" fill className="object-cover object-right-top" />
