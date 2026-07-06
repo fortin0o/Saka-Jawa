@@ -5,10 +5,10 @@ import Image from "next/image";
 import GalleryModal from "@/components/shared/GalleryModal";
 
 const kulinerGallery = [
-  { id: 1, title: "Chef Arnold Masak Rawon", image: "/Assets/Gambar-Kuliner/galeri/Chef-Arnold-Masak-Rawon.avif" },
-  { id: 2, title: "Pembuatan Kupat Tahu", image: "/Assets/Gambar-Kuliner/galeri/Pembuatan-Kupat-Tahu.avif" },
-  { id: 3, title: "Pembuatan Soto Lamongan", image: "/Assets/Gambar-Kuliner/galeri/Pembuatan-Soto-Lamongan.avif" },
-  { id: 4, title: "Sistem Seblak Prasmanan", image: "/Assets/Gambar-Kuliner/galeri/Sistem-Seblak-Prasmanan.avif" },
+  { id: 1, title: "Chef Arnold Masak Rawon", image: "/Assets/Gambar-Kuliner/galeri/Chef-Arnold-Masak-Rawon.webp" },
+  { id: 2, title: "Pembuatan Kupat Tahu", image: "/Assets/Gambar-Kuliner/galeri/Pembuatan-Kupat-Tahu.webp" },
+  { id: 3, title: "Pembuatan Soto Lamongan", image: "/Assets/Gambar-Kuliner/galeri/Pembuatan-Soto-Lamongan.webp" },
+  { id: 4, title: "Sistem Seblak Prasmanan", image: "/Assets/Gambar-Kuliner/galeri/Sistem-Seblak-Prasmanan.webp" },
 ];
 
 export default function KulinerGallerySection() {

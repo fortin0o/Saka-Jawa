@@ -16,8 +16,8 @@ export const batikHeroContent: HeroContent = {
   ],
   images: [
     { src: "/Assets/Batik Section Sejarawan.svg", alt: "Ilustrasi Seni Lukisan Kain Batik Jawa" },
-    { src: "/Assets/Gambar Batik/Batik Solo/Solo 1.avif", alt: "Batik Solo 1" },
-    { src: "/Assets/Gambar Batik/Batik Jogja/Jogja 1.avif", alt: "Batik Jogja 1" },
-    { src: "/Assets/Gambar Batik/Batik Pekalongan/Pekalongan 1.avif", alt: "Batik Pekalongan 1" },
+    { src: "/Assets/Gambar Batik/Batik Solo/Solo 1.webp", alt: "Batik Solo 1" },
+    { src: "/Assets/Gambar Batik/Batik Jogja/Jogja 1.webp", alt: "Batik Jogja 1" },
+    { src: "/Assets/Gambar Batik/Batik Pekalongan/Pekalongan 1.webp", alt: "Batik Pekalongan 1" },
   ],
 };

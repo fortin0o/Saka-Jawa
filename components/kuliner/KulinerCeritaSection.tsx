@@ -8,20 +8,20 @@ const kulinerStories = [
     id: 1,
     title: "Selat Solo",
     desc: "Perpaduan unik budaya Jawa dan Eropa berupa bistik daging sapi dengan kuah manis gurih, disajikan bersama sayuran segar.",
-    image: "/Assets/Gambar-Kuliner/Jawa Tengah/selat-Solo.avif",
+    image: "/Assets/Gambar-Kuliner/Jawa Tengah/selat-Solo.webp",
     videoUrl: "https://www.youtube.com/embed/XLTpNTTc3ac?si=W82LnD7WIat8Zplc",
   },
   {
     id: 2,
     title: "Empal Gentong",
     desc: "Sajian khas Cirebon berupa daging sapi yang dimasak dalam gentong tanah liat dengan kuah santan kuning yang kaya rempah.",
-    image: "/Assets/Gambar-Kuliner/Jawa Barat/empal-gentong.avif",
+    image: "/Assets/Gambar-Kuliner/Jawa Barat/empal-gentong.webp",
   },
   {
     id: 3,
     title: "Rawon",
     desc: "Sup daging sapi khas Jawa Timur yang ikonik dengan kuah hitam pekat dari kluwek, kaya akan cita rasa dan rempah.",
-    image: "/Assets/Gambar-Kuliner/Jawa Timur/rawon.avif",
+    image: "/Assets/Gambar-Kuliner/Jawa Timur/rawon.webp",
   },
 ];
 

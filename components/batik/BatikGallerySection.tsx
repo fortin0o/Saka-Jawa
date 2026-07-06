@@ -5,9 +5,9 @@ import Image from "next/image";
 import GalleryModal from "@/components/shared/GalleryModal";
 
 const batikGallery = [
-  { id: 1, title: "Batik Solo", image: "/Assets/Gambar Batik/Batik Solo/Solo 2.avif" },
-  { id: 2, title: "Batik Jogja", image: "/Assets/Gambar Batik/Batik Jogja/Jogja 2.avif" },
-  { id: 3, title: "Batik Pekalongan", image: "/Assets/Gambar Batik/Batik Pekalongan/Pekalongan 2.avif" },
+  { id: 1, title: "Batik Solo", image: "/Assets/Gambar Batik/Batik Solo/Solo 2.webp" },
+  { id: 2, title: "Batik Jogja", image: "/Assets/Gambar Batik/Batik Jogja/Jogja 2.webp" },
+  { id: 3, title: "Batik Pekalongan", image: "/Assets/Gambar Batik/Batik Pekalongan/Pekalongan 2.webp" },
 ];
 
 export default function BatikGallerySection() {

@@ -3,22 +3,22 @@ import Image from "next/image";
 export default function LandingHeritageSection() {
   const images = [
     {
-      src: "/Assets/kulinerHeroAsset.avif",
+      src: "/Assets/kulinerHeroAsset.webp",
       alt: "Kuliner Tradisional",
       className: "w-[240px] md:w-[280px] h-[340px] md:h-[420px]",
     },
     {
-      src: "/Assets/gamelanHeroAsset.avif",
+      src: "/Assets/gamelanHeroAsset.webp",
       alt: "Gamelan",
       className: "w-[240px] md:w-[280px] h-[280px] md:h-[360px]",
     },
     {
-      src: "/Assets/wayangHeroAsset.avif",
+      src: "/Assets/wayangHeroAsset.webp",
       alt: "Wayang",
       className: "w-[240px] md:w-[280px] h-[240px] md:h-[280px]",
     },
     {
-      src: "/Assets/batikHeroAsset.avif",
+      src: "/Assets/batikHeroAsset.webp",
       alt: "Batik",
       className: "w-[240px] md:w-[280px] h-[300px] md:h-[400px]",
     },

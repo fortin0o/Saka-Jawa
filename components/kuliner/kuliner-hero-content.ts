@@ -16,19 +16,19 @@ export const kulinerHeroContent: HeroContent = {
   ],
   images: [
     {
-      src: "/Assets/Gambar-Kuliner/Jawa Timur/lontong-balap.avif",
+      src: "/Assets/Gambar-Kuliner/Jawa Timur/lontong-balap.webp",
       alt: "Lontong Balap",
     },
     {
-      src: "/Assets/Gambar-Kuliner/Jawa Tengah/magelangan.avif",
+      src: "/Assets/Gambar-Kuliner/Jawa Tengah/magelangan.webp",
       alt: "Nasi Goreng Magelangan",
     },
     {
-      src: "/Assets/Gambar-Kuliner/Jawa Barat/tahu-kupat.avif",
+      src: "/Assets/Gambar-Kuliner/Jawa Barat/tahu-kupat.webp",
       alt: "Tahu Kupat",
     },
     {
-      src: "/Assets/Gambar-Kuliner/Jawa Barat/seblak-creamy-mie-bakso.avif",
+      src: "/Assets/Gambar-Kuliner/Jawa Barat/seblak-creamy-mie-bakso.webp",
       alt: "Seblak",
     },
   ],

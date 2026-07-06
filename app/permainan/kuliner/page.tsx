@@ -22,25 +22,25 @@ const KULINER_DATA: KulinerItem[] = [
     id: "nasi-liwet", 
     nama: "Nasi Liwet", 
     deskripsi: "Nasi gurih santan khas Solo, disajikan dengan telur dan ayam suwir", 
-    gambarSrc: "/Assets/Gambar Kuliner/Jawa Tengah/nasi liwet.avif" 
+    gambarSrc: "/Assets/Gambar Kuliner/Jawa Tengah/nasi liwet.webp" 
   },
   { 
     id: "rawon", 
     nama: "Rawon", 
     deskripsi: "Sup daging berkuah hitam legam khas Jawa Timur dengan bumbu kluwek", 
-    gambarSrc: "/Assets/Gambar Kuliner/Jawa Timur/rawon.avif" 
+    gambarSrc: "/Assets/Gambar Kuliner/Jawa Timur/rawon.webp" 
   },
   { 
     id: "soto", 
     nama: "Soto Lamongan", 
     deskripsi: "Sup berkuah kuning khas Lamongan dengan taburan koya gurih", 
-    gambarSrc: "/Assets/Gambar Kuliner/Jawa Timur/soto-lamongan.avif" 
+    gambarSrc: "/Assets/Gambar Kuliner/Jawa Timur/soto-lamongan.webp" 
   },
   { 
     id: "empal", 
     nama: "Empal Gentong", 
     deskripsi: "Masakan sejenis gulai berkuah santan khas Cirebon, dimasak di gentong", 
-    gambarSrc: "/Assets/Gambar Kuliner/Jawa Barat/empal-gentong.avif" 
+    gambarSrc: "/Assets/Gambar Kuliner/Jawa Barat/empal-gentong.webp" 
   }
 ];
 
