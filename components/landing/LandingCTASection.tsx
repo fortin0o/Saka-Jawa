@@ -5,8 +5,8 @@ import Link from "next/link";
 
 export default function LandingCTASection() {
   return (
-    <section className="w-full max-w-[900px] mx-auto px-4 sm:px-6 lg:px-8 pt-0 pb-16 -mt-8 lg:-mt-12 relative z-20">
-      <div className="relative w-full bg-gradient-to-r from-[#4E0B11] to-[#2D0F12] rounded-[32px] overflow-hidden flex flex-col md:flex-row min-h-[280px] lg:min-h-[320px] shadow-[0_12px_24px_-8px_rgba(0,0,0,0.3)]">
+    <section className="w-full max-w-[1100px] mx-auto px-4 sm:px-6 lg:px-8 pt-0 pb-16 -mt-8 lg:-mt-12 relative z-20">
+      <div className="relative w-full bg-gradient-to-r from-[#4E0B11] to-[#2D0F12] rounded-[32px] overflow-hidden flex flex-col md:flex-row min-h-[280px] lg:min-h-[320px] shadow-[0_12px_24px_-8px_rgba(0,0,0,0.3)] px-4 md:px-0">
         {/* Decorative Assets */}
         <Image
           src="/Assets/Gunungan CTA Atas.svg"
@@ -24,7 +24,7 @@ export default function LandingCTASection() {
         />
 
         {/* Content */}
-        <div className="relative z-10 w-full md:w-[65%] lg:w-[60%] p-8 md:py-12 md:pl-16 lg:py-[48px] lg:pl-[80px] flex flex-col justify-center items-start gap-4">
+        <div className="relative z-10 w-full md:w-[55%] lg:w-[50%] py-10 pl-10 md:py-12 md:pl-16 lg:py-[52px] lg:pl-[100px] pr-4 flex flex-col justify-center items-start gap-4">
           <h2 className="text-3xl md:text-[36px] lg:text-[42px] font-bold text-white leading-[1.1] font-sans tracking-tight">
             Sudah Siap <br />
             Menjelajahi Budaya <br />
@@ -45,12 +45,12 @@ export default function LandingCTASection() {
         </div>
 
         {/* Right Wayang Image */}
-        <div className="absolute z-10 bottom-0 right-0 w-[80%] md:w-[60%] lg:w-[65%] h-[80%] md:h-[105%] pointer-events-none flex justify-end">
+        <div className="absolute z-10 bottom-0 right-[2%] md:right-[4%] lg:right-[6%] w-[75%] md:w-[52%] lg:w-[52%] h-[85%] md:h-[108%] pointer-events-none">
           <Image
             src="/Assets/Wayang CTA.svg"
             alt="Wayang CTA"
             fill
-            className="object-contain object-right-bottom md:object-right-bottom transform md:translate-y-4 lg:translate-y-6 lg:translate-x-4"
+            className="object-contain object-bottom transform md:translate-y-4 lg:translate-y-6"
           />
         </div>
       </div>
