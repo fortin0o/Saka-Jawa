@@ -12,14 +12,15 @@ const quotes = [
     title: "Raja Karaton Yogyakarta",
     quote: "Kekayaan alam Jawa ini bukan warisan nenek moyang untuk dihabiskan, melainkan titipan anak cucu yang harus dirawat. Filosofi 'Hamemayu Hayuning Bawana' menuntut kita untuk menata, memperindah, dan menjaga keseimbangan alam ini agar tetap harmonis.",
     align: "right",
+    image: "/assets/hb%20x.avif",
   },
   {
     id: 2,
-    name: "Raden Ngabehi Ronggowar...",
+    name: "R. Ngabehi Ronggowarsito",
     title: "Pujangga Besar Karaton Surakarta",
     quote: "Amenangi zaman edan, ewuh aya ing pambudi... Nanging saresmene, memayu hayuning bawana dadi laku utama amrih slameting urip.",
     align: "left",
-    
+    image: "/assets/r%20ngabehi%20ranggawarsita.avif",
   },
   {
     id: 3,
@@ -27,6 +28,7 @@ const quotes = [
     title: "Budayawan dan Seniman Multidimensi",
     quote: "Membaca alam itu lebih utama daripada sekadar membaca buku. Gunung, sawah, dan lautan di tanah Jawa ini tidak pernah berbohong tentang hukum sebab-akibat. Sawah yang kau rawat akan menghidupimu, hutan yang kau gunduli akan menenggelamkanmu.",
     align: "right",
+    image: "/assets/sudjiwo%20tejo.avif",
   },
   {
     id: 4,
@@ -34,6 +36,7 @@ const quotes = [
     title: "Budayawan dan Sastrawan Legendaris",
     quote: "Manusia itu ibarat suami, sedangkan alam ini adalah istri. Tanah Jawa dan seluruh nusantara ini sudah memberikan segalanya—pangan, air, kesuburan. Tugas 'suami' bukan mengeksploitasi atau menyakiti istrinya, melainkan merawat, mengasihi, dan bersinergi dengannya agar tercipta keharmonisan hidup.",
     align: "left",
+    image: "/assets/cak%20nun.avif",
   }
 ];
 
@@ -169,7 +172,11 @@ export default function LandingQuotesSection() {
                         <h4 className="text-xl md:text-2xl font-bold text-[#111] mb-1">{quote.name}</h4>
                         <p className="text-sm md:text-base text-gray-500 font-medium">{quote.title}</p>
                       </div>
-                      <div className="w-12 h-12 rounded-full bg-gray-200 shrink-0"></div>
+                      <div className="relative w-12 h-12 rounded-full overflow-hidden bg-gray-200 shrink-0">
+                        {quote.image && (
+                          <Image src={quote.image} alt={quote.name} fill className="object-cover" />
+                        )}
+                      </div>
                     </div>
                     <p className="text-[15px] md:text-base text-[#333] leading-relaxed">
                       {quote.quote}
