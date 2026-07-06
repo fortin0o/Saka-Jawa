@@ -71,7 +71,7 @@ export default function LandingQuotesSection() {
       className="relative w-full min-h-[150vh] overflow-hidden bg-white -mt-[10px]"
     >
       {/* Background Batik Sejarawan */}
-      <div className="absolute top-[10rem] bottom-0 left-4 right-4 md:left-8 md:right-8 opacity-60 rounded-[2rem] md:rounded-[3rem] overflow-hidden">
+      <div className="absolute top-[13rem] bottom-0 left-4 right-4 md:left-8 md:right-8 opacity-60 rounded-[2rem] md:rounded-[3rem] overflow-hidden">
         <Image
           src="/Assets/Batik%20Section%20Sejarawan.svg"
           alt="Batik Background"
@@ -82,7 +82,7 @@ export default function LandingQuotesSection() {
       </div>
 
       {/* --- MEGA MENDUNG PARALLAX OVERLAY --- */}
-      <div className="absolute top-0 left-0 w-full h-[40vh] md:h-[50vh] lg:h-[62vh] z-30 pointer-events-none">
+      <div className="absolute top-0 left-0 w-full h-[40vh] md:h-[50vh] lg:h-[65vh] z-30 pointer-events-none">
         {/* --- LEFT CLOUDS --- */}
         <motion.div style={{ x: xLeft1 }} className="absolute top-[0%] left-[-5%] w-[65%] h-[73%] z-10">
           <Image src="/Assets/Left%20Mega%20Mendung.svg" alt="" fill className="object-cover object-right-top" />
@@ -117,7 +117,7 @@ export default function LandingQuotesSection() {
       <div className="relative z-20 w-full max-w-5xl mx-auto pt-20 md:pt-28 pb-32 px-4 mt-50">
         
         {/* Title Box */}
-        <div className="flex justify-center mb-24">
+        <div className="flex justify-center mb-24 mt-16">
           <div className="bg-white px-8 md:px-12 py-4 rounded-full border border-gray-300 shadow-md">
             <h2 className="text-2xl md:text-[34px] font-extrabold text-[#111] tracking-tight">
               Kata Budayawan Tentang Jawa
