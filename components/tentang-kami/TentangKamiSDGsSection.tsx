@@ -14,7 +14,7 @@ const sdgs = [
   },
   {
     number: "11",
-    color: "#6B4A2F",
+    color: "#FFC832",
     label: "Kota & Komunitas Berkelanjutan",
     description:
       "Dengan mempromosikan warisan budaya lokal, Saka Jawa berkontribusi pada pembangunan komunitas yang inklusif, berkelanjutan, dan memiliki identitas budaya yang kuat di tengah modernisasi.",

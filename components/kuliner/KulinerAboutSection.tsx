@@ -21,7 +21,7 @@ export default function KulinerAboutSection() {
       {/* Decorative Flowers (Optional, similar to Batik) */}
       <div className="absolute top-0 left-0 w-56 h-56 md:w-80 md:h-80 pointer-events-none -translate-x-1/4 -translate-y-1/4 opacity-90">
         <Image
-          src="/Assets/Bunga Kuning.svg"
+          src="/Assets/BungaKuning.svg"
           alt="Bunga Kuning"
           fill
           className="object-contain"
@@ -29,7 +29,7 @@ export default function KulinerAboutSection() {
       </div>
       <div className="absolute top-0 right-0 w-56 h-56 md:w-96 md:h-96 pointer-events-none translate-x-1/4 -translate-y-1/4 opacity-90">
         <Image
-          src="/Assets/Bunga Kuning2.svg"
+          src="/Assets/BungaKuning2.svg"
           alt="Bunga Kuning 2"
           fill
           className="object-contain"
@@ -51,7 +51,7 @@ export default function KulinerAboutSection() {
               {/* Character Image (Positioned on the Left) */}
               <div className="absolute top-1/2 -translate-y-1/2 left-6 md:left-4 w-[120px] md:w-[180px] flex items-center justify-center pointer-events-none z-20">
                 <Image 
-                  src="/Assets/Sambut Tamu About.svg" 
+                  src="/Assets/SambutTamuAbout.svg" 
                   alt="Karakter Mascot" 
                   width={200} 
                   height={320} 
@@ -62,7 +62,7 @@ export default function KulinerAboutSection() {
               {/* Right Content inside Card */}
               <div className="relative z-10 flex flex-col justify-center text-right">
                 <div className="w-16 h-8 md:w-20 md:h-10 relative ml-auto -mr-2 mb-2">
-                  <Image src="/Assets/Right Mega Mendung.svg" alt="Mega Mendung" fill className="object-contain object-right-top" />
+                  <Image src="/Assets/RightMegaMendung.svg" alt="Mega Mendung" fill className="object-contain object-right-top" />
                 </div>
                 
                 <h3 className="text-2xl md:text-[32px] font-bold text-[#4E0B11] mb-4">
@@ -74,7 +74,7 @@ export default function KulinerAboutSection() {
                 </p>
 
                 <div className="w-16 h-8 md:w-20 md:h-10 relative mr-auto ml-4 md:ml-12">
-                  <Image src="/Assets/Left Mega Mendung.svg" alt="Mega Mendung" fill className="object-contain object-left-bottom" />
+                  <Image src="/Assets/LeftMegaMendung.svg" alt="Mega Mendung" fill className="object-contain object-left-bottom" />
                 </div>
               </div>
 
@@ -96,7 +96,7 @@ export default function KulinerAboutSection() {
                 <div key={index} className="flex flex-col items-center lg:items-end text-center lg:text-right gap-4">
                   <div className="h-10 w-12 relative opacity-90 flex justify-center lg:justify-end">
                     <Image
-                      src="/Assets/Daun Kuning.svg"
+                      src="/Assets/DaunKuning.svg"
                       alt="Ikon daun"
                       fill
                       className="object-contain"

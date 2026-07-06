@@ -128,7 +128,7 @@ export default function ChatBubble({
         <div className="bg-[#4E0B11] px-4 py-3 flex items-center gap-3 shrink-0">
           <div className="relative w-10 h-10 rounded-full overflow-hidden bg-[#FFC832] flex items-center justify-center shrink-0">
             <Image
-              src="/Assets/Chatbot Profil.png"
+              src="/Assets/ChatbotProfil.webp"
               alt="Suro"
               fill
               sizes="55px"
@@ -171,7 +171,7 @@ export default function ChatBubble({
               {msg.sender === "suro" && (
                 <div className="relative w-7 h-7 rounded-full overflow-hidden bg-[#FFC832] shrink-0 mr-2 mt-1">
                   <Image
-                    src="/Assets/Chatbot Profil.png"
+                    src="/Assets/ChatbotProfil.webp"
                     alt=""
                     fill
                     sizes="38px"
@@ -197,7 +197,7 @@ export default function ChatBubble({
             <div className="flex justify-start">
               <div className="relative w-7 h-7 rounded-full overflow-hidden bg-[#FFC832] shrink-0 mr-2 mt-1">
                 <Image
-                  src="/Assets/Chatbot Profil.png"
+                  src="/Assets/ChatbotProfil.webp"
                   alt=""
                   fill
                   sizes="38px"

@@ -43,7 +43,7 @@ export default function LandingFloatingChatbot() {
           {/* Mascot */}
           <div className="absolute right-2 sm:right-5 top-1/3 -translate-y-3/5 h-[80px] w-[40px] sm:h-[110px] sm:w-[60px] z-10">
             <Image
-              src="/Assets/Chatbot Abdi Dalem.svg"
+              src="/Assets/ChatbotAbdiDalem.svg"
               alt="Mascot Abdi Dalem"
               fill
               sizes="80px"

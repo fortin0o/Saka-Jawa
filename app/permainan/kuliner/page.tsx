@@ -28,19 +28,19 @@ const KULINER_DATA: KulinerItem[] = [
     id: "rawon", 
     nama: "Rawon", 
     deskripsi: "Sup daging berkuah hitam legam khas Jawa Timur dengan bumbu kluwek", 
-    gambarSrc: "/Assets/Gambar Kuliner/Jawa Timur/rawon.webp" 
+    gambarSrc: "/Assets/Gambar-Kuliner/JawaTimur/rawon.webp" 
   },
   { 
     id: "soto", 
     nama: "Soto Lamongan", 
     deskripsi: "Sup berkuah kuning khas Lamongan dengan taburan koya gurih", 
-    gambarSrc: "/Assets/Gambar Kuliner/Jawa Timur/soto-lamongan.webp" 
+    gambarSrc: "/Assets/Gambar-Kuliner/JawaTimur/soto-lamongan.webp" 
   },
   { 
     id: "empal", 
     nama: "Empal Gentong", 
     deskripsi: "Masakan sejenis gulai berkuah santan khas Cirebon, dimasak di gentong", 
-    gambarSrc: "/Assets/Gambar Kuliner/Jawa Barat/empal-gentong.webp" 
+    gambarSrc: "/Assets/Gambar-Kuliner/JawaBarat/empal-gentong.webp" 
   }
 ];
 

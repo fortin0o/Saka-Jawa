@@ -40,7 +40,7 @@ const INSTRUMEN: Instrumen[] = [
     warnaGlow: "rgba(78,11,17,0.45)",
     warnaText: "#FFC832",
     suaraLabel: "GONG",
-    gambarSrc: "/Assets/Gambar Gamelan/Gong.jpg",
+    gambarSrc: "/Assets/Gambar-Gamelan/Gong.webp",
     deskripsi: "Menandai awal & akhir gendhing",
   },
   {
@@ -50,7 +50,7 @@ const INSTRUMEN: Instrumen[] = [
     warnaGlow: "rgba(124,58,30,0.45)",
     warnaText: "#FFF8E7",
     suaraLabel: "DUG TAK",
-    gambarSrc: "/Assets/Gambar Gamelan/Kendang.jpg",
+    gambarSrc: "/Assets/Gambar-Gamelan/Kendang.webp",
     deskripsi: "Pemimpin tempo & irama",
   },
   {
@@ -60,7 +60,7 @@ const INSTRUMEN: Instrumen[] = [
     warnaGlow: "rgba(181,130,10,0.45)",
     warnaText: "#1A1A1A",
     suaraLabel: "TING",
-    gambarSrc: "/Assets/Gambar Gamelan/Bonang.jpg",
+    gambarSrc: "/Assets/Gambar-Gamelan/Bonang.webp",
     deskripsi: "Melodi utama gong kecil",
   },
   {
@@ -70,7 +70,7 @@ const INSTRUMEN: Instrumen[] = [
     warnaGlow: "rgba(74,51,43,0.45)",
     warnaText: "#FFC832",
     suaraLabel: "NDANG",
-    gambarSrc: "/Assets/Gambar Gamelan/Saron.jpg",
+    gambarSrc: "/Assets/Gambar-Gamelan/Saron.webp",
     deskripsi: "Fondasi nada pokok bilah logam",
   },
 ];

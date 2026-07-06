@@ -26,7 +26,7 @@ export default function BatikInteractiveMapSection() {
           {/* Base Map */}
           <div className="absolute inset-0 w-full h-full">
             <Image
-              src="/Assets/Tanah Pendhopo.svg"
+              src="/Assets/TanahPendhopo.svg"
               alt="Peta Pendhopo"
               fill
               className="object-contain"
@@ -39,11 +39,11 @@ export default function BatikInteractiveMapSection() {
             className="absolute top-[3%] left-[8%] w-[28%] aspect-[6/3] cursor-pointer hover:-translate-y-2 hover:scale-105 transition-all duration-300 origin-bottom z-10 drop-shadow-2xl group flex flex-col items-center"
           >
             <div className="absolute -top-[20%] left-1/2 -translate-x-1/2 w-[15%] aspect-square animate-bounce z-30 pointer-events-none">
-              <Image src="/Assets/User Location.svg" alt="Lokasi Anda" fill className="object-contain" />
+              <Image src="/Assets/UserLocation.svg" alt="Lokasi Anda" fill className="object-contain" />
             </div>
             <div className="relative w-full h-full drop-shadow-[0_0_20px_rgba(255,200,50,0.8)] scale-110">
               <Image
-                src="/Assets/Pendhopo Batik.svg"
+                src="/Assets/PendhopoBatik.svg"
                 alt="Pendhopo Batik"
                 fill
                 className="object-contain"
@@ -62,7 +62,7 @@ export default function BatikInteractiveMapSection() {
           >
             <div className="relative w-full h-full">
               <Image
-                src="/Assets/Pendhopo Kuliner.svg"
+                src="/Assets/PendhopoKuliner.svg"
                 alt="Pendhopo Kuliner"
                 fill
                 className="object-contain"
@@ -81,7 +81,7 @@ export default function BatikInteractiveMapSection() {
           >
             <div className="relative w-full h-full">
               <Image
-                src="/Assets/Pendhopo Wayang.svg"
+                src="/Assets/PendhopoWayang.svg"
                 alt="Pendhopo Wayang"
                 fill
                 className="object-contain"
@@ -100,7 +100,7 @@ export default function BatikInteractiveMapSection() {
           >
             <div className="relative w-full h-full">
               <Image
-                src="/Assets/Pendhopo Gamelan.svg"
+                src="/Assets/PendhopoGamelan.svg"
                 alt="Pendhopo Gamelan"
                 fill
                 className="object-contain"

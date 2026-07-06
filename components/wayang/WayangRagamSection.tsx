@@ -5,11 +5,11 @@ import Image from "next/image";
 import DetailGaleri from "../shared/DetailGaleri";
 
 const wayangCharacters = [
-  { id: 1, name: "Wayang Kulit", image: "/Assets/Gambar Wayang/wayangKulit.webp", desc: "Wayang paling ikonik dari Jawa Tengah, Yogyakarta, dan Jawa Timur. Terbuat dari kulit kerbau yang ditatah dan diwarnai, dimainkan dengan bayangan di balik kelir diterangi lampu." }    ,
-  { id: 2, name: "Wayang Golek", image: "/Assets/Gambar Wayang/wayangGolek.webp", desc: "Khas tanah Sunda, Jawa Barat. Berbeda dari wayang kulit, ini boneka kayu tiga dimensi yang bisa dilihat langsung wujudnya tanpa bayangan." },
-  { id: 3, name: "Wayang Wong", image: "/Assets/Gambar Wayang/wayangOrang.webp", desc: "Pertunjukan wayang yang diperankan langsung oleh manusia, lengkap dengan kostum, tarian, dan dialog. Berkembang pesat di lingkungan keraton Surakarta dan Yogyakarta." },
-  { id: 4, name: "Wayang Klithik", image: "/Assets/Gambar Wayang/wayangKlithik.webp", desc: "Terbuat dari kayu pipih, lebih tipis dari wayang golek. Biasa membawakan cerita-cerita pasca-Majapahit seperti Damarwulan. Berkembang di pesisir utara Jawa Timur." },
-  { id: 5, name: "Wayang Beber", image: "/Assets/Gambar Wayang/wayangBeber.webp", desc: "Salah satu bentuk wayang tertua di Jawa, berupa gulungan kertas atau kain panjang bergambar adegan cerita, dibeberkan sedikit demi sedikit sambil dalang bertutur." },
+  { id: 1, name: "Wayang Kulit", image: "/Assets/Gambar-Wayang/wayangKulit.webp", desc: "Wayang paling ikonik dari Jawa Tengah, Yogyakarta, dan Jawa Timur. Terbuat dari kulit kerbau yang ditatah dan diwarnai, dimainkan dengan bayangan di balik kelir diterangi lampu." }    ,
+  { id: 2, name: "Wayang Golek", image: "/Assets/Gambar-Wayang/wayangGolek.webp", desc: "Khas tanah Sunda, Jawa Barat. Berbeda dari wayang kulit, ini boneka kayu tiga dimensi yang bisa dilihat langsung wujudnya tanpa bayangan." },
+  { id: 3, name: "Wayang Wong", image: "/Assets/Gambar-Wayang/wayangOrang.webp", desc: "Pertunjukan wayang yang diperankan langsung oleh manusia, lengkap dengan kostum, tarian, dan dialog. Berkembang pesat di lingkungan keraton Surakarta dan Yogyakarta." },
+  { id: 4, name: "Wayang Klithik", image: "/Assets/Gambar-Wayang/wayangKlithik.webp", desc: "Terbuat dari kayu pipih, lebih tipis dari wayang golek. Biasa membawakan cerita-cerita pasca-Majapahit seperti Damarwulan. Berkembang di pesisir utara Jawa Timur." },
+  { id: 5, name: "Wayang Beber", image: "/Assets/Gambar-Wayang/wayangBeber.webp", desc: "Salah satu bentuk wayang tertua di Jawa, berupa gulungan kertas atau kain panjang bergambar adegan cerita, dibeberkan sedikit demi sedikit sambil dalang bertutur." },
 ];
 
 export default function WayangRagamSection() {
@@ -17,12 +17,12 @@ export default function WayangRagamSection() {
   const [selectedWayangId, setSelectedWayangId] = useState<number | null>(null);
 
   const wayangKulitGallery = [
-    { id: "wk-1", src: "/Assets/Gambar Wayang/Yudhistira.webp", title: "Yudhistira", description: "Putra sulung Pandawa yang berwatak sabar, jujur, adil, dan menjunjung tinggi kebenaran tanpa pernah berbohong." },
-    { id: "wk-2", src: "/Assets/Gambar Wayang/Bima.webp", title: "Bima Sena", description: "Tokoh Pandawa kedua yang gagah berani, berbadan besar, memiliki kuku Pancanaka, dan setia pada kebenaran." },
-    { id: "wk-3", src: "/Assets/Gambar Wayang/Arjuna.webp", title: "Arjuna", description: "Putra penengah Pandawa yang tampan, ahli memanah, dan memiliki pusaka Pasopati serta keris Pulanggeni." },
-    { id: "wk-4", src: "/Assets/Gambar Wayang/Nakula.webp", title: "Nakula", description: "Salah satu dari saudara kembar putra Madrim, ahli dalam pengobatan dan ilmu kesaktian." },
-    { id: "wk-5", src: "/Assets/Gambar Wayang/Sadewa.webp", title: "Sadewa", description: "Saudara kembar Nakula, ahli dalam perbintangan dan memiliki ilmu kesaktian yang luar biasa." },
-    { id: "wk-6", src: "/Assets/Gambar Wayang/gatotkaca.webp", title: "Gatotkaca", description: "Ksatria otot kawat balung wesi, putra Bima yang memiliki kesaktian luar biasa hingga mampu terbang tanpa sayap." },
+    { id: "wk-1", src: "/Assets/Gambar-Wayang/Yudhistira.webp", title: "Yudhistira", description: "Putra sulung Pandawa yang berwatak sabar, jujur, adil, dan menjunjung tinggi kebenaran tanpa pernah berbohong." },
+    { id: "wk-2", src: "/Assets/Gambar-Wayang/Bima.webp", title: "Bima Sena", description: "Tokoh Pandawa kedua yang gagah berani, berbadan besar, memiliki kuku Pancanaka, dan setia pada kebenaran." },
+    { id: "wk-3", src: "/Assets/Gambar-Wayang/Arjuna.webp", title: "Arjuna", description: "Putra penengah Pandawa yang tampan, ahli memanah, dan memiliki pusaka Pasopati serta keris Pulanggeni." },
+    { id: "wk-4", src: "/Assets/Gambar-Wayang/Nakula.webp", title: "Nakula", description: "Salah satu dari saudara kembar putra Madrim, ahli dalam pengobatan dan ilmu kesaktian." },
+    { id: "wk-5", src: "/Assets/Gambar-Wayang/Sadewa.webp", title: "Sadewa", description: "Saudara kembar Nakula, ahli dalam perbintangan dan memiliki ilmu kesaktian yang luar biasa." },
+    { id: "wk-6", src: "/Assets/Gambar-Wayang/gatotkaca.webp", title: "Gatotkaca", description: "Ksatria otot kawat balung wesi, putra Bima yang memiliki kesaktian luar biasa hingga mampu terbang tanpa sayap." },
   ];
 
   const handleNext = () => {

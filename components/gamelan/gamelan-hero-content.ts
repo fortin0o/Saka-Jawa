@@ -2,7 +2,7 @@ import { HeroContent } from "../shared/HeroSection";
 
 export const gamelanHeroContent: HeroContent = {
   badge: {
-    iconSrc: "/Assets/Pendhopo Gamelan.svg",
+    iconSrc: "/Assets/PendhopoGamelan.svg",
     iconAlt: "Ikon Pendhapa Gamelan",
     label: "Pendhapa Gamelan",
   },
@@ -15,10 +15,10 @@ export const gamelanHeroContent: HeroContent = {
     { id: "btn-jelajahi-instrumen", label: "Jelajahi Instrumen", variant: "secondary", href: "#instrumen" },
   ],
   images: [
-    { src: "/Assets/Gambar Gamelan/Gamelan 1.jpg", alt: "Gamelan Jawa 1" },
-    { src: "/Assets/Gambar Gamelan/Gamelan 2.jpg", alt: "Gamelan Jawa 2" },
-    { src: "/Assets/Gambar Gamelan/Gamelan 3.jpg", alt: "Gamelan Jawa 3" },
-    { src: "/Assets/Gambar Gamelan/Gamelan 4.jpg", alt: "Gamelan Jawa 4" },
+    { src: "/Assets/Gambar-Gamelan/Gamelan1.webp", alt: "Gamelan Jawa 1" },
+    { src: "/Assets/Gambar-Gamelan/Gamelan2.webp", alt: "Gamelan Jawa 2" },
+    { src: "/Assets/Gambar-Gamelan/Gamelan3.webp", alt: "Gamelan Jawa 3" },
+    { src: "/Assets/Gambar-Gamelan/Gamelan4.webp", alt: "Gamelan Jawa 4" },
   ],
   dots: {
     count: 4,

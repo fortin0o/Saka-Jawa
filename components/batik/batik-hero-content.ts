@@ -2,7 +2,7 @@ import { HeroContent } from "../shared/HeroSection";
 
 export const batikHeroContent: HeroContent = {
   badge: {
-    iconSrc: "/Assets/Pendhopo Batik.svg",
+    iconSrc: "/Assets/PendhopoBatik.svg",
     iconAlt: "Ikon Pendhapa",
     label: "Pendhapa Batik",
   },
@@ -15,9 +15,9 @@ export const batikHeroContent: HeroContent = {
     { id: "btn-jelajahi-motif", label: "Jelajahi Motif", variant: "secondary", href: "#batik-motif" },
   ],
   images: [
-    { src: "/Assets/Batik Section Sejarawan.svg", alt: "Ilustrasi Seni Lukisan Kain Batik Jawa" },
-    { src: "/Assets/Gambar Batik/Batik Solo/Solo 1.webp", alt: "Batik Solo 1" },
-    { src: "/Assets/Gambar Batik/Batik Jogja/Jogja 1.webp", alt: "Batik Jogja 1" },
-    { src: "/Assets/Gambar Batik/Batik Pekalongan/Pekalongan 1.webp", alt: "Batik Pekalongan 1" },
+    { src: "/Assets/BatikSectionSejarawan.svg", alt: "Ilustrasi Seni Lukisan Kain Batik Jawa" },
+    { src: "/Assets/Gambar-Batik/Batik-Solo/Solo1.webp", alt: "Batik Solo 1" },
+    { src: "/Assets/Gambar-Batik/Batik-Jogja/Jogja1.webp", alt: "Batik Jogja 1" },
+    { src: "/Assets/Gambar-Batik/Batik-Pekalongan/Pekalongan1.webp", alt: "Batik Pekalongan 1" },
   ],
 };

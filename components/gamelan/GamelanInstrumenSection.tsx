@@ -8,41 +8,41 @@ const gamelanInstruments = [
   {
     id: 1,
     name: "Gong Ageng",
-    image: "/Assets/Gambar Gamelan/Gong.jpg",
+    image: "/Assets/Gambar-Gamelan/Gong.webp",
     desc: "Instrumen terbesar dalam gamelan yang menandai awal dan akhir sebuah gendhing, melambangkan keagungan dan kesempurnaan.",
   },
   {
     id: 2,
     name: "Kendang",
-    image: "/Assets/Gambar Gamelan/Kendang.jpg",
+    image: "/Assets/Gambar-Gamelan/Kendang.webp",
     desc: "Drum dua sisi yang berfungsi sebagai pemimpin tempo dan irama, menghubungkan seluruh instrumen menjadi satu kesatuan harmonis.",
   },
   {
     id: 3,
     name: "Bonang",
-    image: "/Assets/Gambar Gamelan/Bonang.jpg",
+    image: "/Assets/Gambar-Gamelan/Bonang.webp",
     desc: "Rangkaian gong kecil yang dimainkan dengan pemukul lunak, menghasilkan melodi utama yang mengalun indah dan merdu.",
   },
   {
     id: 4,
     name: "Saron",
-    image: "/Assets/Gambar Gamelan/Saron.jpg",
+    image: "/Assets/Gambar-Gamelan/Saron.webp",
     desc: "Instrumen bilah logam yang dipukul untuk menghasilkan nada pokok, menjadi fondasi melodi dalam keseluruhan ansambel.",
   },
   {
     id: 5,
     name: "Gender",
-    image: "/Assets/Gambar Gamelan/Gender.jpg",
+    image: "/Assets/Gambar-Gamelan/Gender.webp",
     desc: "Bilah logam tipis yang digantung di atas tabung resonator, menghasilkan suara lembut dan mistis yang khas gamelan Jawa.",
   },
 ];
 
 const gongGalleryImages = [
-  { id: 1, src: "/Assets/Gambar Gamelan/Gamelan 1.jpg", title: "Gamelan 1", description: "Potret instrumen Gamelan Jawa.Instrumen terbesar dalam gamelan yang menandai awal dan akhir sebuah gendhing, melambangkan keagungan dan kesempurnaan" },
-  { id: 2, src: "/Assets/Gambar Gamelan/Gamelan 2.jpg", title: "Gamelan 2", description: "Detail perangkat Gamelan." },
-  { id: 3, src: "/Assets/Gambar Gamelan/Gamelan 3.jpg", title: "Gamelan 3", description: "Keindahan seni ukir pada tiang Gamelan." },
-  { id: 4, src: "/Assets/Gambar Gamelan/Gamelan 4.jpg", title: "Gamelan 4", description: "Suasana ansambel Gamelan." },
-  { id: 5, src: "/Assets/Gambar Gamelan/Gamelan 5.jpg", title: "Gamelan 5", description: "Berbagai instrumen yang melengkapi Gamelan." },
+  { id: 1, src: "/Assets/Gambar-Gamelan/Gamelan1.webp", title: "Gamelan 1", description: "Potret instrumen Gamelan Jawa.Instrumen terbesar dalam gamelan yang menandai awal dan akhir sebuah gendhing, melambangkan keagungan dan kesempurnaan" },
+  { id: 2, src: "/Assets/Gambar-Gamelan/Gamelan2.webp", title: "Gamelan 2", description: "Detail perangkat Gamelan." },
+  { id: 3, src: "/Assets/Gambar-Gamelan/Gamelan3.webp", title: "Gamelan 3", description: "Keindahan seni ukir pada tiang Gamelan." },
+  { id: 4, src: "/Assets/Gambar-Gamelan/Gamelan4.webp", title: "Gamelan 4", description: "Suasana ansambel Gamelan." },
+  { id: 5, src: "/Assets/Gambar-Gamelan/Gamelan5.webp", title: "Gamelan 5", description: "Berbagai instrumen yang melengkapi Gamelan." },
 ];
 
 export default function GamelanInstrumenSection() {

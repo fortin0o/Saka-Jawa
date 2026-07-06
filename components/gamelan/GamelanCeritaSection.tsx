@@ -8,20 +8,20 @@ const gamelanStories = [
     id: 1,
     title: "Gamelan Sekaten",
     desc: "Gamelan yang dibunyikan saat perayaan Maulid Nabi di Keraton Yogyakarta dan Surakarta, penuh dengan doa dan harapan luhur.",
-    image: "/Assets/Gambar%20Gamelan/Sekaten.jpg",
+    image: "/Assets/Gambar-Gamelan/Sekaten.webp",
     videoUrl: "https://www.youtube.com/embed/SDXKs-QrF_M",
   },
   {
     id: 2,
     title: "Gamelan Kodhok Ngorek",
     desc: "Gamelan kuno milik Keraton yang hanya dimainkan pada upacara adat tertentu, melambangkan kesakralan budaya Jawa.",
-    image: "/Assets/Gambar%20Gamelan/Kodok%20Ngorek.jpeg",
+    image: "/Assets/Gambar-Gamelan/KodokNgorek.webp",
   },
   {
     id: 3,
     title: "Gamelan Carabalen",
     desc: "Ansambel gamelan yang mengiringi tari klasik Jawa, menciptakan harmoni sempurna antara gerak tubuh dan lantunan musik.",
-    image: "/Assets/Gambar%20Gamelan/Carabalen.jpg",
+    image: "/Assets/Gambar-Gamelan/Carabalen.webp",
   },
 ];
 

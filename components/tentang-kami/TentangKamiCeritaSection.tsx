@@ -54,7 +54,7 @@ export default function TentangKamiCeritaSection() {
 
             <div className="relative w-full max-w-[400px] aspect-[3/4] rounded-2xl overflow-hidden shadow-xl">
               <Image
-                src="/Assets/Mockup.png"
+                src="/Assets/Mockup.webp"
                 alt="Mockup Saka Jawa"
                 fill
                 className="object-cover"

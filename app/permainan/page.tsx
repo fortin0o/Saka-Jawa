@@ -67,7 +67,7 @@ export default function PermainanIntroPage() {
         {/* Decorative gunungan kanan */}
         <div className="absolute -right-12 -top-8 w-56 sm:w-72 md:w-96 h-auto opacity-10 pointer-events-none">
           <Image
-            src="/Assets/Gunungan CTA Atas.svg"
+            src="/Assets/GununganCTAAtas.svg"
             alt=""
             width={400}
             height={500}
@@ -78,7 +78,7 @@ export default function PermainanIntroPage() {
         {/* Decorative gunungan kiri bawah */}
         <div className="absolute -left-10 -bottom-10 w-40 sm:w-56 md:w-72 opacity-10 pointer-events-none">
           <Image
-            src="/Assets/Gunungan CTA Bawah.svg"
+            src="/Assets/GununganCTABawah.svg"
             alt=""
             width={300}
             height={400}

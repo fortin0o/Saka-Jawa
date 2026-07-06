@@ -4,13 +4,13 @@ import Image from "next/image";
 import { useEffect, useRef } from "react";
 
 const heroLayers = {
-  base: "/Assets/Dasaran Hero.svg",
-  mountain: "/Assets/Gunung Hero.svg",
-  trees: "/Assets/Pepohonan Hero.svg",
-  gamelan: "/Assets/Gamelan Hero.svg",
-  kelir: "/Assets/Kelir Wayang Hero.svg",
-  logo: "/Assets/Logo Utama.svg",
-  chatbot: "/Assets/Chatbot Abdi Dalem.svg",
+  base: "/Assets/DasaranHero.svg",
+  mountain: "/Assets/GunungHero.svg",
+  trees: "/Assets/PepohonanHero.svg",
+  gamelan: "/Assets/GamelanHero.svg",
+  kelir: "/Assets/KelirWayangHero.svg",
+  logo: "/Assets/LogoUtama.svg",
+  chatbot: "/Assets/ChatbotAbdiDalem.svg",
 };
 
 

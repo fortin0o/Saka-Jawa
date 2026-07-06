@@ -8,20 +8,20 @@ const batikStories = [
     id: 1,
     title: "Filosofi Sidomukti",
     desc: "Motif keraton Solo yang melambangkan harapan akan kehidupan yang makmur, sejahtera, mulia, dan penuh kebahagiaan.",
-    image: "/Assets/Gambar Batik/Batik Solo/Solo 1.webp",
+    image: "/Assets/Gambar-Batik/Batik-Solo/Solo1.webp",
     videoUrl: "https://www.youtube.com/embed/xRozwDefvHE?si=T4kA1bNGtVCJpai4",
   },
   {
     id: 2,
     title: "Makna Truntum",
     desc: "Motif berbentuk taburan bintang atau bunga cengkeh yang bermakna cinta yang tumbuh kembali dan kesetiaan yang tulus dari keraton.",
-    image: "/Assets/Gambar Batik/Batik Jogja/Jogja 1.webp",
+    image: "/Assets/Gambar-Batik/Batik-Jogja/Jogja1.webp",
   },
   {
     id: 3,
     title: "Dinamika Jlamprang",
     desc: "Motif pesisiran Pekalongan yang kaya warna, mencerminkan keberagaman budaya dan sifat adaptif serta ceria masyarakat pesisir.",
-    image: "/Assets/Gambar Batik/Batik Pekalongan/Pekalongan 1.webp",
+    image: "/Assets/Gambar-Batik/Batik-Pekalongan/Pekalongan1.webp",
   },
 ];
 

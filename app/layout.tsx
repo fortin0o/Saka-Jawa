@@ -85,9 +85,9 @@ export const metadata: Metadata = {
     images: ["/saka-jawa.webp"],
   },
   icons: {
-    icon: "/Assets/logo-utama.svg",
-    shortcut: "/Assets/logo-utama.svg",
-    apple: "/Assets/logo-utama.svg",
+    icon: "/Assets/LogoUtama.svg",
+    shortcut: "/Assets/LogoUtama.svg",
+    apple: "/Assets/LogoUtama.svg",
   },
   verification: {
     google: "k7S7SzDmRqJDPfk6b6TjVKvcypjfOnKwLQrTaZR72e0",

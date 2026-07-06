@@ -31,25 +31,25 @@ const WAYANG_DATA: WayangChar[] = [
     id: "yudhistira",
     nama: "Yudhistira",
     ciriKhas: "Sifat jujur & bijaksana, sulung Pandawa",
-    gambarSrc: "/Assets/Gambar Wayang/Yudhistira.webp",
+    gambarSrc: "/Assets/Gambar-Wayang/Yudhistira.webp",
   },
   {
     id: "bima",
     nama: "Bima Sena",
     ciriKhas: "Kekuatan besar, bersenjata gada Rujakpala",
-    gambarSrc: "/Assets/Gambar Wayang/Bima.webp",
+    gambarSrc: "/Assets/Gambar-Wayang/Bima.webp",
   },
   {
     id: "arjuna",
     nama: "Arjuna",
     ciriKhas: "Ksatria pemanah ulung berparas tampan",
-    gambarSrc: "/Assets/Gambar Wayang/Arjuna.webp",
+    gambarSrc: "/Assets/Gambar-Wayang/Arjuna.webp",
   },
   {
     id: "gatotkaca",
     nama: "Gatotkaca",
     ciriKhas: "Bisa terbang, dijuluki Otot Kawat Tulang Besi",
-    gambarSrc: "/Assets/Gambar Wayang/gatotkaca.webp",
+    gambarSrc: "/Assets/Gambar-Wayang/gatotkaca.webp",
   },
 ];
 

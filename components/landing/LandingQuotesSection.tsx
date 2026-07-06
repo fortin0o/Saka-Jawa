@@ -12,7 +12,7 @@ const quotes = [
     title: "Raja Karaton Yogyakarta",
     quote: "Kekayaan alam Jawa ini bukan warisan nenek moyang untuk dihabiskan, melainkan titipan anak cucu yang harus dirawat. Filosofi 'Hamemayu Hayuning Bawana' menuntut kita untuk menata, memperindah, dan menjaga keseimbangan alam ini agar tetap harmonis.",
     align: "right",
-    image: "/assets/hb%20x.avif",
+    image: "/Assets/Budayawan/hb-x.avif",
   },
   {
     id: 2,
@@ -20,7 +20,7 @@ const quotes = [
     title: "Pujangga Besar Karaton Surakarta",
     quote: "Amenangi zaman edan, ewuh aya ing pambudi... Nanging saresmene, memayu hayuning bawana dadi laku utama amrih slameting urip.",
     align: "left",
-    image: "/assets/r%20ngabehi%20ranggawarsita.avif",
+    image: "/Assets/Budayawan/ngabehi-ranggawarsita.avif",
   },
   {
     id: 3,
@@ -28,7 +28,7 @@ const quotes = [
     title: "Budayawan dan Seniman Multidimensi",
     quote: "Membaca alam itu lebih utama daripada sekadar membaca buku. Gunung, sawah, dan lautan di tanah Jawa ini tidak pernah berbohong tentang hukum sebab-akibat. Sawah yang kau rawat akan menghidupimu, hutan yang kau gunduli akan menenggelamkanmu.",
     align: "right",
-    image: "/assets/sudjiwo%20tejo.avif",
+    image: "/Assets/Budayawan/sudjiwo-tejo.avif",
   },
   {
     id: 4,
@@ -36,7 +36,7 @@ const quotes = [
     title: "Budayawan dan Sastrawan Legendaris",
     quote: "Manusia itu ibarat suami, sedangkan alam ini adalah istri. Tanah Jawa dan seluruh nusantara ini sudah memberikan segalanya—pangan, air, kesuburan. Tugas 'suami' bukan mengeksploitasi atau menyakiti istrinya, melainkan merawat, mengasihi, dan bersinergi dengannya agar tercipta keharmonisan hidup.",
     align: "left",
-    image: "/assets/cak%20nun.avif",
+    image: "/Assets/Budayawan/cak-nun.avif",
   }
 ];
 
@@ -76,7 +76,7 @@ export default function LandingQuotesSection() {
       {/* Background Batik Sejarawan */}
       <div className="absolute top-[13rem] bottom-0 left-4 right-4 md:left-8 md:right-8 opacity-60 rounded-[2rem] md:rounded-[3rem] overflow-hidden">
         <Image
-          src="/Assets/Batik%20Section%20Sejarawan.svg"
+          src="/Assets/BatikSectionSejarawan.svg"
           alt="Batik Background"
           fill
           className="object-cover object-top"
@@ -88,30 +88,30 @@ export default function LandingQuotesSection() {
       <div className="absolute top-0 left-0 w-full h-[40vh] md:h-[50vh] lg:h-[65vh] z-30 pointer-events-none">
         {/* --- LEFT CLOUDS --- */}
         <motion.div style={{ x: xLeft1 }} className="absolute top-[0%] left-[-5%] w-[65%] h-[73%] z-10">
-          <Image src="/Assets/Left%20Mega%20Mendung.svg" alt="" fill className="object-cover object-right-top" />
+          <Image src="/Assets/LeftMegaMendung.svg" alt="" fill className="object-cover object-right-top" />
         </motion.div>
         <motion.div style={{ x: xLeft2 }} className="absolute top-[18%] left-[-5%] w-[65%] h-[73%] z-20">
-          <Image src="/Assets/Left%20Mega%20Mendung.svg" alt="" fill className="object-cover object-right-top" />
+          <Image src="/Assets/LeftMegaMendung.svg" alt="" fill className="object-cover object-right-top" />
         </motion.div>
         <motion.div style={{ x: xLeft3 }} className="absolute top-[38%] left-[-5%] w-[65%] h-[73%] z-10">
-          <Image src="/Assets/Left%20Mega%20Mendung.svg" alt="" fill className="object-cover object-right-top" />
+          <Image src="/Assets/LeftMegaMendung.svg" alt="" fill className="object-cover object-right-top" />
         </motion.div>
         <motion.div style={{ x: xLeft4 }} className="absolute top-[58%] left-[-5%] w-[65%] h-[73%] z-20 drop-shadow-2xl">
-          <Image src="/Assets/Left%20Mega%20Mendung.svg" alt="Left Mega Mendung" fill className="object-cover object-right-top" />
+          <Image src="/Assets/LeftMegaMendung.svg" alt="Left Mega Mendung" fill className="object-cover object-right-top" />
         </motion.div>
 
         {/* --- RIGHT CLOUDS --- */}
         <motion.div style={{ x: xRight1 }} className="absolute top-[0%] right-[-5%] w-[65%] h-[73%] z-10">
-          <Image src="/Assets/Right%20Mega%20Mendung.svg" alt="" fill className="object-cover object-left-top" />
+          <Image src="/Assets/RightMegaMendung.svg" alt="" fill className="object-cover object-left-top" />
         </motion.div>
         <motion.div style={{ x: xRight2 }} className="absolute top-[18%] right-[-5%] w-[65%] h-[73%] z-20">
-          <Image src="/Assets/Right%20Mega%20Mendung.svg" alt="" fill className="object-cover object-left-top" />
+          <Image src="/Assets/RightMegaMendung.svg" alt="" fill className="object-cover object-left-top" />
         </motion.div>
         <motion.div style={{ x: xRight3 }} className="absolute top-[38%] right-[-5%] w-[65%] h-[73%] z-10">
-          <Image src="/Assets/Right%20Mega%20Mendung.svg" alt="" fill className="object-cover object-left-top" />
+          <Image src="/Assets/RightMegaMendung.svg" alt="" fill className="object-cover object-left-top" />
         </motion.div>
         <motion.div style={{ x: xRight4 }} className="absolute top-[58%] right-[-5%] w-[65%] h-[73%] z-20 drop-shadow-2xl">
-          <Image src="/Assets/Right%20Mega%20Mendung.svg" alt="Right Mega Mendung" fill className="object-cover object-left-top" />
+          <Image src="/Assets/RightMegaMendung.svg" alt="Right Mega Mendung" fill className="object-cover object-left-top" />
         </motion.div>
       </div>
 

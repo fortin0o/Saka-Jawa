@@ -8,20 +8,20 @@ const wayangStories = [
     id: 1,
     title: "Yudhistira",
     desc: "Putra sulung Pandawa yang berwatak sabar, jujur, adil, dan menjunjung tinggi kebenaran tanpa pernah berbohong.",
-    image: "/Assets/Gambar Wayang/Yudhistira.webp",
+    image: "/Assets/Gambar-Wayang/Yudhistira.webp",
     videoUrl: "https://www.youtube.com/embed/hcLPxkRNX3o?si=9tOtEPBVtOeiXqMa",
   },
   {
     id: 2,
     title: "Bima Sena",
     desc: "Tokoh Pandawa kedua yang gagah berani, berbadan besar, memiliki kuku Pancanaka, dan setia pada kebenaran.",
-    image: "/Assets/Gambar Wayang/Bima.webp",
+    image: "/Assets/Gambar-Wayang/Bima.webp",
   },
   {
     id: 3,
     title: "Gatotkaca",
     desc: "Ksatria otot kawat balung wesi, putra Bima yang memiliki kesaktian luar biasa hingga mampu terbang tanpa sayap.",
-    image: "/Assets/Gambar Wayang/gatotkaca.webp",
+    image: "/Assets/Gambar-Wayang/gatotkaca.webp",
   },
 ];
 

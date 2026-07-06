@@ -2,7 +2,7 @@ import { HeroContent } from "../shared/HeroSection";
 
 export const wayangHeroContent: HeroContent = {
   badge: {
-    iconSrc: "/Assets/Pendhopo Wayang.svg",
+    iconSrc: "/Assets/PendhopoWayang.svg",
     iconAlt: "Ikon Pendhapa Wayang",
     label: "Pendhapa Wayang",
   },
@@ -15,14 +15,14 @@ export const wayangHeroContent: HeroContent = {
     { id: "btn-jelajahi-tokoh", label: "Jelajahi Tokoh", variant: "secondary", href: "#ragam" },
   ],
   image: {
-    src: "/Assets/Gambar Wayang/heroWayang.webp",
+    src: "/Assets/Gambar-Wayang/heroWayang.webp",
     alt: "Seni Wayang Kulit Jawa",
   },
   images: [
-    { src: "/Assets/Gambar Wayang/heroWayang.webp", alt: "Ilustrasi Seni Wayang Kulit Jawa" },
-    { src: "/Assets/Gambar Wayang/wayang.webp", alt: "Wayang 1" },
-    { src: "/Assets/Gambar Wayang/wayang1.webp", alt: "Wayang 2" },
-    { src: "/Assets/Gambar Wayang/wayang2.webp", alt: "Wayang 3" },
+    { src: "/Assets/Gambar-Wayang/heroWayang.webp", alt: "Ilustrasi Seni Wayang Kulit Jawa" },
+    { src: "/Assets/Gambar-Wayang/wayang.webp", alt: "Wayang 1" },
+    { src: "/Assets/Gambar-Wayang/wayang1.webp", alt: "Wayang 2" },
+    { src: "/Assets/Gambar-Wayang/wayang2.webp", alt: "Wayang 3" },
   ],
   dots: {
     count: 4,

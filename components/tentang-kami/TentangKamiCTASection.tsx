@@ -7,14 +7,14 @@ export default function TentangKamiCTASection() {
       <div className="relative w-full bg-gradient-to-r from-[#4E0B11] to-[#2D0F12] rounded-[32px] overflow-hidden flex flex-col md:flex-row min-h-[280px] lg:min-h-[320px] px-4 md:px-0">
         {/* Decorative Assets */}
         <Image
-          src="/Assets/Gunungan CTA Atas.svg"
+          src="/Assets/GununganCTAAtas.svg"
           alt=""
           width={350}
           height={350}
           className="absolute -top-6 -right-6 w-[140px] md:w-[200px] lg:w-[250px] h-auto z-0 pointer-events-none rotate-180 opacity-90"
         />
         <Image
-          src="/Assets/Gunungan CTA Bawah.svg"
+          src="/Assets/GununganCTABawah.svg"
           alt=""
           width={250}
           height={250}
@@ -61,7 +61,7 @@ export default function TentangKamiCTASection() {
         {/* Right Wayang Image */}
         <div className="absolute z-10 bottom-0 right-[2%] md:right-[4%] lg:right-[6%] w-[75%] md:w-[52%] lg:w-[52%] h-[85%] md:h-[108%] pointer-events-none">
           <Image
-            src="/Assets/Wayang CTA.svg"
+            src="/Assets/WayangCTA.svg"
             alt="Wayang"
             fill
             className="object-contain object-bottom transform md:translate-y-4 lg:translate-y-6"

@@ -2,7 +2,7 @@ import { HeroContent } from "../shared/HeroSection";
 
 export const kulinerHeroContent: HeroContent = {
   badge: {
-    iconSrc: "/Assets/Pendhopo Kuliner.svg",
+    iconSrc: "/Assets/PendhopoKuliner.svg",
     iconAlt: "Ikon Pendhapa Kuliner",
     label: "Pendhapa Kuliner",
   },
@@ -16,19 +16,19 @@ export const kulinerHeroContent: HeroContent = {
   ],
   images: [
     {
-      src: "/Assets/Gambar-Kuliner/Jawa Timur/lontong-balap.webp",
+      src: "/Assets/Gambar-Kuliner/JawaTimur/lontong-balap.webp",
       alt: "Lontong Balap",
     },
     {
-      src: "/Assets/Gambar-Kuliner/Jawa Tengah/magelangan.webp",
+      src: "/Assets/Gambar-Kuliner/JawaTengah/magelangan.webp",
       alt: "Nasi Goreng Magelangan",
     },
     {
-      src: "/Assets/Gambar-Kuliner/Jawa Barat/tahu-kupat.webp",
+      src: "/Assets/Gambar-Kuliner/JawaBarat/tahu-kupat.webp",
       alt: "Tahu Kupat",
     },
     {
-      src: "/Assets/Gambar-Kuliner/Jawa Barat/seblak-creamy-mie-bakso.webp",
+      src: "/Assets/Gambar-Kuliner/JawaBarat/seblak-creamy-mie-bakso.webp",
       alt: "Seblak",
     },
   ],

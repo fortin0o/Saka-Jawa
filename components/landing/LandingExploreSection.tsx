@@ -17,7 +17,7 @@ export default function LandingExploreSection() {
           {/* Base Map */}
           <div className="absolute inset-0 w-full h-full">
             <Image
-              src="/Assets/Tanah Pendhopo.svg"
+              src="/Assets/TanahPendhopo.svg"
               alt="Peta Pendhopo"
               fill
               className="object-contain"
@@ -32,7 +32,7 @@ export default function LandingExploreSection() {
           >
             <div className="relative w-full h-full">
               <Image
-                src="/Assets/Pendhopo Batik.svg"
+                src="/Assets/PendhopoBatik.svg"
                 alt="Pendhopo Batik"
                 fill
                 className="object-contain"
@@ -52,7 +52,7 @@ export default function LandingExploreSection() {
           >
             <div className="relative w-full h-full">
               <Image
-                src="/Assets/Pendhopo Kuliner.svg"
+                src="/Assets/PendhopoKuliner.svg"
                 alt="Pendhopo Kuliner"
                 fill
                 className="object-contain"
@@ -72,7 +72,7 @@ export default function LandingExploreSection() {
           >
             <div className="relative w-full h-full">
               <Image
-                src="/Assets/Pendhopo Wayang.svg"
+                src="/Assets/PendhopoWayang.svg"
                 alt="Pendhopo Wayang"
                 fill
                 className="object-contain"
@@ -92,7 +92,7 @@ export default function LandingExploreSection() {
           >
             <div className="relative w-full h-full">
               <Image
-                src="/Assets/Pendhopo Gamelan.svg"
+                src="/Assets/PendhopoGamelan.svg"
                 alt="Pendhopo Gamelan"
                 fill
                 className="object-contain"

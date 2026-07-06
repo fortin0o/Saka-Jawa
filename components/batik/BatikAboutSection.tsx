@@ -21,7 +21,7 @@ export default function BatikAboutSection() {
       {/* Decorative Flowers */}
       <div className="absolute top-0 left-0 w-56 h-56 md:w-80 md:h-80 pointer-events-none -translate-x-1/4 -translate-y-1/4 opacity-90">
         <Image
-          src="/Assets/Bunga Kuning.svg"
+          src="/Assets/BungaKuning.svg"
           alt="Bunga Kuning"
           fill
           className="object-contain"
@@ -29,7 +29,7 @@ export default function BatikAboutSection() {
       </div>
       <div className="absolute top-0 right-0 w-56 h-56 md:w-96 md:h-96 pointer-events-none translate-x-1/4 -translate-y-1/4 opacity-90">
         <Image
-          src="/Assets/Bunga Kuning2.svg"
+          src="/Assets/BungaKuning2.svg"
           alt="Bunga Kuning 2"
           fill
           className="object-contain"
@@ -54,7 +54,7 @@ export default function BatikAboutSection() {
                 <div key={index} className="flex flex-col items-center sm:items-start text-center sm:text-left gap-4">
                   <div className="h-10 w-12 relative opacity-90 flex justify-center sm:justify-start">
                     <Image
-                      src="/Assets/Daun Kuning.svg"
+                      src="/Assets/DaunKuning.svg"
                       alt="Ikon daun"
                       fill
                       className="object-contain"
@@ -80,7 +80,7 @@ export default function BatikAboutSection() {
               {/* Left Content inside Card */}
               <div className="relative z-10 flex flex-col justify-center">
                 <div className="w-16 h-8 md:w-20 md:h-10 relative -ml-2 mb-2">
-                  <Image src="/Assets/Left Mega Mendung.svg" alt="Mega Mendung" fill className="object-contain object-left-top" />
+                  <Image src="/Assets/LeftMegaMendung.svg" alt="Mega Mendung" fill className="object-contain object-left-top" />
                 </div>
                 
                 <h3 className="text-2xl md:text-[32px] font-bold text-[#4E0B11] mb-4">
@@ -92,14 +92,14 @@ export default function BatikAboutSection() {
                 </p>
 
                 <div className="w-16 h-8 md:w-20 md:h-10 relative ml-auto mr-4 md:mr-12">
-                  <Image src="/Assets/Right Mega Mendung.svg" alt="Mega Mendung" fill className="object-contain object-right-bottom" />
+                  <Image src="/Assets/RightMegaMendung.svg" alt="Mega Mendung" fill className="object-contain object-right-bottom" />
                 </div>
               </div>
 
               {/* Character Image */}
               <div className="absolute top-1/2 -translate-y-1/2 right-6 md:right-4 w-[120px] md:w-[180px] flex items-center justify-center pointer-events-none z-20">
                 <Image 
-                  src="/Assets/Sambut Tamu About.svg" 
+                  src="/Assets/SambutTamuAbout.svg" 
                   alt="Karakter Mascot" 
                   width={200} 
                   height={320} 

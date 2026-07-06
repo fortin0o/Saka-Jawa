@@ -14,7 +14,7 @@ export default function BatikQuotesSection() {
         {/* Quote image overflowing to the next section */}
         <div className="flex justify-end absolute right-0 top-0 bottom-[-50px] lg:bottom-[-150px] w-full md:w-1/2 pointer-events-none z-30">
           <Image
-            src="/Assets/Batik Quotes.png"
+            src="/Assets/BatikQuotes.webp"
             alt="Ilustrasi Batik Quotes"
             fill
             className="object-contain object-right-bottom"

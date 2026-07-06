@@ -4,19 +4,19 @@ const teamMembers = [
   {
     name: "Donald Terrifortino",
     role: "Frontend Designer",
-    image: "/Assets/Profil Tim/RPL Donald.jpeg",
+    image: "/Assets/ProfilTim/RPLDonald.webp",
     bgColor: "#4E0B11",
   },
   {
     name: "Byatara Ade Wisnubrata",
     role: "Frontend Designer",
-    image: "/Assets/Profil Tim/RPL Byan.jpeg",
+    image: "/Assets/ProfilTim/RPLByan.webp",
     bgColor: "#5B0917",
   },
   {
     name: "Mohamad Hilmi Azzam",
     role: "Frontend Designer",
-    image: "/Assets/Profil Tim/Hilmi.jpeg",
+    image: "/Assets/ProfilTim/RPLDonald.webp",
     bgColor: "#6B1520",
   },
 ];

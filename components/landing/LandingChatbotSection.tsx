@@ -79,7 +79,7 @@ export default function LandingChatbotSection() {
         <div className="w-full md:w-1/2 flex justify-center md:justify-end">
           <div className="relative w-full max-w-[450px] aspect-square">
             <Image
-              src="/Assets/maskotChatbot.png"
+              src="/Assets/maskotChatbot.webp"
               alt="Saka Mascot"
               fill
               className="object-contain"

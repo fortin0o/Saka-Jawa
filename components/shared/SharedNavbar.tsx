@@ -61,7 +61,7 @@ export default function SharedNavbar({ className }: { className?: string }) {
           className="relative block h-[28px] w-[25px] sm:h-[34px] sm:w-[30px] shrink-0"
         >
           <Image
-            src="/Assets/Logo Utama.svg"
+            src="/Assets/LogoUtama.svg"
             alt="Saka Jawa"
             fill
             sizes="64px"
