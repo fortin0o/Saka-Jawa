@@ -52,8 +52,8 @@ export default function Footer() {
       <div className="relative z-10 mx-auto w-full max-w-[var(--container-lg)] px-6 md:px-12 lg:px-24">
         <div className="grid grid-cols-1 gap-12 md:grid-cols-12">
 
-          {/* Brand Column */}
-          <div className="md:col-span-12 lg:col-span-5">
+          {/* Brand & Contact Column */}
+          <div className="md:col-span-12 lg:col-span-5 flex flex-col">
             <div className="flex items-center gap-3 mb-6">
               <Image
                 src="/Assets/Logo Utama.svg"
@@ -64,40 +64,44 @@ export default function Footer() {
               />
               <span className="text-2xl font-extrabold text-[#FFC832]">SakaJawa</span>
             </div>
-            <p className="text-gray-900 font-semibold leading-[1.8] max-w-sm text-sm sm:text-base">
+            <p className="text-gray-900 font-semibold leading-[1.8] max-w-sm text-sm sm:text-base mb-8">
               Kami hadir untuk menghubungkan generasi muda dengan akar budayanya melalui pengalaman digital yang interaktif dan bermakna.
             </p>
+            <div className="flex items-center gap-4">
+              <a href="mailto:halo@sakajawa.com" className="p-2 rounded-full bg-[#4E0B11] text-white hover:bg-[#FFC832] hover:text-[#4E0B11] transition-colors" aria-label="Email">
+                <Mail size={24} />
+              </a>
+              <a href="#" className="p-2 rounded-full bg-[#4E0B11] text-white hover:bg-[#FFC832] hover:text-[#4E0B11] transition-colors" aria-label="Instagram">
+                <InstagramIcon size={24} />
+              </a>
+              <a href="#" className="p-2 rounded-full bg-[#4E0B11] text-white hover:bg-[#FFC832] hover:text-[#4E0B11] transition-colors" aria-label="YouTube">
+                <YoutubeIcon size={24} />
+              </a>
+              <a href="#" className="p-2 rounded-full bg-[#4E0B11] text-white hover:bg-[#FFC832] hover:text-[#4E0B11] transition-colors" aria-label="WhatsApp">
+                <MessageCircle size={24} />
+              </a>
+            </div>
           </div>
 
-          {/* Navigation Column */}
+          {/* Navigation Column 1 - Eksplorasi */}
           <div className="md:col-span-6 lg:col-span-3 lg:col-start-7">
-            <h3 className="text-xl font-bold text-[#FFC832] mb-6">Navigasi</h3>
-            <ul className="space-y-2 text-gray-900 font-semibold text-sm sm:text-base">
+            <h3 className="text-xl font-bold text-[#FFC832] mb-6">Eksplorasi</h3>
+            <ul className="space-y-3 text-gray-900 font-semibold text-sm sm:text-base">
               <li><Link href="/" className="hover:text-[#4E0B11] transition-colors">Beranda</Link></li>
+              <li><Link href="/tentang-kami" className="hover:text-[#4E0B11] transition-colors">Tentang Kami</Link></li>
+              <li><Link href="/permainan" className="hover:text-[#4E0B11] transition-colors">Permainan</Link></li>
+            </ul>
+          </div>
+
+          {/* Navigation Column 2 - Budaya */}
+          <div className="md:col-span-6 lg:col-span-3">
+            <h3 className="text-xl font-bold text-[#FFC832] mb-6">Budaya</h3>
+            <ul className="space-y-3 text-gray-900 font-semibold text-sm sm:text-base">
               <li><Link href="/batik" className="hover:text-[#4E0B11] transition-colors">Batik Jawa</Link></li>
               <li><Link href="/wayang" className="hover:text-[#4E0B11] transition-colors">Wayang Kulit</Link></li>
               <li><Link href="/gamelan" className="hover:text-[#4E0B11] transition-colors">Gamelan</Link></li>
               <li><Link href="/kuliner" className="hover:text-[#4E0B11] transition-colors">Kuliner Tradisional</Link></li>
             </ul>
-          </div>
-
-          {/* Contact Column */}
-          <div className="md:col-span-6 lg:col-span-3">
-            <h3 className="text-xl font-bold text-[#FFC832] mb-6">Kontak Kami</h3>
-            <div className="flex items-center gap-4 text-gray-900">
-              <a href="mailto:halo@sakajawa.com" className="p-2 rounded-full bg-white/50 hover:bg-[#FFC832] hover:text-[#4E0B11] transition-colors" aria-label="Email">
-                <Mail size={24} />
-              </a>
-              <a href="#" className="p-2 rounded-full bg-white/50 hover:bg-[#FFC832] hover:text-[#4E0B11] transition-colors" aria-label="Instagram">
-                <InstagramIcon size={24} />
-              </a>
-              <a href="#" className="p-2 rounded-full bg-white/50 hover:bg-[#FFC832] hover:text-[#4E0B11] transition-colors" aria-label="YouTube">
-                <YoutubeIcon size={24} />
-              </a>
-              <a href="#" className="p-2 rounded-full bg-white/50 hover:bg-[#FFC832] hover:text-[#4E0B11] transition-colors" aria-label="WhatsApp">
-                <MessageCircle size={24} />
-              </a>
-            </div>
           </div>
         </div>
       </div>
