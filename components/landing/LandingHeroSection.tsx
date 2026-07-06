@@ -117,13 +117,13 @@ export default function LandingHeroSection() {
       className="relative isolate h-[100svh] min-h-[560px] overflow-hidden bg-[#F9F1E4] text-white"
       aria-labelledby="landing-hero-title"
     >
-      <div className="absolute inset-0 z-20">
-        <LayerImage src={heroLayers.base} eager />
+      <div className="absolute inset-0 z-20 origin-bottom scale-y-[0.55] lg:scale-y-[0.75]">
+        <LayerImage src={heroLayers.base} eager className="object-bottom" />
       </div>
 
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_42%,rgba(255,244,211,0.75)_0%,rgba(236,197,103,0.34)_28%,rgba(216,169,66,0)_56%)]" />
 
-      <div className="absolute left-1/2 bottom-[15%] z-10 w-[45vw] max-w-[480px] min-w-[240px] -translate-x-1/2 sm:bottom-[15%] sm:w-[35vw] lg:w-[90vw]">
+      <div className="absolute left-1/2 bottom-[15%] z-10 w-[45vw] max-w-[480px] min-w-[240px] -translate-x-1/2 sm:bottom-[8%] sm:w-[35vw] lg:w-[90vw]">
         <div ref={mountainRef} className="will-change-transform origin-bottom">
           <ObjectImage src={heroLayers.mountain} />
         </div>
@@ -147,7 +147,7 @@ export default function LandingHeroSection() {
 
 
 
-      <div className="absolute left-1/2 top-[43%] z-0 w-[min(92vw,820px)] -translate-x-1/2 -translate-y-1/2 text-center">
+      <div className="absolute left-1/2 top-[40%] z-0 w-[min(92vw,820px)] -translate-x-1/2 -translate-y-1/2 text-center">
         <div ref={textRef} className="will-change-transform">
           <h1
             id="landing-hero-title"
