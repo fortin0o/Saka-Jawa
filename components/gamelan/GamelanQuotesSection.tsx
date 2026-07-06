@@ -6,7 +6,7 @@ export default function GamelanQuotesSection() {
       <div className="mx-auto w-full max-w-[1400px] grid grid-cols-1 md:grid-cols-2 gap-8 items-center min-h-[450px] lg:min-h-[600px] relative">
 
         {/* Gamelan.svg graphic sticking to the LEFT */}
-        <div className="flex justify-start absolute left-[-15px] lg:left-[-30px] top-0 h-[250px] lg:h-[500px] w-full md:w-1/2 pointer-events-none z-30">
+        <div className="flex justify-start absolute left-[-15px] lg:left-[-30px] top-24 h-[250px] lg:h-[500px] w-full md:w-1/2 pointer-events-none z-30">
           <Image
             src="/Assets/Gamelan.svg"
             alt="Ilustrasi Gamelan"
