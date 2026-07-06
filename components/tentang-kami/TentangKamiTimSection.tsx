@@ -3,20 +3,20 @@ import Image from "next/image";
 const teamMembers = [
   {
     name: "Donald Terrifortino",
-    role: "FE Designer",
+    role: "Frontend Designer",
     image: "/Assets/Profil Tim/Donald.jpeg",
     bgColor: "#4E0B11",
   },
   {
     name: "Byatara Ade Wisnubrata",
-    role: "FE Designer",
+    role: "Frontend Designer",
     image: "/Assets/Profil Tim/RPL Byan.jpeg",
     bgColor: "#5B0917",
   },
   {
     name: "Mohamad Hilmi Azzam",
-    role: "FE Designer",
-    image: "/Assets/Profil Tim/ Hilmi.jpeg",
+    role: "Frontend Designer",
+    image: "/Assets/Profil Tim/Hilmi.jpeg",
     bgColor: "#6B1520",
   },
 ];
