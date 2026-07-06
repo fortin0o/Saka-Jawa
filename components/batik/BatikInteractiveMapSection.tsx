@@ -12,7 +12,7 @@ export default function BatikInteractiveMapSection() {
           </h3>
           <div>
             <a
-              href="/wayang"
+              href="/kuliner"
               className="inline-flex items-center gap-3 rounded-full bg-[#ffc832] px-6 py-3 font-semibold text-[#4e0b11] shadow-md transition-all hover:scale-105 active:scale-95"
             >
               <span className="font-['League_Spartan'] text-lg">Selanjutnya</span>

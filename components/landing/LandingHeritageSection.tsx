@@ -32,10 +32,11 @@ export default function LandingHeritageSection() {
             Bukan Hanya<br />Peninggalan Masa Lalu
           </h2>
           <div className="max-w-[320px] flex gap-4 text-gray-800">
-            <span className="text-5xl text-gray-400 font-serif leading-none mt-[-8px]">“</span>
+            <span className="text-5xl text-gray-400 font-serif leading-none mt-[-20px]">“</span>
             <p className="text-[15px] font-medium leading-relaxed">
               Budaya Jawa bukan hanya sejarah, tetapi identitas yang masih hidup hingga hari ini.
             </p>
+            <span className="text-5xl text-gray-400 font-serif leading-none mt-[58px] mr-6">”</span>
           </div>
         </div>
       </div>
