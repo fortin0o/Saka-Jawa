@@ -4,7 +4,7 @@ const teamMembers = [
   {
     name: "Donald Terrifortino",
     role: "FE Designer",
-    image: "/Assets/Gambar Wayang/Bima.webp",
+    image: "/Assets/Profil Tim/Donald.jpeg",
     bgColor: "#4E0B11",
   },
   {
@@ -16,7 +16,7 @@ const teamMembers = [
   {
     name: "Mohamad Hilmi Azzam",
     role: "FE Designer",
-    image: "/Assets/Gambar Wayang/gatotkaca.webp",
+    image: "/Assets/Profil Tim/ Hilmi.jpeg",
     bgColor: "#6B1520",
   },
 ];

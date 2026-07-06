@@ -46,42 +46,19 @@ export default function TentangKamiCeritaSection() {
             </div>
           </div>
 
-          {/* Right: Illustration */}
+          {/* Right: Mockup */}
           <div className="relative flex items-center justify-center">
             {/* Accent frame */}
-            <div className="absolute -top-4 -left-4 w-20 h-20 border-t-[8px] border-l-[8px] border-[#FFC832] rounded-tl-2xl" />
-            <div className="absolute -bottom-4 -right-4 w-20 h-20 border-b-[8px] border-r-[8px] border-[#FFC832] rounded-br-2xl" />
+            <div className="absolute -top-10 -left-2 w-20 h-20 border-t-[8px] border-l-[8px] border-[#FFC832] rounded-tl-2xl" />
+            <div className="absolute -bottom-10 -right-2 w-20 h-20 border-b-[8px] border-r-[8px] border-[#FFC832] rounded-br-2xl" />
 
-            <div className="relative w-full max-w-[400px] aspect-[3/4] rounded-2xl overflow-hidden bg-[#F0E8D8]">
-              {/* Mega mendung ornament */}
-              <div className="absolute top-4 left-4 w-20 h-10 z-10">
-                <Image
-                  src="/Assets/Left Mega Mendung.svg"
-                  alt=""
-                  fill
-                  className="object-contain object-left-top"
-                />
-              </div>
-              <div className="absolute bottom-4 right-4 w-20 h-10 z-10">
-                <Image
-                  src="/Assets/Right Mega Mendung.svg"
-                  alt=""
-                  fill
-                  className="object-contain object-right-bottom"
-                />
-              </div>
-
-              {/* Gunungan illustration */}
-              <div className="absolute inset-0 flex items-center justify-center p-12">
-                <div className="relative w-full h-full">
-                  <Image
-                    src="/Assets/Gunungan CTA Atas.svg"
-                    alt="Ilustrasi Gunungan Wayang"
-                    fill
-                    className="object-contain"
-                  />
-                </div>
-              </div>
+            <div className="relative w-full max-w-[400px] aspect-[3/4] rounded-2xl overflow-hidden shadow-xl">
+              <Image
+                src="/Assets/Mockup.png"
+                alt="Mockup Saka Jawa"
+                fill
+                className="object-cover"
+              />
             </div>
           </div>
 
