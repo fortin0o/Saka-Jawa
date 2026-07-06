@@ -1,7 +1,7 @@
 const sdgs = [
   {
     number: "8",
-    color: "#C01D2D",
+    color: "#A13D2B",
     label: "Pekerjaan Layak & Pertumbuhan Ekonomi",
     description:
       "Mendukung penghidupan perajin batik, dalang, dan pengrajin tradisional dengan membuka akses pasar dan apresiasi yang lebih luas terhadap karya mereka.",
@@ -14,7 +14,7 @@ const sdgs = [
   },
   {
     number: "11",
-    color: "#F99D2A",
+    color: "#6B4A2F",
     label: "Kota & Komunitas Berkelanjutan",
     description:
       "Dengan mempromosikan warisan budaya lokal, Saka Jawa berkontribusi pada pembangunan komunitas yang inklusif, berkelanjutan, dan memiliki identitas budaya yang kuat di tengah modernisasi.",
@@ -27,7 +27,7 @@ const sdgs = [
   },
   {
     number: "15",
-    color: "#19486A",
+    color: "#5C7A5E",
     label: "Ekosistem daratan",
     description:
       "Turut menjaga pengetahuan tradisional tentang bahan alami, seperti pewarna batik dari tumbuhan, yang selama ini menopang kelestarian lingkungan sekitar.",

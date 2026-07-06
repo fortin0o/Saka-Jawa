@@ -3,6 +3,9 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useGame } from "../../context/GameContext";
+import SharedNavbar from "@/components/shared/SharedNavbar";
+
+import { Palette, VenetianMask, Music, Utensils } from "lucide-react";
 
 type PendhapaKey = "batik" | "wayang" | "gamelan" | "kuliner";
 
@@ -12,7 +15,7 @@ type PendhapaInfo = {
   href: string;
   color: string;
   desc: string;
-  icon: string;
+  icon: React.ReactNode;
 };
 
 const pendhapas: PendhapaInfo[] = [
@@ -22,7 +25,7 @@ const pendhapas: PendhapaInfo[] = [
     href: "/permainan/batik",
     color: "#FFC832",
     desc: "Motif & filosofi kain Jawa",
-    icon: "1",
+    icon: <Palette className="w-6 h-6" />,
   },
   {
     key: "wayang",
@@ -30,7 +33,7 @@ const pendhapas: PendhapaInfo[] = [
     href: "/permainan/wayang",
     color: "#FFC832",
     desc: "Tokoh & cerita pewayangan",
-    icon: "2",
+    icon: <VenetianMask className="w-6 h-6" />,
   },
   {
     key: "gamelan",
@@ -38,7 +41,7 @@ const pendhapas: PendhapaInfo[] = [
     href: "/permainan/gamelan",
     color: "#FFC832",
     desc: "Instrumen & harmoni musik",
-    icon: "3",
+    icon: <Music className="w-6 h-6" />,
   },
   {
     key: "kuliner",
@@ -46,7 +49,7 @@ const pendhapas: PendhapaInfo[] = [
     href: "/permainan/kuliner",
     color: "#FFC832",
     desc: "Cita rasa masakan tradisional",
-    icon: "4",
+    icon: <Utensils className="w-6 h-6" />,
   },
 ];
 
@@ -58,6 +61,7 @@ export default function PermainanIntroPage() {
 
   return (
     <div className="min-h-screen bg-[#F9F1E4] overflow-hidden">
+      <SharedNavbar />
       {/* ── Hero Section ─────────────────────────────── */}
       <section className="relative w-full bg-gradient-to-br from-[#4E0B11] to-[#2D0F12] overflow-hidden">
         {/* Decorative gunungan kanan */}

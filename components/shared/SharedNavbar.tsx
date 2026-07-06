@@ -1,5 +1,6 @@
 "use client";
 
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -13,12 +14,37 @@ const navRight = [
   { label: "Tentang Kami", href: "/tentang-kami" },
 ];
 
-export default function SharedNavbar() {
+export default function SharedNavbar({ className }: { className?: string }) {
+  const [isVisible, setIsVisible] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+
+      if (currentScrollY > lastScrollY && currentScrollY > 50) {
+        // scroll down and past 50px
+        setIsVisible(false);
+      } else {
+        // scroll up or top
+        setIsVisible(true);
+      }
+      
+      setLastScrollY(currentScrollY);
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [lastScrollY]);
 
   return (
-    <header className="fixed left-1/2 top-6 z-[100] w-fit -translate-x-1/2">
+    <header 
+      className={`fixed left-1/2 top-6 z-[100] w-fit -translate-x-1/2 transition-all duration-300 ${
+        isVisible ? "translate-y-0 opacity-100" : "-translate-y-[150%] opacity-0"
+      }`}
+    >
       <nav
-        className="grid grid-cols-[1fr_auto_1fr] items-center rounded-full bg-[#8b8b8b]/40 backdrop-blur-md border border-white/20 px-4 sm:px-6 lg:px-10 py-2 shadow-lg text-xs sm:text-[15px] font-semibold text-black"
+        className={`grid grid-cols-[1fr_auto_1fr] items-center rounded-full backdrop-blur-md px-4 sm:px-6 lg:px-10 py-2 shadow-lg text-xs sm:text-[15px] font-semibold ${className || "bg-[#8b8b8b]/40 border border-white/20 text-black"}`}
         aria-label="Navigasi utama shared"
       >
         <div className="flex items-center justify-end gap-3 sm:gap-8 lg:gap-16 pr-4 sm:pr-8 lg:pr-16">
