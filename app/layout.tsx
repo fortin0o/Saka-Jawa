@@ -3,6 +3,7 @@ import { League_Spartan } from "next/font/google";
 import "./globals.css";
 import Footer from "../components/shared/Footer";
 import SmoothScrolling from "../components/shared/SmoothScrolling";
+import LoadingScreen from "../components/shared/LoadingScreen";
 
 const leagueSpartan = League_Spartan({
   variable: "--font-league-spartan",
@@ -188,6 +189,7 @@ export default function RootLayout({
         />
       </head>
       <body className="flex flex-col min-h-screen">
+        <LoadingScreen />
         <SmoothScrolling>
           <main className="flex-1">{children}</main>
           <Footer />
