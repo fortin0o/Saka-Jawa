@@ -76,10 +76,7 @@ const INSTRUMEN: Instrumen[] = [
 ];
 
 // --- Audio Helper (Web Audio API) ---
-// TODO: Ganti dengan file audio asli saat tersedia di /Assets/Audio/gamelan/
-//       Contoh: new Audio("/Assets/Audio/gamelan/gong.mp3").play()
-//       Saat ini menggunakan oscillator sebagai placeholder bunyi sederhana.
-function playTone(instrumenId: string, audioCtx: AudioContext | null): void {
+function playOscillatorTone(instrumenId: string, audioCtx: AudioContext | null): void {
   if (!audioCtx) return;
   try {
     const freqMap: Record<string, number> = {
@@ -101,7 +98,27 @@ function playTone(instrumenId: string, audioCtx: AudioContext | null): void {
     osc.start(audioCtx.currentTime);
     osc.stop(audioCtx.currentTime + 0.65);
   } catch {
-    // Abaikan error audio (mis. autoplay policy)
+  }
+}
+
+function playTone(instrumenId: string, audioCtx: AudioContext | null): void {
+  if (instrumenId === "bonang") {
+    playOscillatorTone(instrumenId, audioCtx);
+  } else {
+    try {
+      const fileNameMap: Record<string, string> = {
+        gong: "GongAgeng",
+        kendang: "Kendang",
+        saron: "Saron"
+      };
+      const fileName = fileNameMap[instrumenId] || instrumenId;
+      const audio = new Audio(`/Assets/Audio/${fileName}.MP3`);
+      audio.play().catch(() => {
+        playOscillatorTone(instrumenId, audioCtx);
+      });
+    } catch {
+      playOscillatorTone(instrumenId, audioCtx);
+    }
   }
 }
 
