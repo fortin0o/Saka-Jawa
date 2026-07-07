@@ -44,7 +44,8 @@ const YoutubeIcon = ({ size = 24 }: { size?: number }) => (
 
 export default function Footer() {
   const pathname = usePathname();
-  if (pathname?.startsWith("/permainan")) return null;
+  // Sembunyikan footer di halaman mini-game (misal: /permainan/batik), tapi tetap tampilkan di /permainan
+  if (pathname !== "/permainan" && pathname?.startsWith("/permainan")) return null;
 
   return (
     <footer className="relative w-full overflow-hidden bg-[#F9F1E4] pt-16 lg:pt-24">

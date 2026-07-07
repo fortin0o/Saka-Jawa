@@ -64,21 +64,21 @@ export default function PermainanIntroPage() {
       <SharedNavbar />
       {/* ── Hero Section ─────────────────────────────── */}
       <section className="relative w-full bg-gradient-to-br from-[#4E0B11] to-[#2D0F12] overflow-hidden">
-        {/* Decorative gunungan kanan */}
-        <div className="absolute -right-12 -top-8 w-56 sm:w-72 md:w-96 h-auto opacity-10 pointer-events-none">
+        {/* Decorative mega mendung kanan */}
+        <div className="absolute -right-12 -top-8 w-56 sm:w-72 md:w-96 h-auto opacity-15 pointer-events-none">
           <Image
-            src="/Assets/GununganCTAAtas.svg"
+            src="/Assets/RightMegaMendung.svg"
             alt=""
             width={400}
             height={500}
-            className="object-contain rotate-180 w-full h-auto"
+            className="object-contain w-full h-auto"
             unoptimized
           />
         </div>
-        {/* Decorative gunungan kiri bawah */}
-        <div className="absolute -left-10 -bottom-10 w-40 sm:w-56 md:w-72 opacity-10 pointer-events-none">
+        {/* Decorative mega mendung kiri bawah */}
+        <div className="absolute -left-10 -bottom-2 w-56 sm:w-72 md:w-96 opacity-15 pointer-events-none">
           <Image
-            src="/Assets/GununganCTABawah.svg"
+            src="/Assets/LeftMegaMendung.svg"
             alt=""
             width={300}
             height={400}
@@ -87,11 +87,11 @@ export default function PermainanIntroPage() {
           />
         </div>
 
-        <div className="relative z-10 max-w-3xl mx-auto px-4 sm:px-6 py-16 sm:py-20 md:py-24 text-center">
-          {/* Badge */}
-          <span className="inline-flex items-center gap-2 text-[11px] sm:text-xs font-bold uppercase tracking-widest text-[#4E0B11] bg-[#FFC832] rounded-full px-4 py-1.5 mb-6">
+        <div className="relative z-10 max-w-3xl mx-auto px-4 sm:px-6 pt-28 pb-24 sm:pt-32 sm:pb-32 md:pt-40 md:pb-40 text-center">
+          {/* Subtle text label instead of pill button */}
+          <p className="text-[#FFC832] font-bold uppercase tracking-widest text-sm mb-4">
             Game Edukasi
-          </span>
+          </p>
 
           {/* Heading */}
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white leading-tight tracking-tight">
