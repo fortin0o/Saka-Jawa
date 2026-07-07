@@ -8,6 +8,7 @@ const batikGallery = [
   { id: 1, title: "Batik Solo", image: "/Assets/Gambar-Batik/Batik-Solo/Solo2.webp" },
   { id: 2, title: "Batik Jogja", image: "/Assets/Gambar-Batik/Batik-Jogja/Jogja2.webp" },
   { id: 3, title: "Batik Pekalongan", image: "/Assets/Gambar-Batik/Batik-Pekalongan/Pekalongan2.webp" },
+  { id: 4, title: "Batik Solo Klasik", image: "/Assets/Gambar-Batik/Batik-Solo/Solo3.webp" },
 ];
 
 export default function BatikGallerySection() {
@@ -45,7 +46,7 @@ export default function BatikGallerySection() {
 
         {/* Cards Grid */}
         <div className="grid gap-6 sm:grid-cols-3">
-          {batikGallery.map((gal) => (
+          {batikGallery.slice(0, 3).map((gal) => (
             <div key={gal.id} className="relative aspect-video w-full rounded-2xl overflow-hidden shadow-lg border border-stone-200">
               <Image
                 src={gal.image}

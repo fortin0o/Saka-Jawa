@@ -70,7 +70,17 @@ export default function DetailGaleri({ initialImageId, images, onClose }: Detail
   const otherImages = images.filter((img) => img.id !== currentImage?.id).slice(0, 4);
 
   useEffect(() => {
-    document.body.style.overflow = "hidden";
+    // Kunci scroll halaman sepenuhnya saat DetailGaleri terbuka
+    const html = document.documentElement;
+    const body = document.body;
+    const scrollY = window.scrollY;
+
+    html.style.overflow = "hidden";
+    body.style.overflow = "hidden";
+    // Trick agar halaman tidak loncat saat overflow hidden diterapkan
+    body.style.position = "fixed";
+    body.style.top = `-${scrollY}px`;
+    body.style.width = "100%";
 
     const handleWheel = (e: WheelEvent) => {
       if (containerRef.current) {
@@ -85,7 +95,14 @@ export default function DetailGaleri({ initialImageId, images, onClose }: Detail
     }
 
     return () => {
-      document.body.style.overflow = "unset";
+      // Kembalikan scroll ke posisi semula saat DetailGaleri ditutup
+      html.style.overflow = "";
+      body.style.overflow = "";
+      body.style.position = "";
+      body.style.top = "";
+      body.style.width = "";
+      window.scrollTo(0, scrollY);
+
       if (container) {
         container.removeEventListener("wheel", handleWheel);
       }

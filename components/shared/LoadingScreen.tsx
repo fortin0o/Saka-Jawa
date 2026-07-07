@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
+import { useLenis } from "lenis/react";
 
 export default function LoadingScreen() {
   const [mounted, setMounted] = useState(false);
@@ -10,6 +11,23 @@ export default function LoadingScreen() {
   const [isHidden, setIsHidden] = useState(false);
 
   const pathname = usePathname();
+  const lenis = useLenis();
+
+  // Kunci scroll saat loading screen aktif
+  useEffect(() => {
+    if (!isHidden) {
+      document.body.style.overflow = "hidden";
+      lenis?.stop();
+    } else {
+      document.body.style.overflow = "";
+      lenis?.start();
+    }
+
+    return () => {
+      document.body.style.overflow = "";
+      lenis?.start();
+    };
+  }, [isHidden, lenis]);
 
   useEffect(() => {
     // Reset state setiap kali pathname berubah (saat pindah halaman)

@@ -8,6 +8,7 @@ const gamelanGallery = [
   { id: 1, title: "Perangkat Gamelan Keraton", image: "/Assets/Gambar-Gamelan/Gamelan1.webp" },
   { id: 2, title: "Penabuh Gong Ageng", image: "/Assets/Gambar-Gamelan/Gamelan2.webp" },
   { id: 3, title: "Pementasan Gamelan", image: "/Assets/Gambar-Gamelan/Gamelan3.webp" },
+  { id: 4, title: "Upacara Sekaten", image: "/Assets/Gambar-Gamelan/Sekaten.webp" },
 ];
 
 export default function GamelanGallerySection() {
@@ -45,7 +46,7 @@ export default function GamelanGallerySection() {
 
         {/* Cards Grid */}
         <div className="grid gap-6 sm:grid-cols-3">
-          {gamelanGallery.map((gal) => (
+          {gamelanGallery.slice(0, 3).map((gal) => (
             <div key={gal.id} className="relative aspect-video w-full rounded-2xl overflow-hidden shadow-lg border border-stone-200">
               <Image
                 src={gal.image}

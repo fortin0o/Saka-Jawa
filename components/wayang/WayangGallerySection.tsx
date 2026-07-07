@@ -8,6 +8,7 @@ const wayangGallery = [
   { id: 1, title: "Silsilah Pandawa & Kurawa", image: "/Assets/Gambar-Wayang/silsilahWayang.webp" },
   { id: 2, title: "Pewayangan", image: "/Assets/Gambar-Wayang/wayang1.webp" },
   { id: 3, title: "Wayang-wayang", image: "/Assets/Gambar-Wayang/wayang2.webp" },
+  { id: 4, title: "Wayang Golek", image: "/Assets/Gambar-Wayang/wayangGolek.webp" },
 ];
 
 export default function WayangGallerySection() {
@@ -45,7 +46,7 @@ export default function WayangGallerySection() {
 
         {/* Cards Grid */}
         <div className="grid gap-6 sm:grid-cols-3">
-          {wayangGallery.map((gal) => (
+          {wayangGallery.slice(0, 3).map((gal) => (
             <div
               key={gal.id}
               className="relative aspect-video w-full rounded-2xl overflow-hidden shadow-lg border border-stone-200 bg-gradient-to-br from-[#4e0b11] to-[#2a0608]"
