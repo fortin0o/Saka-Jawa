@@ -1,8 +1,8 @@
 "use client";
 
-// Menggunakan Image dari Next.js secara benar
 import Image from "next/image";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 
 function useTypewriter(text: string, speed = 30, trigger = true) {
   const [displayed, setDisplayed] = useState("");
@@ -37,25 +37,7 @@ function useTypewriter(text: string, speed = 30, trigger = true) {
 }
 
 export default function LandingChatbotSection() {
-  const cardRef = useRef<HTMLDivElement>(null);
   const [visible, setVisible] = useState(false);
-
-  useEffect(() => {
-    const el = cardRef.current;
-    if (!el) return;
-    
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setVisible(true);
-          observer.disconnect();
-        }
-      },
-      { threshold: 0.3 }
-    );
-    observer.observe(el);
-    return () => observer.disconnect();
-  }, []);
 
   const heading = "Sugeng Rawuh!";
   const paragraph =
@@ -73,10 +55,16 @@ export default function LandingChatbotSection() {
   );
 
   return (
-    <section className="relative w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
-      <div className="flex flex-col md:flex-row items-center justify-between gap-12 lg:gap-20">
+    <section className="relative w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24 overflow-hidden">
+      <div className="flex flex-col md:flex-row items-center justify-center gap-9 w-full">
         {/* Left Side: Mascot Image */}
-        <div className="w-full md:w-1/2 flex justify-center md:justify-end">
+        <motion.div 
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "0px 0px -100px 0px" }}
+          transition={{ duration: 0.7, ease: "easeOut" }}
+          className="w-full md:w-[400px] lg:w-[450px] flex justify-center shrink-0"
+        >
           <div className="relative w-full max-w-[450px] aspect-square">
             <Image
               src="/Assets/maskotChatbot.webp"
@@ -86,13 +74,19 @@ export default function LandingChatbotSection() {
               priority
             />
           </div>
-        </div>
+        </motion.div>
 
         {/* Right Side: Text Card */}
-        <div className="w-full md:w-1/2 flex justify-center md:justify-start">
+        <motion.div 
+          initial={{ opacity: 0, x: 50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true, margin: "0px 0px -100px 0px" }}
+          onViewportEnter={() => setVisible(true)}
+          transition={{ duration: 0.7, ease: "easeOut", delay: 0.2 }}
+          className="w-full md:w-[500px] lg:w-[550px] flex justify-center shrink-0"
+        >
           <div
-            ref={cardRef}
-            className="bg-white border-2 border-[#601c23] rounded-3xl p-8 md:p-10 lg:p-12 shadow-sm flex flex-col gap-6 max-w-[550px]"
+            className="bg-white border-2 border-[#601c23] rounded-3xl p-8 md:p-10 lg:p-12 shadow-sm flex flex-col gap-6 w-full"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-black tracking-wide min-h-[1.2em]">
               {displayedHeading}
@@ -117,7 +111,7 @@ export default function LandingChatbotSection() {
               </button>
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
