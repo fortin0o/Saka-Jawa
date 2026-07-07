@@ -117,29 +117,29 @@ export default function LandingHeroSection() {
       className="relative isolate h-[100svh] min-h-[560px] overflow-hidden bg-[#F9F1E4] text-white"
       aria-labelledby="landing-hero-title"
     >
-      <div className="absolute inset-0 z-20 origin-bottom scale-y-[0.55] lg:scale-y-[0.75]">
+      <div className="pointer-events-none absolute inset-0 z-20 origin-bottom scale-y-[0.55] lg:scale-y-[0.75]">
         <LayerImage src={heroLayers.base} eager className="object-bottom" />
       </div>
 
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_42%,rgba(255,244,211,0.75)_0%,rgba(236,197,103,0.34)_28%,rgba(216,169,66,0)_56%)]" />
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_50%_42%,rgba(255,244,211,0.75)_0%,rgba(236,197,103,0.34)_28%,rgba(216,169,66,0)_56%)]" />
 
-      <div className="absolute left-1/2 bottom-[15%] z-10 w-[45vw] max-w-[480px] min-w-[240px] -translate-x-1/2 sm:bottom-[8%] sm:w-[35vw] lg:w-[90vw]">
+      <div className="pointer-events-none absolute left-1/2 bottom-[15%] z-10 w-[45vw] max-w-[480px] min-w-[240px] -translate-x-1/2 sm:bottom-[8%] sm:w-[35vw] lg:w-[90vw]">
         <div ref={mountainRef} className="will-change-transform origin-bottom">
           <ObjectImage src={heroLayers.mountain} />
         </div>
       </div>
 
-      <div className="absolute inset-0 z-50">
+      <div className="pointer-events-none absolute inset-0 z-50">
         <LayerImage src={heroLayers.trees} eager />
       </div>
 
-      <div className="absolute bottom-[-1%] left-[-15%] z-40 w-[76vw] max-w-[520px] sm:left-[1%] sm:w-[44vw] lg:left-[4%] lg:w-[40vw]">
+      <div className="pointer-events-none absolute bottom-[-1%] left-[-15%] z-40 w-[76vw] max-w-[520px] sm:left-[1%] sm:w-[44vw] lg:left-[4%] lg:w-[40vw]">
         <div ref={gamelanRef} className="will-change-transform">
           <ObjectImage src={heroLayers.gamelan} />
         </div>
       </div>
 
-      <div className="absolute right-[-23%] bottom-[2%] z-30 w-[74vw] max-w-[460px] sm:right-[-5%] sm:w-[38vw] lg:right-[4%] lg:w-[32vw]">
+      <div className="pointer-events-none absolute right-[-23%] bottom-[2%] z-30 w-[74vw] max-w-[460px] sm:right-[-5%] sm:w-[38vw] lg:right-[4%] lg:w-[32vw]">
         <div ref={kelirRef} className="will-change-transform">
           <ObjectImage src={heroLayers.kelir} />
         </div>
@@ -147,7 +147,7 @@ export default function LandingHeroSection() {
 
 
 
-      <div className="absolute left-1/2 top-[43%] z-0 w-[min(92vw,820px)] -translate-x-1/2 -translate-y-1/2 text-center">
+      <div className="absolute left-1/2 top-[44%] z-0 w-[min(92vw,820px)] -translate-x-1/2 -translate-y-1/2 text-center">
         <div ref={textRef} className="will-change-transform">
           <h1
             id="landing-hero-title"
@@ -160,11 +160,11 @@ export default function LandingHeroSection() {
             Yang Hidup
           </h1>
           
-          <div className="mt-4 flex flex-row items-center justify-center gap-4 sm:gap-6">
-            <button className="rounded-2xl border-2 border-[#512402] px-6 py-3 text-sm font-bold text-[#512402] shadow-sm transition-colors hover:bg-[#512402] hover:text-[#F9F1E4] md:px-8 md:py-2 md:text-base">
+          <div className="mt-4 flex flex-row items-center justify-center gap-4 sm:gap-4">
+            <button className="rounded-full border-2 border-[#512402] px-6 py-3 text-sm font-bold text-[#512402] shadow-sm transition-colors hover:bg-[#512402] hover:text-[#F9F1E4] md:px-8 md:py-2 md:text-base cursor-pointer active:scale-98 transition-transform duration-300">
               Jelajahi Kami
             </button>
-            <button className="rounded-2xl bg-[#FFC436] border-[#FFC436] px-6 py-3 text-sm font-bold text-[#512402] shadow-sm transition-colors hover:bg-[#e6ae2e] md:px-8 md:py-2 md:text-base">
+            <button className="rounded-full border-2 border-[#ffc62e] bg-[#ffc62e] px-6 py-3 text-sm font-bold text-[#5B0917] shadow-sm transition-colors md:px-8 md:py-2 md:text-base hover:scale-103 cursor-pointer active:scale-98 transition-transform duration-300">
               Tentang Kami
             </button>
           </div>
