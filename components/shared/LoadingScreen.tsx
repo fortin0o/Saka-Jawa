@@ -2,13 +2,21 @@
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 
 export default function LoadingScreen() {
   const [mounted, setMounted] = useState(false);
   const [isHiding, setIsHiding] = useState(false);
   const [isHidden, setIsHidden] = useState(false);
 
+  const pathname = usePathname();
+
   useEffect(() => {
+    // Reset state setiap kali pathname berubah (saat pindah halaman)
+    setMounted(false);
+    setIsHiding(false);
+    setIsHidden(false);
+
     // Memastikan animasi berjalan setelah komponen dirender di client
     const mountTimer = setTimeout(() => {
       setMounted(true);
@@ -29,7 +37,7 @@ export default function LoadingScreen() {
       clearTimeout(hideTimer);
       clearTimeout(unmountTimer);
     };
-  }, []);
+  }, [pathname]); // Dependensi pathname agar efek berjalan ulang saat pindah halaman
 
   if (isHidden) return null;
 
