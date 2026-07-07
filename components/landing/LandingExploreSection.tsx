@@ -5,15 +5,15 @@ export default function LandingExploreSection() {
   return (
     <section id="explore-section" className="bg-white pt-24 pb-4 px-6 md:px-12 w-full flex flex-col items-center overflow-hidden">
       <div className="max-w-[1200px] w-full flex flex-col items-center">
-        <h2 className="text-[32px] md:text-[42px] font-extrabold text-[#111] mb-2 text-center tracking-tight">
-          Jelajahi Kekayaan Budaya Jawa
+        <h2 className="text-[32px] md:text-[42px] font-extrabold text-[#111] mb-3 text-center tracking-tight leading-[1.1] md:leading-tight">
+          Jelajahi Kekayaan<br className="block md:hidden" /> Budaya Jawa
         </h2>
-        <p className="text-[#555] text-center text-[15px] md:text-[17px] mb-12">
-          Tekan salah satu Pendhapa dan jelajahi sepuas mungkin!
+        <p className="text-[#555] text-center text-[15px] md:text-[17px] mb-8 leading-[1.3] md:leading-normal">
+          Tekan salah satu Pendhapa dan jelajahi<br className="block md:hidden" /> sepuas mungkin!
         </p>
 
-                {/* Map Container */}
-        <div className="w-full overflow-x-auto overflow-y-visible pb-12 -mx-6 px-6 md:mx-0 md:px-0 hide-scrollbar">
+        {/* Map Container */}
+        <div className="w-full overflow-x-auto pt-5 pb-3 -mx-6 px-6 md:mx-0 md:px-0 hide-scrollbar">
           <div className="relative w-full min-w-[900px] md:min-w-0 md:max-w-[1000px] aspect-[16/5] mx-auto">
           {/* Base Map */}
           <div className="absolute inset-0 w-full h-full">

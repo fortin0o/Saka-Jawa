@@ -58,15 +58,15 @@ export default function LandingQuotesSection() {
 
   // Karena section ini sekarang tinggi, awan harus menyingkir lebih cepat (di 30% awal scroll)
   // Kita map 0.15 sampai 0.6 ke animasi penuh agar awan segera terbuka setelah sedikit scroll
-  const xLeft1 = useTransform(scrollYProgress, [0, 0.6], ["0%", "-110%"]);
-  const xLeft2 = useTransform(scrollYProgress, [0.10, 0.7], ["0%", "-105%"]);
-  const xLeft3 = useTransform(scrollYProgress, [0.20, 0.8], ["0%", "-100%"]);
-  const xLeft4 = useTransform(scrollYProgress, [0.10, 0.6], ["0%", "-105%"]);
+  const xLeft1 = useTransform(scrollYProgress, [0, 0.4], ["0%", "-110%"]);
+  const xLeft2 = useTransform(scrollYProgress, [0.10, 0.4], ["0%", "-105%"]);
+  const xLeft3 = useTransform(scrollYProgress, [0.16, 0.5], ["0%", "-100%"]);
+  const xLeft4 = useTransform(scrollYProgress, [0.10, 0.4], ["0%", "-105%"]);
 
-  const xRight1 = useTransform(scrollYProgress, [0, 0.6], ["0%", "110%"]);
-  const xRight2 = useTransform(scrollYProgress, [0.10, 0.7], ["0%", "105%"]);
-  const xRight3 = useTransform(scrollYProgress, [0.20, 0.8], ["0%", "100%"]);
-  const xRight4 = useTransform(scrollYProgress, [0.10, 0.6], ["0%", "105%"]);
+  const xRight1 = useTransform(scrollYProgress, [0, 0.4], ["0%", "110%"]);
+  const xRight2 = useTransform(scrollYProgress, [0.10, 0.4], ["0%", "105%"]);
+  const xRight3 = useTransform(scrollYProgress, [0.16, 0.5], ["0%", "100%"]);
+  const xRight4 = useTransform(scrollYProgress, [0.10, 0.4], ["0%", "105%"]);
 
   return (
     <section 
@@ -74,7 +74,7 @@ export default function LandingQuotesSection() {
       className="relative w-full min-h-[150vh] overflow-hidden bg-white -mt-[10px]"
     >
       {/* Background Batik Sejarawan */}
-      <div className="absolute top-[13rem] bottom-0 left-4 right-4 md:left-8 md:right-8 opacity-60 rounded-[2rem] md:rounded-[3rem] overflow-hidden">
+      <div className="absolute top-[3rem] md:top-[12rem] bottom-0 left-4 right-4 md:left-8 md:right-8 opacity-60 rounded-[2rem] md:rounded-[3rem] overflow-hidden">
         <Image
           src="/Assets/BatikSectionSejarawan.svg"
           alt="Batik Background"
@@ -85,7 +85,7 @@ export default function LandingQuotesSection() {
       </div>
 
       {/* --- MEGA MENDUNG PARALLAX OVERLAY --- */}
-      <div className="absolute top-0 left-0 w-full h-[40vh] md:h-[50vh] lg:h-[65vh] z-30 pointer-events-none">
+      <div className="absolute top-0 left-0 w-full h-[20vh] md:h-[50vh] lg:h-[65vh] z-30 pointer-events-none">
         {/* --- LEFT CLOUDS --- */}
         <motion.div style={{ x: xLeft1 }} className="absolute top-[0%] left-[-5%] w-[65%] h-[73%] z-10">
           <Image src="/Assets/LeftMegaMendung.svg" alt="" fill className="object-cover object-right-top" />
@@ -117,13 +117,13 @@ export default function LandingQuotesSection() {
 
 
       {/* --- CONTENT SECTION --- */}
-      <div className="relative z-20 w-full max-w-5xl mx-auto pt-20 md:pt-28 pb-32 px-4 mt-50">
+      <div className="relative z-20 w-full max-w-5xl mx-auto md:pt-26 pb-32 px-4 mt-20 md:mt-25">
         
         {/* Title Box */}
         <div className="flex justify-center mb-24 mt-16">
-          <div className="bg-white px-8 md:px-12 py-4 rounded-full border border-gray-300 shadow-md">
-            <h2 className="text-2xl md:text-[34px] font-extrabold text-[#111] tracking-tight">
-              Kata Budayawan Tentang Jawa
+          <div className="bg-white px-8 md:px-12 py-4 rounded-3xl border border-[#61452e] shadow-md">
+            <h2 className="text-2xl md:text-[34px] font-extrabold text-[#111] tracking-tight text-center">
+              Kata Budayawan <br className="block md:hidden" /> Tentang Jawa
             </h2>
           </div>
         </div>
@@ -165,20 +165,20 @@ export default function LandingQuotesSection() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: false, margin: "0px 0px -40% 0px" }}
                     transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
-                    className={`relative w-full md:w-[45%] bg-white rounded-[1.5rem] border border-gray-300 shadow-sm p-6 md:p-8 ${isRight ? 'md:ml-auto' : 'md:mr-auto'}`}
+                    className={`relative w-full max-md:w-[90%] max-md:mx-auto md:w-[45%] bg-white rounded-[1.5rem] border border-[#61452e] shadow-sm p-5 md:p-8 ${isRight ? 'md:ml-auto' : 'md:mr-auto'}`}
                   >
-                    <div className="flex justify-between items-start mb-4">
+                    <div className="flex justify-between items-start mb-4 max-md:mb-3">
                       <div>
-                        <h4 className="text-xl md:text-2xl font-bold text-[#111] mb-1">{quote.name}</h4>
-                        <p className="text-sm md:text-base text-gray-500 font-medium">{quote.title}</p>
+                        <h4 className="text-[17px] md:text-2xl font-bold text-[#111] mb-0.5 md:mb-1">{quote.name}</h4>
+                        <p className="text-[13px] md:text-base text-gray-500 font-medium">{quote.title}</p>
                       </div>
-                      <div className="relative w-12 h-12 rounded-full overflow-hidden bg-gray-200 shrink-0">
+                      <div className="relative w-10 h-10 md:w-12 md:h-12 rounded-full overflow-hidden bg-gray-200 shrink-0 max-md:mt-1">
                         {quote.image && (
                           <Image src={quote.image} alt={quote.name} fill className="object-cover" />
                         )}
                       </div>
                     </div>
-                    <p className="text-[15px] md:text-base text-[#333] leading-relaxed">
+                    <p className="text-[13px] md:text-base text-[#111] md:text-[#333] font-bold md:font-normal leading-snug md:leading-relaxed">
                       {quote.quote}
                     </p>
                   </motion.div>
