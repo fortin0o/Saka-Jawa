@@ -6,12 +6,18 @@ import { usePathname } from "next/navigation";
 import { useLenis } from "lenis/react";
 
 export default function LoadingScreen() {
+  const [isMounted, setIsMounted] = useState(false);
   const [mounted, setMounted] = useState(false);
   const [isHiding, setIsHiding] = useState(false);
   const [isHidden, setIsHidden] = useState(false);
 
   const pathname = usePathname();
   const lenis = useLenis();
+
+  // Guard: hanya render di client, hindari hydration mismatch
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
 
   // Kunci scroll saat loading screen aktif
   useEffect(() => {
@@ -57,7 +63,7 @@ export default function LoadingScreen() {
     };
   }, [pathname]); // Dependensi pathname agar efek berjalan ulang saat pindah halaman
 
-  if (isHidden) return null;
+  if (!isMounted || isHidden) return null;
 
   return (
     <div 
@@ -85,11 +91,11 @@ export default function LoadingScreen() {
       </div>
 
       {/* Animasi Batik di Bawah */}
-      <div className="absolute bottom-0 w-full flex h-6 md:h-8 lg:h-10 overflow-hidden">
+      <div className="absolute bottom-0 w-full flex h-12 md:h-16 lg:h-20 overflow-hidden">
         {/* Batik Kiri (Muncul dari kiri ke tengah) */}
         <div className="w-1/2 h-full relative overflow-hidden">
           <Image 
-            src="/Assets/BatikSambungan.svg" 
+            src="/Assets/Batik Sambungan Kuning.png" 
             alt="Batik Kiri" 
             fill 
             priority
@@ -100,7 +106,7 @@ export default function LoadingScreen() {
         {/* Batik Kanan (Muncul dari kanan ke tengah) */}
         <div className="w-1/2 h-full relative overflow-hidden">
           <Image 
-            src="/Assets/BatikSambungan.svg" 
+            src="/Assets/Batik Sambungan Kuning.png" 
             alt="Batik Kanan" 
             fill 
             priority
