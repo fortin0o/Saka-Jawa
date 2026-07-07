@@ -61,6 +61,7 @@ export default function LandingNavbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isVisible, setIsVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const lenis = useLenis();
 
   const handleScrollToExplore = useCallback(() => {
@@ -100,24 +101,56 @@ export default function LandingNavbar() {
 
   return (
     <>
+      {/* 1. Static Navbar (Hero Section) */}
       <header className="absolute left-1/2 top-5 z-[100] w-full max-w-[1024px] -translate-x-1/2 px-5 sm:top-8 pointer-events-none">
+        {/* Desktop */}
         <nav
-          className="grid grid-cols-[1fr_auto_1fr] items-center gap-8 sm:gap-16 text-[0.8rem] font-bold text-black sm:text-base pointer-events-auto"
-          aria-label="Navigasi utama statis"
+          className="hidden md:grid grid-cols-[1fr_auto_1fr] items-center gap-8 sm:gap-16 text-[0.8rem] font-bold text-black sm:text-base pointer-events-auto"
+          aria-label="Navigasi utama statis desktop"
         >
           <NavContent onKekayaanBudayaClick={handleScrollToExplore} />
+        </nav>
+
+        {/* Mobile */}
+        <nav
+          className="md:hidden flex items-center justify-between w-full pointer-events-auto"
+          aria-label="Navigasi utama statis mobile"
+        >
+          <Link href="/" aria-label="Saka Jawa" className="flex items-center gap-2">
+            <div className="relative h-[34px] w-[30px]">
+              <Image
+                src="/Assets/LogoUtama.svg"
+                alt="Saka Jawa"
+                fill
+                sizes="64px"
+                loading="eager"
+                fetchPriority="high"
+                unoptimized
+                className="object-contain"
+              />
+            </div>
+            <span className="text-xl font-bold text-black tracking-tight">SakaJawa</span>
+          </Link>
+          <button onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} aria-label="Menu" className="p-2 -mr-2 cursor-pointer transition-transform hover:scale-105 active:scale-95 text-black">
+            <div className="flex flex-col items-end justify-between w-6 h-[16px]">
+              <span className="block h-[2.5px] w-full bg-current rounded-full" />
+              <span className="block h-[2.5px] w-4.5 bg-current rounded-full" />
+              <span className="block h-[2.5px] w-3 bg-current rounded-full" />
+            </div>
+          </button>
         </nav>
       </header>
 
       {/* 2. Glass Navbar (Fixed, shows after scrolling down past hero) */}
       <header
-        className={`fixed left-1/2 top-6 z-[100] w-fit -translate-x-1/2 transition-all duration-500 pointer-events-none ${
+        className={`fixed left-1/2 top-4 sm:top-6 z-[100] w-[calc(100%-2.5rem)] sm:w-fit -translate-x-1/2 transition-all duration-500 pointer-events-none ${
           isScrolled && isVisible ? "translate-y-0 opacity-100" : "-translate-y-[150%] opacity-0"
         }`}
       >
+        {/* Desktop */}
         <nav
-          className="grid grid-cols-[1fr_auto_1fr] items-center rounded-full bg-[#8b8b8b]/40 backdrop-blur-md border border-white/20 px-10 py-2 shadow-lg text-sm sm:text-[15px] font-semibold text-black pointer-events-auto"
-          aria-label="Navigasi utama scroll"
+          className="hidden md:grid grid-cols-[1fr_auto_1fr] items-center rounded-full bg-white/50 backdrop-blur-md border border-white/50 px-10 py-2 shadow-lg text-sm sm:text-[15px] font-semibold text-black pointer-events-auto"
+          aria-label="Navigasi utama scroll desktop"
         >
           <div className="flex items-center justify-end gap-6 sm:gap-16 pr-8 sm:pr-16">
             {navLeft.map((item) => (
@@ -158,7 +191,68 @@ export default function LandingNavbar() {
             ))}
           </div>
         </nav>
+
+        {/* Mobile */}
+        <nav
+          className="md:hidden flex items-center justify-between w-full rounded-full bg-white/50 backdrop-blur-md border border-white/50 px-6 py-2.5 shadow-lg pointer-events-auto"
+          aria-label="Navigasi utama scroll mobile"
+        >
+          <Link href="/" aria-label="Saka Jawa" className="flex items-center gap-2">
+            <div className="relative h-[28px] w-[25px]">
+              <Image
+                src="/Assets/LogoUtama.svg"
+                alt="Saka Jawa"
+                fill
+                sizes="64px"
+                loading="eager"
+                fetchPriority="high"
+                unoptimized
+                className="object-contain"
+              />
+            </div>
+            <span className="text-lg font-bold text-black tracking-tight">SakaJawa</span>
+          </Link>
+          <button onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} aria-label="Menu" className="p-2 -mr-1 cursor-pointer transition-transform hover:scale-105 active:scale-95 text-black">
+            <div className="flex flex-col items-end justify-between w-6 h-[16px]">
+              <span className="block h-[2.5px] w-full bg-current rounded-full" />
+              <span className="block h-[2.5px] w-4.5 bg-current rounded-full" />
+              <span className="block h-[2.5px] w-3 bg-current rounded-full" />
+            </div>
+          </button>
+        </nav>
       </header>
+
+      {/* 3. Mobile Menu Dropdown */}
+      {isMobileMenuOpen && (
+        <div 
+          className="fixed inset-0 z-[190] md:hidden"
+          onClick={() => setIsMobileMenuOpen(false)}
+          aria-hidden="true"
+        />
+      )}
+      
+      <div 
+        className={`fixed left-1/2 top-[80px] sm:top-[90px] z-[200] w-[calc(100%-2.5rem)] max-w-[400px] -translate-x-1/2 flex flex-col items-center gap-6 rounded-[2.5rem] bg-white/50 backdrop-blur-md border border-white/50 px-6 py-8 shadow-lg transition-all duration-300 pointer-events-auto md:hidden text-lg font-semibold ${
+          isMobileMenuOpen ? "translate-y-0 opacity-100 visible" : "-translate-y-4 opacity-0 invisible"
+        }`}
+      >
+        {navLeft.map((item) => (
+          <Link key={item.label} href={item.href} onClick={() => setIsMobileMenuOpen(false)} className="transition-opacity hover:opacity-75">
+            {item.label}
+          </Link>
+        ))}
+        <button 
+          onClick={() => { handleScrollToExplore(); setIsMobileMenuOpen(false); }} 
+          className="transition-opacity hover:opacity-75 font-inherit text-inherit"
+        >
+          Kekayaan Budaya
+        </button>
+        {navRight.map((item) => (
+          <Link key={item.label} href={item.href} onClick={() => setIsMobileMenuOpen(false)} className="transition-opacity hover:opacity-75">
+            {item.label}
+          </Link>
+        ))}
+      </div>
     </>
   );
 }

@@ -73,9 +73,10 @@ export default function LandingHeroSection() {
       const progress = Math.min(scrollY / Math.max(rect.height, 1), 1);
 
       if (mountainRef.current) {
-        mountainRef.current.style.transform = `translate3d(0, ${scrollY * -0.120}px, 0) scale(${
-          1 + progress * 1
-        })`;
+        const isMobile = window.innerWidth < 640;
+        const translateY = scrollY * (isMobile ? -0.03 : -0.120);
+        const scaleVal = 1 + progress * (isMobile ? 1.5 : 1);
+        mountainRef.current.style.transform = `translate3d(0, ${translateY}px, 0) scale(${scaleVal})`;
       }
 
       if (gamelanRef.current) {
@@ -117,29 +118,29 @@ export default function LandingHeroSection() {
       className="relative isolate h-[100svh] min-h-[560px] overflow-hidden bg-[#F9F1E4] text-white"
       aria-labelledby="landing-hero-title"
     >
-      <div className="pointer-events-none absolute inset-0 z-20 origin-bottom scale-y-[0.55] lg:scale-y-[0.75]">
-        <LayerImage src={heroLayers.base} eager className="object-bottom" />
+      <div className="pointer-events-none absolute inset-0 z-20 origin-bottom scale-100 sm:scale-100 sm:scale-y-[0.55] lg:scale-y-[0.75]">
+        <LayerImage src={heroLayers.base} eager className="object-[60%_bottom] sm:object-bottom" />
       </div>
 
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_50%_42%,rgba(255,244,211,0.75)_0%,rgba(236,197,103,0.34)_28%,rgba(216,169,66,0)_56%)]" />
 
-      <div className="pointer-events-none absolute left-1/2 bottom-[15%] z-10 w-[45vw] max-w-[480px] min-w-[240px] -translate-x-1/2 sm:bottom-[8%] sm:w-[35vw] lg:w-[90vw]">
+      <div className="pointer-events-none absolute left-1/2 bottom-[28%] z-10 w-[45vw] max-w-[480px] min-w-[240px] -translate-x-1/2 sm:bottom-[8%] sm:w-[35vw] lg:w-[90vw]">
         <div ref={mountainRef} className="will-change-transform origin-bottom">
           <ObjectImage src={heroLayers.mountain} />
         </div>
       </div>
 
       <div className="pointer-events-none absolute inset-0 z-50">
-        <LayerImage src={heroLayers.trees} eager />
+        <LayerImage src={heroLayers.trees} eager className="object-[55%_bottom] sm:object-bottom" />
       </div>
 
-      <div className="pointer-events-none absolute bottom-[-1%] left-[-15%] z-40 w-[76vw] max-w-[520px] sm:left-[1%] sm:w-[44vw] lg:left-[4%] lg:w-[40vw]">
+      <div className="pointer-events-none absolute bottom-[-1%] left-[-15%] z-40 w-[76vw] max-w-[520px] hidden sm:block sm:left-[1%] sm:w-[44vw] lg:left-[4%] lg:w-[40vw]">
         <div ref={gamelanRef} className="will-change-transform">
           <ObjectImage src={heroLayers.gamelan} />
         </div>
       </div>
 
-      <div className="pointer-events-none absolute right-[-23%] bottom-[2%] z-30 w-[74vw] max-w-[460px] sm:right-[-5%] sm:w-[38vw] lg:right-[4%] lg:w-[32vw]">
+      <div className="pointer-events-none absolute right-[-23%] bottom-[2%] z-30 w-[74vw] max-w-[460px] hidden sm:block sm:right-[-5%] sm:w-[38vw] lg:right-[4%] lg:w-[32vw]">
         <div ref={kelirRef} className="will-change-transform">
           <ObjectImage src={heroLayers.kelir} />
         </div>
@@ -151,13 +152,24 @@ export default function LandingHeroSection() {
         <div ref={textRef} className="will-change-transform">
           <h1
             id="landing-hero-title"
-            className="text-[clamp(2.25rem,4.7vw,4.25rem)] leading-[0.92] font-black text-[#512402] drop-shadow-[0_4px_0_#FFCA98]"
+            className="text-[2.25rem] sm:text-[clamp(2.25rem,4.7vw,4.25rem)] leading-[1] sm:leading-[0.92] font-black text-[#512402] drop-shadow-[0_4px_0_#FFCA98]"
           >
-            Jelajahi Jiwa Jawa,
-            <br />
-            Rasakan Warisan
-            <br />
-            Yang Hidup
+            <span className="block sm:hidden">
+              Jelajahi Jiwa
+              <br />
+              Jawa, Rasakan
+              <br />
+              Warisan Yang
+              <br />
+              Hidup
+            </span>
+            <span className="hidden sm:block">
+              Jelajahi Jiwa Jawa,
+              <br />
+              Rasakan Warisan
+              <br />
+              Yang Hidup
+            </span>
           </h1>
           
           <div className="mt-4 flex flex-row items-center justify-center gap-4 sm:gap-4">
