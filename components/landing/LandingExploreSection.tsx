@@ -13,7 +13,8 @@ export default function LandingExploreSection() {
         </p>
 
                 {/* Map Container */}
-        <div className="relative w-full max-w-[1000px] aspect-[16/5] mx-auto">
+        <div className="w-full overflow-x-auto overflow-y-visible pb-12 -mx-6 px-6 md:mx-0 md:px-0 hide-scrollbar">
+          <div className="relative w-full min-w-[900px] md:min-w-0 md:max-w-[1000px] aspect-[16/5] mx-auto">
           {/* Base Map */}
           <div className="absolute inset-0 w-full h-full">
             <Image
@@ -104,6 +105,7 @@ export default function LandingExploreSection() {
                </span>
             </div>
           </Link>
+        </div>
         </div>
       </div>
     </section>
