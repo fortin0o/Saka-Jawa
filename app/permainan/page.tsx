@@ -87,7 +87,7 @@ export default function PermainanIntroPage() {
           />
         </div>
 
-        <div className="relative z-10 max-w-3xl mx-auto px-4 sm:px-6 pt-28 pb-24 sm:pt-32 sm:pb-32 md:pt-40 md:pb-40 text-center">
+        <div className="relative z-10 max-w-3xl mx-auto px-4 sm:px-6 pt-36 pb-24 sm:pt-44 sm:pb-32 md:pt-48 md:pb-40 text-center">
           {/* Subtle text label instead of pill button */}
           <p className="text-[#FFC832] font-bold uppercase tracking-widest text-sm mb-4 leading-relaxed">
             Game Edukasi

@@ -1,6 +1,16 @@
+"use client";
+
 import Image from "next/image";
+import { useState } from "react";
 
 export default function LandingHeritageSection() {
+  const [flippedCards, setFlippedCards] = useState<string[]>([]);
+
+  const toggleFlip = (alt: string) => {
+    setFlippedCards((prev) => 
+      prev.includes(alt) ? prev.filter((item) => item !== alt) : [...prev, alt]
+    );
+  };
   const images = [
     {
       src: "/Assets/kulinerHeroAsset.webp",
@@ -46,12 +56,16 @@ export default function LandingHeritageSection() {
       </div>
 
       <div className="w-full relative group">
-        <div className="flex w-max animate-[scroll_25s_linear_infinite] group-hover:[animation-play-state:paused] items-start">
+        <div className={`flex w-max animate-[scroll_25s_linear_infinite] items-start ${flippedCards.length > 0 ? '[animation-play-state:paused]' : 'group-hover:[animation-play-state:paused]'}`}>
           {/* First set */}
           <div className="flex gap-4 md:gap-6 pr-4 md:pr-6 items-start ml-6 md:ml-12 lg:ml-24">
             {images.map((img, idx) => (
-              <div key={`set1-${idx}`} className={`${img.className} group/card [perspective:1000px] shrink-0`}>
-                <div className="relative w-full h-full transition-transform duration-700 [transform-style:preserve-3d] group-hover/card:[transform:rotateY(180deg)]">
+              <div 
+                key={`set1-${idx}`} 
+                className={`${img.className} group/card [perspective:1000px] shrink-0 cursor-pointer`}
+                onClick={() => toggleFlip(img.alt)}
+              >
+                <div className={`relative w-full h-full transition-transform duration-700 [transform-style:preserve-3d] ${flippedCards.includes(img.alt) ? '[transform:rotateY(180deg)]' : ''}`}>
                   {/* Front Card */}
                   <div className="absolute inset-0 [backface-visibility:hidden] rounded-2xl md:rounded-3xl overflow-hidden shadow-lg">
                     <Image src={img.src} fill className="object-cover" alt={img.alt} unoptimized />
@@ -68,8 +82,12 @@ export default function LandingHeritageSection() {
           {/* Second set for seamless loop */}
           <div className="flex gap-4 md:gap-6 pr-4 md:pr-6 items-start">
             {images.map((img, idx) => (
-              <div key={`set2-${idx}`} className={`${img.className} group/card [perspective:1000px] shrink-0`}>
-                <div className="relative w-full h-full transition-transform duration-700 [transform-style:preserve-3d] group-hover/card:[transform:rotateY(180deg)]">
+              <div 
+                key={`set2-${idx}`} 
+                className={`${img.className} group/card [perspective:1000px] shrink-0 cursor-pointer`}
+                onClick={() => toggleFlip(img.alt)}
+              >
+                <div className={`relative w-full h-full transition-transform duration-700 [transform-style:preserve-3d] ${flippedCards.includes(img.alt) ? '[transform:rotateY(180deg)]' : ''}`}>
                   {/* Front Card */}
                   <div className="absolute inset-0 [backface-visibility:hidden] rounded-2xl md:rounded-3xl overflow-hidden shadow-lg">
                     <Image src={img.src} fill className="object-cover" alt={img.alt} unoptimized />
