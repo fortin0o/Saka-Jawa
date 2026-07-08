@@ -5,13 +5,13 @@ import Image from "next/image";
 import Link from "next/link";
 
 const navLeft = [
-  { label: "Beranda", href: "/" },
-  { label: "Kekayaan Budaya", href: "/#explore-section" },
+  { label: "Batik", href: "/batik" },
+  { label: "Gamelan", href: "/gamelan" },
 ];
 
 const navRight = [
-  { label: "Permainan", href: "/permainan" },
-  { label: "Tentang Kami", href: "/tentang-kami" },
+  { label: "Kuliner", href: "/kuliner" },
+  { label: "Wayang", href: "/wayang" },
 ];
 
 export default function SharedNavbar({ className }: { className?: string }) {
@@ -44,7 +44,7 @@ export default function SharedNavbar({ className }: { className?: string }) {
       }`}
     >
       <nav
-        className={`grid grid-cols-[1fr_auto_1fr] items-center rounded-full backdrop-blur-md px-4 sm:px-6 lg:px-10 py-2 shadow-lg text-xs sm:text-[15px] font-semibold ${className || "bg-[#8b8b8b]/40 border border-white/20 text-black"}`}
+        className={`grid grid-cols-[1fr_auto_1fr] items-center rounded-full backdrop-blur-md px-4 sm:px-6 lg:px-10 py-2 shadow-lg text-xs sm:text-[15px] font-semibold ${className || "bg-white/50 border border-white/50 text-black"}`}
         aria-label="Navigasi utama shared"
       >
         <div className="flex items-center justify-end gap-3 sm:gap-8 lg:gap-16 pr-4 sm:pr-8 lg:pr-16">
