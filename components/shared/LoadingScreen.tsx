@@ -5,12 +5,12 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useLenis } from "lenis/react";
 
-export default function LoadingScreen() {
+// Komponen inner yang di-remount setiap kali pathname berubah via key
+function LoadingScreenInner() {
   const [mounted, setMounted] = useState(false);
   const [isHiding, setIsHiding] = useState(false);
   const [isHidden, setIsHidden] = useState(false);
 
-  const pathname = usePathname();
   const lenis = useLenis();
 
   // Kunci scroll saat loading screen aktif
@@ -30,11 +30,6 @@ export default function LoadingScreen() {
   }, [isHidden, lenis]);
 
   useEffect(() => {
-    // Reset state setiap kali pathname berubah (saat pindah halaman)
-    setMounted(false);
-    setIsHiding(false);
-    setIsHidden(false);
-
     // Memastikan animasi berjalan setelah komponen dirender di client
     const mountTimer = setTimeout(() => {
       setMounted(true);
@@ -55,7 +50,7 @@ export default function LoadingScreen() {
       clearTimeout(hideTimer);
       clearTimeout(unmountTimer);
     };
-  }, [pathname]); // Dependensi pathname agar efek berjalan ulang saat pindah halaman
+  }, []); // Hanya berjalan sekali saat mount (remount otomatis via key)
 
   if (isHidden) return null;
 
@@ -110,4 +105,12 @@ export default function LoadingScreen() {
       </div>
     </div>
   );
+}
+
+// Wrapper: menggunakan key={pathname} agar LoadingScreenInner di-remount
+// setiap kali pathname berubah, sehingga state ter-reset secara alami
+// tanpa perlu memanggil setState secara sinkron di dalam useEffect.
+export default function LoadingScreen() {
+  const pathname = usePathname();
+  return <LoadingScreenInner key={pathname} />;
 }
