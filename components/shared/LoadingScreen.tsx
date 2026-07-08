@@ -6,18 +6,12 @@ import { usePathname } from "next/navigation";
 import { useLenis } from "lenis/react";
 
 export default function LoadingScreen() {
-  const [isMounted, setIsMounted] = useState(false);
   const [mounted, setMounted] = useState(false);
   const [isHiding, setIsHiding] = useState(false);
   const [isHidden, setIsHidden] = useState(false);
 
   const pathname = usePathname();
   const lenis = useLenis();
-
-  // Guard: hanya render di client, hindari hydration mismatch
-  useEffect(() => {
-    setIsMounted(true);
-  }, []);
 
   // Kunci scroll saat loading screen aktif
   useEffect(() => {
@@ -63,7 +57,7 @@ export default function LoadingScreen() {
     };
   }, [pathname]); // Dependensi pathname agar efek berjalan ulang saat pindah halaman
 
-  if (!isMounted || isHidden) return null;
+  if (isHidden) return null;
 
   return (
     <div 

@@ -138,14 +138,9 @@ export default function DetailGaleri({ initialImageId, images, onClose }: Detail
   return (
     <div
       ref={containerRef}
-      className="fixed inset-0 z-[9999] bg-[#4E0B11] overflow-x-auto overflow-y-hidden"
-      style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+      className="fixed inset-0 z-[9999] bg-[#4E0B11] overflow-x-auto overflow-y-hidden [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+      style={{ msOverflowStyle: "none" }}
     >
-      <style jsx>{`
-        div::-webkit-scrollbar {
-          display: none;
-        }
-      `}</style>
 
       {/* Back Button */}
       <motion.button 
