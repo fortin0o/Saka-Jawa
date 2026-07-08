@@ -21,8 +21,9 @@ export default function WayangInteractiveMapSection() {
           </div>
         </div>
 
-                        {/* Interactive Map */}
-        <div className="relative w-full max-w-[1000px] aspect-[16/5] mx-auto mt-8 mb-8">
+        {/* Map Container */}
+        <div className="w-full overflow-x-auto pt-5 pb-3 -mx-6 px-6 md:mx-0 md:px-0 hide-scrollbar mt-4 mb-4">
+          <div className="relative w-full min-w-[900px] md:min-w-0 md:max-w-[1000px] aspect-[16/5] mx-auto">
           {/* Base Map */}
           <div className="absolute inset-0 w-full h-full">
             <Image
@@ -113,6 +114,7 @@ export default function WayangInteractiveMapSection() {
             </div>
           </Link>
 
+          </div>
         </div>
       </div>
     </section>
