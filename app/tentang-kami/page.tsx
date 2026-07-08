@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import SharedNavbar from "@/components/shared/SharedNavbar";
+import LandingNavbar from "@/components/landing/LandingNavbar";
 import TentangKamiHeroSection from "@/components/tentang-kami/TentangKamiHeroSection";
 import TentangKamiCeritaSection from "@/components/tentang-kami/TentangKamiCeritaSection";
 import TentangKamiVisiMisiSection from "@/components/tentang-kami/TentangKamiVisiMisiSection";
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
 export default function TentangKamiPage() {
   return (
     <main>
-      <SharedNavbar />
+      <LandingNavbar />
       <TentangKamiHeroSection />
       <TentangKamiCeritaSection />
       <TentangKamiVisiMisiSection />

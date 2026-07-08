@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useGame } from "../../context/GameContext";
-import SharedNavbar from "@/components/shared/SharedNavbar";
+import LandingNavbar from "@/components/landing/LandingNavbar";
 
 import { Palette, VenetianMask, Music, Utensils } from "lucide-react";
 
@@ -61,7 +61,7 @@ export default function PermainanIntroPage() {
 
   return (
     <div className="min-h-screen bg-[#F9F1E4] overflow-hidden">
-      <SharedNavbar />
+      <LandingNavbar />
       {/* ── Hero Section ─────────────────────────────── */}
       <section className="relative w-full bg-gradient-to-br from-[#4E0B11] to-[#2D0F12] overflow-hidden">
         {/* Decorative mega mendung kanan */}
