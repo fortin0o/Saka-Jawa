@@ -85,11 +85,6 @@ export const metadata: Metadata = {
       "Jelajahi kekayaan budaya Jawa: Batik, Wayang, Gamelan, dan Kuliner Tradisional. Warisan Nusantara untuk generasi muda.",
     images: ["/saka-jawa.webp"],
   },
-  icons: {
-    icon: "/Assets/LogoUtama.svg",
-    shortcut: "/Assets/LogoUtama.svg",
-    apple: "/Assets/LogoUtama.svg",
-  },
   verification: {
     google: "k7S7SzDmRqJDPfk6b6TjVKvcypjfOnKwLQrTaZR72e0",
   },
