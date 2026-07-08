@@ -64,10 +64,10 @@ export default function DeviceOrientationOverlay() {
         </svg>
       </div>
 
-      <h2 className="text-2xl font-bold mb-3 tracking-wide">
+      <h2 className="text-2xl font-semibold mb-3 tracking-wide leading-tight">
         Mohon Putar Perangkat
       </h2>
-      <p className="text-sm opacity-90 max-w-[280px] leading-relaxed">
+      <p className="text-sm opacity-90 max-w-[280px] leading-relaxed font-normal">
         Untuk pengalaman bermain yang lebih baik dan luas, silakan putar HP Anda ke mode <strong>Lanskap (Horizontal)</strong>.
       </p>
     </div>

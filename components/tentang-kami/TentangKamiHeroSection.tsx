@@ -46,18 +46,18 @@ export default function TentangKamiHeroSection() {
 
       {/* Content */}
       <div className="relative z-10 max-w-[var(--container-md)] mx-auto">
-        <p className="text-[#FFC832] text-sm md:text-base font-semibold tracking-[0.2em] uppercase mb-4">
+        <p className="text-[#FFC832] text-sm md:text-base font-semibold tracking-[0.2em] uppercase mb-4 leading-relaxed">
           Tim Golek Howo
         </p>
         <h1
           id="tentang-kami-title"
-          className="text-4xl md:text-[52px] lg:text-[60px] font-bold text-white leading-[1.1] mb-6"
+          className="text-4xl md:text-[52px] lg:text-[60px] font-bold text-white leading-[1.1] mb-6 leading-tight"
         >
           Menjaga Akar,{" "}
           <span className="text-[#FFC832]">Merawat Warisan</span>{" "}
           Jawa
         </h1>
-        <p className="text-white/80 text-base md:text-lg leading-relaxed max-w-2xl mx-auto">
+        <p className="text-white/80 text-base md:text-lg leading-relaxed max-w-2xl mx-auto font-normal">
           Di tengah derasnya arus modernisasi, banyak generasi muda yang mulai
           kehilangan jejak warisan leluhurnya sendiri. Bahasa, seni, dan filosofi
           Jawa kian terasa asing — bukan karena tak berharga, melainkan karena

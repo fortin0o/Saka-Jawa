@@ -52,13 +52,13 @@ export default function TentangKamiSDGsSection() {
       <div className="mx-auto w-full max-w-[var(--container-lg)]">
         {/* Header */}
         <div className="text-center mb-4">
-          <p className="text-[#5B0917] text-sm font-bold tracking-[0.18em] uppercase mb-3">
+          <p className="text-[#5B0917] text-sm font-bold tracking-[0.18em] uppercase mb-3 leading-relaxed">
             Global Goals
           </p>
-          <h2 className="text-3xl md:text-[40px] font-bold text-[#4E0B11] mb-4">
+          <h2 className="text-3xl md:text-[40px] font-semibold text-[#4E0B11] mb-4 leading-tight">
             Kontribusi terhadap SDGs
           </h2>
-          <p className="text-[#4A332B] text-base md:text-lg leading-relaxed max-w-2xl mx-auto">
+          <p className="text-[#4A332B] text-base md:text-lg leading-relaxed max-w-2xl mx-auto font-normal">
            Saka Jawa mendukung tiga tujuan pembangunan berkelanjutan melalui pelestarian budaya, penghidupan perajin, 
            dan pengetahuan tradisional yang selaras dengan alam.
           </p>
@@ -90,7 +90,7 @@ export default function TentangKamiSDGsSection() {
                   {sdg.icon}
                 </div>
                 <div>
-                  <p className="text-[11px] font-bold tracking-widest uppercase text-[#888]">
+                  <p className="text-[11px] font-bold tracking-widest uppercase text-[#888] leading-relaxed">
                     SDG {sdg.number}
                   </p>
                   <p className="font-bold text-[#1A1A1A] text-[15px] leading-tight">
@@ -100,7 +100,7 @@ export default function TentangKamiSDGsSection() {
               </div>
 
               {/* Description */}
-              <p className="text-[#4A332B] text-[14px] leading-relaxed">
+              <p className="text-[#4A332B] text-[14px] leading-relaxed font-normal">
                 {sdg.description}
               </p>
             </div>

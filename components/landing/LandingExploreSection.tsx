@@ -8,12 +8,12 @@ export default function LandingExploreSection() {
         <h2 className="text-[32px] md:text-[42px] font-extrabold text-[#111] mb-3 text-center tracking-tight leading-[1.1] md:leading-tight">
           Jelajahi Kekayaan<br className="block md:hidden" /> Budaya Jawa
         </h2>
-        <p className="text-[#555] text-center text-[15px] md:text-[17px] mb-8 leading-[1.3] md:leading-normal">
+        <p className="text-[#555] text-center text-[15px] md:text-[17px] mb-8 leading-[1.3] md:leading-normal font-normal">
           Tekan salah satu Pendhapa dan jelajahi<br className="block md:hidden" /> sepuas mungkin!
         </p>
 
         {/* Map Container */}
-        <div className="w-full overflow-x-auto pt-5 pb-3 -mx-6 px-6 md:mx-0 md:px-0 hide-scrollbar">
+        <div className="w-full overflow-x-auto pt-16 pb-12 -mx-6 px-6 md:mx-0 md:px-0 hide-scrollbar">
           <div className="relative w-full min-w-[900px] md:min-w-0 md:max-w-[1000px] aspect-[16/5] mx-auto">
           {/* Base Map */}
           <div className="absolute inset-0 w-full h-full">
@@ -40,7 +40,7 @@ export default function LandingExploreSection() {
               />
             </div>
             <div className="absolute -bottom-8 left-1/2 -translate-x-1/2 whitespace-nowrap z-30 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
-               <span className="font-['League_Spartan'] text-sm sm:text-base font-bold bg-[#5b0917] text-white px-3 py-1 rounded-full shadow">
+               <span className="text-sm sm:text-base font-bold bg-[#5b0917] text-white px-3 py-1 rounded-full shadow">
                   Pendhapa Batik
                </span>
             </div>
@@ -60,7 +60,7 @@ export default function LandingExploreSection() {
               />
             </div>
             <div className="absolute -bottom-8 left-1/2 -translate-x-1/2 whitespace-nowrap z-30 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
-               <span className="font-['League_Spartan'] text-sm sm:text-base font-bold bg-[#5b0917] text-white px-3 py-1 rounded-full shadow">
+               <span className="text-sm sm:text-base font-bold bg-[#5b0917] text-white px-3 py-1 rounded-full shadow">
                   Pendhapa Kuliner
                </span>
             </div>
@@ -80,7 +80,7 @@ export default function LandingExploreSection() {
               />
             </div>
             <div className="absolute -bottom-8 left-1/2 -translate-x-1/2 whitespace-nowrap z-30 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
-               <span className="font-['League_Spartan'] text-sm sm:text-base font-bold bg-[#5b0917] text-white px-3 py-1 rounded-full shadow">
+               <span className="text-sm sm:text-base font-bold bg-[#5b0917] text-white px-3 py-1 rounded-full shadow">
                   Pendhapa Wayang
                </span>
             </div>
@@ -100,7 +100,7 @@ export default function LandingExploreSection() {
               />
             </div>
             <div className="absolute -bottom-8 left-1/2 -translate-x-1/2 whitespace-nowrap z-30 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
-               <span className="font-['League_Spartan'] text-sm sm:text-base font-bold bg-[#5b0917] text-white px-3 py-1 rounded-full shadow">
+               <span className="text-sm sm:text-base font-bold bg-[#5b0917] text-white px-3 py-1 rounded-full shadow">
                   Pendhapa Gamelan
                </span>
             </div>

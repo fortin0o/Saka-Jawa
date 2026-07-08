@@ -37,10 +37,10 @@ export default function WayangCeritaSection() {
             {/* Left Header content */}
             <div className="lg:col-span-4 flex flex-col gap-6 text-left">
               <div>
-                <h3 className="font-['League_Spartan'] text-2xl sm:text-3xl md:text-4xl font-bold leading-tight">
+                <h3 className="text-2xl sm:text-3xl md:text-4xl font-semibold leading-tight">
                   Cerita Wayang Penuh Makna
                 </h3>
-                <p className="mt-3 md:mt-4 font-['League_Spartan'] text-sm sm:text-base text-white/80 leading-relaxed">
+                <p className="mt-3 md:mt-4 text-sm sm:text-base text-white/80 leading-relaxed font-normal">
                   Kenali kisah-kisah legendaris serta ketokohan para ksatria pewayangan Jawa dan filosofi luhurnya.
                 </p>
               </div>
@@ -72,17 +72,17 @@ export default function WayangCeritaSection() {
                       />
                     </div>
                     {/* Title */}
-                    <h4 className="mt-4 font-['League_Spartan'] text-xl font-bold text-[#4e0b11]">
+                    <h4 className="mt-4 text-xl font-bold text-[#4e0b11]">
                       {story.title}
                     </h4>
                     {/* Description */}
-                    <p className="mt-2 font-['League_Spartan'] text-sm text-stone-700 leading-relaxed">
+                    <p className="mt-2 text-sm text-stone-700 leading-relaxed font-normal">
                       {story.desc}
                     </p>
                   </div>
                   {/* Actions inside card */}
                   <div className="mt-4 pt-4 border-t border-stone-200 flex items-center justify-between">
-                    <span className="font-['League_Spartan'] text-sm font-semibold text-[#4e0b11]">
+                    <span className="text-sm font-semibold text-[#4e0b11]">
                       Lihat Selengkapnya
                     </span>
                     <button 

@@ -48,7 +48,7 @@ export default function GalleryModal({
       >
         {/* Header */}
         <div className="flex items-center justify-between p-6 md:px-8 border-b border-maroon/10 shrink-0">
-          <h2 className="text-2xl md:text-3xl font-bold text-maroon">{title}</h2>
+          <h2 className="text-2xl md:text-3xl font-semibold text-maroon leading-tight">{title}</h2>
           <button 
             onClick={onClose}
             className="flex items-center justify-center w-10 h-10 bg-[#3E0B10] rounded-full hover:bg-[#3E0B10] transition-colors shadow-sm focus:outline-none focus:ring-4 focus:ring-red-500/30 group"
@@ -75,7 +75,7 @@ export default function GalleryModal({
                 />
                 {/* Optional overlay on hover */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-                  <p className="text-white font-medium text-sm translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                  <p className="text-white font-medium text-sm translate-y-4 group-hover:translate-y-0 transition-transform duration-300 leading-relaxed">
                     {img.alt}
                   </p>
                 </div>
@@ -85,7 +85,7 @@ export default function GalleryModal({
           
           {images.length === 0 && (
             <div className="flex flex-col items-center justify-center py-20 text-maroon/60 h-full">
-              <p className="text-lg">Belum ada gambar yang tersedia.</p>
+              <p className="text-lg font-normal leading-relaxed">Belum ada gambar yang tersedia.</p>
             </div>
           )}
         </div>

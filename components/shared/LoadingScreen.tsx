@@ -72,7 +72,7 @@ function LoadingScreenInner() {
           />
         </div>
         <h1 
-          className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-widest text-[var(--color-maroon)] uppercase"
+          className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-widest text-[var(--color-maroon)] uppercase leading-tight"
           style={{ fontFamily: 'var(--font-league-spartan)' }}
         >
           Saka Jawa

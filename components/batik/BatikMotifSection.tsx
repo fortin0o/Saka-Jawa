@@ -72,10 +72,10 @@ export default function BatikMotifSection() {
           
           {/* Header */}
           <div className="mb-12">
-            <h2 className="text-3xl sm:text-4xl md:text-[42px] font-extrabold text-[#4E0B11] mb-3">
+            <h2 className="text-3xl sm:text-4xl md:text-[42px] font-extrabold text-[#4E0B11] mb-3 leading-tight">
               Ragam Motif Batik
             </h2>
-            <p className="text-sm sm:text-base font-medium text-gray-800 max-w-2xl">
+            <p className="text-sm sm:text-base font-medium text-gray-800 max-w-2xl leading-relaxed">
               Kenali beberapa motif khas dari berbagai daerah di pulau Jawa dan pesonanya dalam menciptakan harmoni budaya
             </p>
           </div>
@@ -99,7 +99,7 @@ export default function BatikMotifSection() {
                 </div>
 
                 {/* Text Details */}
-                <h3 className="text-xl font-bold text-[#4E0B11] mb-3">
+                <h3 className="text-xl font-semibold text-[#4E0B11] mb-3 leading-tight">
                   {motif.title}
                 </h3>
                 

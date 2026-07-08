@@ -47,10 +47,10 @@ export default function SharedNavbar({ className }: { className?: string }) {
       >
         {/* Desktop */}
         <nav
-          className={`hidden md:grid grid-cols-[1fr_auto_1fr] items-center rounded-full backdrop-blur-md px-10 py-2 shadow-lg text-sm sm:text-[15px] font-semibold pointer-events-auto ${className || "bg-white/50 border border-white/50 text-black"}`}
+          className={`hidden md:grid grid-cols-[1fr_auto_1fr] items-center rounded-full backdrop-blur-md px-10 py-2 shadow-lg text-sm sm:text-[15px] font-medium pointer-events-auto ${className || "bg-white/50 border border-white/50 text-black"}`}
           aria-label="Navigasi utama shared desktop"
         >
-          <div className="flex items-center justify-end gap-6 sm:gap-16 pr-8 sm:pr-16">
+          <div className="flex items-center justify-end gap-6 sm:gap-8 pr-8 sm:pr-16">
             {navLeft.map((item) => (
               <Link key={item.label} href={item.href} className="transition-opacity hover:opacity-75 whitespace-nowrap">
                 {item.label}
@@ -75,7 +75,7 @@ export default function SharedNavbar({ className }: { className?: string }) {
             />
           </Link>
 
-          <div className="flex items-center justify-start gap-6 sm:gap-16 pl-8 sm:pl-16">
+          <div className="flex items-center justify-start gap-6 sm:gap-8 pl-8 sm:pl-16">
             {navRight.map((item) => (
               <Link key={item.label} href={item.href} className="transition-opacity hover:opacity-75 whitespace-nowrap">
                 {item.label}
@@ -124,7 +124,7 @@ export default function SharedNavbar({ className }: { className?: string }) {
       )}
       
       <div 
-        className={`fixed left-1/2 top-[80px] sm:top-[90px] z-[200] w-[calc(100%-2.5rem)] max-w-[400px] -translate-x-1/2 flex flex-col items-center gap-6 rounded-[2.5rem] backdrop-blur-md px-6 py-8 shadow-lg transition-all duration-300 pointer-events-auto md:hidden text-lg font-semibold ${className || "bg-white/50 border border-white/50 text-black"} ${
+        className={`fixed left-1/2 top-[80px] sm:top-[90px] z-[200] w-[calc(100%-2.5rem)] max-w-[400px] -translate-x-1/2 flex flex-col items-center gap-6 sm:gap-8 rounded-[2.5rem] backdrop-blur-md px-6 py-8 shadow-lg transition-all duration-300 pointer-events-auto md:hidden text-lg font-medium ${className || "bg-white/50 border border-white/50 text-black"} ${
           isMobileMenuOpen ? "translate-y-0 opacity-100 visible" : "-translate-y-4 opacity-0 invisible"
         }`}
       >

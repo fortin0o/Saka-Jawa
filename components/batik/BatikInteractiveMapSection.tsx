@@ -7,7 +7,7 @@ export default function BatikInteractiveMapSection() {
       <div className="mx-auto w-full max-w-[var(--container-lg)] flex flex-col gap-8">
         {/* Header Row */}
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
-          <h3 className="font-['League_Spartan'] text-3xl font-bold text-[#4e0b11]">
+          <h3 className="text-3xl font-semibold text-[#4e0b11] leading-tight">
             Telusuri Pendhapa Lainnya
           </h3>
           <div>
@@ -15,14 +15,14 @@ export default function BatikInteractiveMapSection() {
               href="/kuliner"
               className="inline-flex items-center gap-3 rounded-full bg-[#ffc832] px-6 py-3 font-semibold text-[#4e0b11] shadow-md transition-all hover:scale-105 active:scale-95"
             >
-              <span className="font-['League_Spartan'] text-lg">Selanjutnya</span>
+              <span className="text-lg">Selanjutnya</span>
               <span className="flex h-6 w-6 items-center justify-center rounded-full bg-[#4e0b11] text-white">→</span>
             </a>
           </div>
         </div>
 
         {/* Map Container */}
-        <div className="w-full overflow-x-auto pt-5 pb-3 -mx-6 px-6 md:mx-0 md:px-0 hide-scrollbar mt-4 mb-4">
+        <div className="w-full overflow-x-auto pt-16 pb-12 -mx-6 px-6 md:mx-0 md:px-0 hide-scrollbar mt-4 mb-4">
           <div className="relative w-full min-w-[900px] md:min-w-0 md:max-w-[1000px] aspect-[16/5] mx-auto">
             {/* Base Map */}
             <div className="absolute inset-0 w-full h-full">
@@ -51,7 +51,7 @@ export default function BatikInteractiveMapSection() {
                 />
               </div>
               <div className="absolute -bottom-8 left-1/2 -translate-x-1/2 whitespace-nowrap z-30 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
-                 <span className="font-['League_Spartan'] text-sm sm:text-base font-bold bg-[#ffc832] text-[#4e0b11] px-3 py-1 rounded-full shadow">
+                 <span className="text-sm sm:text-base font-bold bg-[#ffc832] text-[#4e0b11] px-3 py-1 rounded-full shadow">
                     Pendhapa Batik (Anda di Sini)
                  </span>
               </div>
@@ -70,7 +70,7 @@ export default function BatikInteractiveMapSection() {
                 />
               </div>
               <div className="absolute -bottom-8 left-1/2 -translate-x-1/2 whitespace-nowrap z-30 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
-                 <span className="font-['League_Spartan'] text-sm sm:text-base font-bold bg-[#5b0917] text-white px-3 py-1 rounded-full shadow">
+                 <span className="text-sm sm:text-base font-bold bg-[#5b0917] text-white px-3 py-1 rounded-full shadow">
                     Pendhapa Kuliner
                  </span>
               </div>
@@ -89,7 +89,7 @@ export default function BatikInteractiveMapSection() {
                 />
               </div>
               <div className="absolute -bottom-8 left-1/2 -translate-x-1/2 whitespace-nowrap z-30 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
-                 <span className="font-['League_Spartan'] text-sm sm:text-base font-bold bg-[#5b0917] text-white px-3 py-1 rounded-full shadow">
+                 <span className="text-sm sm:text-base font-bold bg-[#5b0917] text-white px-3 py-1 rounded-full shadow">
                     Pendhapa Wayang
                  </span>
               </div>
@@ -108,7 +108,7 @@ export default function BatikInteractiveMapSection() {
                 />
               </div>
               <div className="absolute -bottom-8 left-1/2 -translate-x-1/2 whitespace-nowrap z-30 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
-                 <span className="font-['League_Spartan'] text-sm sm:text-base font-bold bg-[#5b0917] text-white px-3 py-1 rounded-full shadow">
+                 <span className="text-sm sm:text-base font-bold bg-[#5b0917] text-white px-3 py-1 rounded-full shadow">
                     Pendhapa Gamelan
                  </span>
               </div>

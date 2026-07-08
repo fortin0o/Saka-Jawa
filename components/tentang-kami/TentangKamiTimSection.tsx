@@ -30,13 +30,13 @@ export default function TentangKamiTimSection() {
       <div className="mx-auto w-full max-w-[var(--container-lg)]">
         {/* Header */}
         <div className="text-center mb-14">
-          <p className="text-[#5B0917] text-sm font-bold tracking-[0.18em] uppercase mb-3">
+          <p className="text-[#5B0917] text-sm font-bold tracking-[0.18em] uppercase mb-3 leading-relaxed">
             Orang-Orangnya
           </p>
-          <h2 className="text-3xl md:text-[40px] font-bold text-[#4E0B11] mb-3">
+          <h2 className="text-3xl md:text-[40px] font-semibold text-[#4E0B11] mb-3 leading-tight">
             Tim Golek Howo
           </h2>
-          <p className="text-[#4A332B] text-base leading-relaxed max-w-xl mx-auto">
+          <p className="text-[#4A332B] text-base leading-relaxed max-w-xl mx-auto font-normal">
             Tiga orang dengan satu visi — mendekatkan generasi muda pada
             warisan budaya Jawa melalui teknologi.
           </p>
@@ -67,7 +67,7 @@ export default function TentangKamiTimSection() {
                 <p className="font-bold text-[#1A1A1A] text-[15px] md:text-base leading-tight mb-1">
                   {member.name}
                 </p>
-                <p className="text-[#6B6B6B] text-[13px] leading-relaxed">
+                <p className="text-[#6B6B6B] text-[13px] leading-relaxed font-normal">
                   {member.role}
                 </p>
               </div>

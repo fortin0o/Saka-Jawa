@@ -249,8 +249,8 @@ export default function BatikGamePage() {
           </div>
 
           <div>
-            <h2 className="text-2xl sm:text-3xl font-bold text-[#4E0B11]">Luar Biasa!</h2>
-            <p className="text-sm text-[#4A332B] font-medium mt-1">
+            <h2 className="text-2xl sm:text-3xl font-semibold text-[#4E0B11] leading-tight">Luar Biasa!</h2>
+            <p className="text-sm text-[#4A332B] font-medium mt-1 leading-relaxed">
               Kamu telah menyelesaikan semua motif batik
             </p>
           </div>
@@ -271,8 +271,8 @@ export default function BatikGamePage() {
                     </svg>
                   </div>
                   <div className="text-left">
-                    <p className="text-xs font-bold text-[#4E0B11]">{m.namaMotif}</p>
-                    <p className="text-[10px] text-[#4A332B] font-medium">{m.asalDaerah}</p>
+                    <p className="text-xs font-bold text-[#4E0B11] leading-relaxed">{m.namaMotif}</p>
+                    <p className="text-[10px] text-[#4A332B] font-medium leading-relaxed">{m.asalDaerah}</p>
                   </div>
                 </div>
                 <span className="font-bold text-[#4E0B11] tabular-nums">{scoreHistory[i] ?? 0} pts</span>
@@ -280,7 +280,7 @@ export default function BatikGamePage() {
             ))}
           </div>
 
-          <p className="text-xs text-[#4A332B]/70 font-medium max-w-xs">
+          <p className="text-xs text-[#4A332B]/70 font-medium max-w-xs leading-relaxed">
             Skor ini akan disimpan saat kamu melihat Hasil Akhir.
           </p>
           
@@ -334,8 +334,8 @@ export default function BatikGamePage() {
               <span className="inline-block text-xs font-bold uppercase tracking-widest text-[#FFC832] bg-[#4E0B11] rounded-full px-2.5 py-0.5 mb-3">
                 Fakta Budaya
               </span>
-              <h3 className="text-base font-bold text-[#4E0B11] mb-1">{currentMotif.namaMotif}</h3>
-              <p className="text-[11px] sm:text-xs font-semibold text-[#4A332B]/70 mb-2">{currentMotif.asalDaerah}</p>
+              <h3 className="text-base font-semibold text-[#4E0B11] mb-1 leading-tight">{currentMotif.namaMotif}</h3>
+              <p className="text-[11px] sm:text-xs font-semibold text-[#4A332B]/70 mb-2 leading-relaxed">{currentMotif.asalDaerah}</p>
               <p className="text-xs sm:text-sm text-[#4A332B] font-medium leading-relaxed">{currentMotif.factSingkat}</p>
               <p className="text-xs text-[#4A332B]/70 font-medium leading-relaxed mt-2">{currentMotif.factDetail}</p>
             </div>
@@ -378,8 +378,8 @@ export default function BatikGamePage() {
               </svg>
             </div>
             <div className="min-w-0">
-              <p className="text-xs font-bold text-[#FFC832] uppercase tracking-widest">Hafalkan gambar ini!</p>
-              <p className="text-xs text-white/80 font-medium mt-0.5">
+              <p className="text-xs font-bold text-[#FFC832] uppercase tracking-widest leading-relaxed">Hafalkan gambar ini!</p>
+              <p className="text-xs text-white/80 font-medium mt-0.5 leading-relaxed">
                 Susun keping acak agar membentuk gambar di bawah. Puzzle dimulai dalam{" "}
                 <span className="font-bold text-[#FFC832]">{previewCount}s</span>
               </p>
@@ -392,8 +392,8 @@ export default function BatikGamePage() {
             {/* Countdown overlay at bottom */}
             <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-[#4E0B11]/80 to-transparent p-4 flex items-end justify-between">
               <div>
-                <p className="text-white font-bold text-sm">{currentMotif.namaMotif}</p>
-                <p className="text-white/70 text-xs font-medium">{currentMotif.asalDaerah}</p>
+                <p className="text-white font-bold text-sm leading-relaxed">{currentMotif.namaMotif}</p>
+                <p className="text-white/70 text-xs font-medium leading-relaxed">{currentMotif.asalDaerah}</p>
               </div>
               {/* Countdown ring */}
               <div className="relative w-12 h-12 shrink-0">
@@ -445,8 +445,8 @@ export default function BatikGamePage() {
         {/* Timer row */}
         <div className="flex items-center justify-between gap-3">
           <div className="min-w-0">
-            <p className="text-xs font-bold text-[#4E0B11] truncate">{currentMotif.namaMotif}</p>
-            <p className="text-[10px] text-[#4A332B]/70 font-medium">{currentMotif.asalDaerah}</p>
+            <p className="text-xs font-bold text-[#4E0B11] truncate leading-relaxed">{currentMotif.namaMotif}</p>
+            <p className="text-[10px] text-[#4A332B]/70 font-medium leading-relaxed">{currentMotif.asalDaerah}</p>
           </div>
           <div
             className="shrink-0 flex items-center gap-1.5 rounded-full px-3 py-1.5 text-sm font-bold tabular-nums transition-colors duration-500"
@@ -466,7 +466,7 @@ export default function BatikGamePage() {
         </div>
 
         {/* Instruction */}
-        <p className="text-xs text-[#4A332B]/70 font-medium text-center">
+        <p className="text-xs text-[#4A332B]/70 font-medium text-center leading-relaxed">
           {tapFirst !== null
             ? "Pilih keping tujuan untuk menukar"
             : "Drag atau tap dua keping untuk menukarnya"}

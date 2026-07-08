@@ -58,7 +58,7 @@ export default function LandingHeritageSection() {
                   </div>
                   {/* Back Card */}
                   <div className="absolute inset-0 [backface-visibility:hidden] [transform:rotateY(180deg)] rounded-2xl md:rounded-3xl overflow-hidden shadow-lg bg-[#F9F1E4] border border-[#E5D5C1] p-6 flex flex-col justify-center items-center text-center">
-                    <h3 className="text-2xl font-bold text-[var(--color-maroon)] mb-3" style={{ fontFamily: 'var(--font-league-spartan)' }}>{img.alt}</h3>
+                    <h3 className="text-2xl font-semibold text-[var(--color-maroon)] mb-3 leading-tight" style={{ fontFamily: 'var(--font-league-spartan)' }}>{img.alt}</h3>
                     <p className="text-[15px] font-medium text-gray-700 leading-relaxed">{img.desc}</p>
                   </div>
                 </div>
@@ -76,7 +76,7 @@ export default function LandingHeritageSection() {
                   </div>
                   {/* Back Card */}
                   <div className="absolute inset-0 [backface-visibility:hidden] [transform:rotateY(180deg)] rounded-2xl md:rounded-3xl overflow-hidden shadow-lg bg-[#F9F1E4] border border-[#E5D5C1] p-6 flex flex-col justify-center items-center text-center">
-                    <h3 className="text-2xl font-bold text-[var(--color-maroon)] mb-3" style={{ fontFamily: 'var(--font-league-spartan)' }}>{img.alt}</h3>
+                    <h3 className="text-2xl font-semibold text-[var(--color-maroon)] mb-3 leading-tight" style={{ fontFamily: 'var(--font-league-spartan)' }}>{img.alt}</h3>
                     <p className="text-[15px] font-medium text-gray-700 leading-relaxed">{img.desc}</p>
                   </div>
                 </div>

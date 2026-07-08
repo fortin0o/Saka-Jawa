@@ -196,7 +196,7 @@ export default function WayangGamePage() {
           </div>
           
           <div className="flex flex-col items-center md:items-start text-center md:text-left max-w-lg">
-            <h2 className="text-2xl md:text-3xl font-bold text-[#3e2723] mb-3 md:mb-4">Cocokkan Siluet Tokoh</h2>
+            <h2 className="text-2xl md:text-3xl font-semibold text-[#3e2723] mb-3 md:mb-4 leading-tight">Cocokkan Siluet Tokoh</h2>
             <p className="text-sm md:text-base text-[#5d4037] font-medium leading-relaxed bg-white border border-[#8d6e63]/30 p-4 md:p-5 rounded-xl shadow-sm mb-4 md:mb-6">
               Temukan pasangan yang tepat! Cocokkan <strong className="text-[#3e2723]">Gambar Siluet</strong> dengan <strong className="text-[#3e2723]">Nama & Ciri Khas</strong> tokoh wayangnya. Semakin sedikit tebakan salah, semakin besar bonus skormu!
             </p>
@@ -232,8 +232,8 @@ export default function WayangGamePage() {
               </svg>
             </div>
             <div>
-              <h2 className="text-2xl sm:text-3xl font-bold text-[#3e2723]">Luar Biasa!</h2>
-              <p className="text-sm text-[#5d4037] font-medium mt-1">
+              <h2 className="text-2xl sm:text-3xl font-semibold text-[#3e2723] leading-tight">Luar Biasa!</h2>
+              <p className="text-sm text-[#5d4037] font-medium mt-1 leading-relaxed">
                 Kamu berhasil mencocokkan semua tokoh.
               </p>
             </div>

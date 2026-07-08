@@ -83,7 +83,7 @@ function StatCard({
 
       {/* Main Card */}
       <div className="relative bg-[#B4979A]/80 group-hover:bg-[#FFC832] rounded-3xl p-8 md:p-10 text-center flex flex-col items-center justify-center shadow-xl z-10 h-full transition-all duration-300 origin-center group-hover:-rotate-6 group-hover:-translate-y-2 group-hover:-translate-x-1">
-        <h3 className="text-4xl md:text-5xl font-extrabold text-[#111] mb-2 tracking-tight min-h-[1.2em] tabular-nums">
+        <h3 className="text-4xl md:text-5xl font-extrabold text-[#111] mb-2 tracking-tight min-h-[1.2em] tabular-nums leading-tight">
           {scrambled}
         </h3>
         <h4 className="text-[17px] font-bold text-[#111] mb-6">{title}</h4>
@@ -125,10 +125,10 @@ export default function LandingImportanceSection() {
       }}
     >
       <div className="max-w-[1200px] mx-auto flex flex-col items-center">
-        <h2 className="text-3xl md:text-[40px] font-bold text-white mb-4 text-center">
+        <h2 className="text-3xl md:text-[40px] font-semibold text-white mb-4 text-center leading-tight">
           Mengapa Warisan Budaya Penting?
         </h2>
-        <p className="text-white/80 text-center max-w-xl text-[15px] md:text-base leading-relaxed mb-16">
+        <p className="text-white/80 text-center max-w-xl text-[15px] md:text-base leading-relaxed mb-16 font-normal">
           Warisan budaya Jawa tidak hanya hidup dalam tradisi,
           <br className="hidden md:block" />
           tetapi juga diakui dan dihargai oleh dunia.

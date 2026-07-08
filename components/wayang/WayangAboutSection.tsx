@@ -35,10 +35,10 @@ export default function WayangAboutSection() {
           
           {/* Left Column */}
           <div className="lg:col-span-6 flex flex-col text-white pt-10">
-            <h2 className="text-3xl sm:text-4xl md:text-[42px] font-bold text-[#FFC832] mb-4 md:mb-6">
+            <h2 className="text-3xl sm:text-4xl md:text-[42px] font-semibold text-[#FFC832] mb-4 md:mb-6 leading-tight">
               Wayang Kulit Jawa
             </h2>
-            <p className="text-sm sm:text-base md:text-lg leading-relaxed text-gray-100 max-w-lg mb-8 md:mb-12">
+            <p className="text-sm sm:text-base md:text-lg leading-relaxed text-gray-100 max-w-lg mb-8 md:mb-12 font-normal">
               Wayang kulit merupakan bentuk seni adiluhung yang telah diakui UNESCO sebagai Masterpiece of the Oral and Intangible Heritage of Humanity. Setiap guratan karakter memuat makna doa dan tuntunan hidup.
             </p>
 
@@ -54,7 +54,7 @@ export default function WayangAboutSection() {
                       className="object-contain"
                     />
                   </div>
-                  <p className="text-[13px] text-gray-200 leading-relaxed font-['League_Spartan']">
+                  <p className="text-[13px] text-gray-200 leading-relaxed font-normal">
                     {desc}
                   </p>
                 </div>
@@ -77,7 +77,7 @@ export default function WayangAboutSection() {
                   <Image src="/Assets/LeftMegaMendung.svg" alt="Mega Mendung" fill className="object-contain object-left-top" />
                 </div>
                 
-                <h3 className="text-2xl md:text-[32px] font-bold text-[#4E0B11] mb-4">
+                <h3 className="text-2xl md:text-[32px] font-semibold text-[#4E0B11] mb-4 leading-tight">
                   Tahukah Kamu?
                 </h3>
                 

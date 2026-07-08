@@ -25,7 +25,7 @@ export default function LandingCTASection() {
 
         {/* Content */}
         <div className="relative z-10 w-full md:w-[55%] lg:w-[50%] max-md:pt-13 max-md:pb-10 px-4 md:py-12 md:pl-16 lg:py-[52px] lg:pl-[100px] md:pr-4 flex flex-col justify-center max-md:items-center md:items-start gap-4">
-          <h2 className="text-3xl md:text-[36px] lg:text-[42px] font-bold text-white leading-[1.1] font-sans tracking-tight max-md:text-center">
+          <h2 className="text-3xl md:text-[36px] lg:text-[42px] font-semibold text-white leading-[1.1] font-sans tracking-tight max-md:text-center leading-tight">
             Sudah Siap <br />
             Menjelajahi Budaya <br />
             <span className="text-[#ffc832]">Jawa?</span>

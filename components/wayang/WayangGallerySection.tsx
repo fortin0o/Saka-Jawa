@@ -26,10 +26,10 @@ export default function WayangGallerySection() {
         {/* Header Row */}
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-12">
           <div className="text-left space-y-2">
-            <h2 className="font-['League_Spartan'] text-3xl sm:text-4xl font-bold text-[#4e0b11]">
+            <h2 className="text-3xl sm:text-4xl font-semibold text-[#4e0b11] leading-tight">
               Galeri Wayang
             </h2>
-            <p className="max-w-[600px] font-['League_Spartan'] text-lg text-stone-700">
+            <p className="max-w-[600px] text-lg text-stone-700 font-normal leading-relaxed">
               Visualisasi pertunjukan, pusaka, serta tokoh-tokoh agung seni wayang kulit Jawa.
             </p>
           </div>
@@ -58,7 +58,7 @@ export default function WayangGallerySection() {
                 className="object-cover object-top transition-transform duration-500 hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-6 pointer-events-none">
-                <h4 className="font-['League_Spartan'] text-xl font-bold text-white">
+                <h4 className="text-xl font-bold text-white">
                   {gal.title}
                 </h4>
               </div>

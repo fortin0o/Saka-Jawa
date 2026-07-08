@@ -162,7 +162,7 @@ export default function KulinerGamePage() {
           </div>
           
           <div className="flex flex-col items-center md:items-start text-center md:text-left max-w-lg">
-            <h2 className="text-2xl md:text-3xl font-bold text-[#4E0B11] mb-3 md:mb-4">Tebak dari Deskripsi</h2>
+            <h2 className="text-2xl md:text-3xl font-semibold text-[#4E0B11] mb-3 md:mb-4 leading-tight">Tebak dari Deskripsi</h2>
             <p className="text-sm md:text-base text-[#4A332B] font-medium leading-relaxed bg-white border border-[#4E0B11]/20 p-4 md:p-5 rounded-xl shadow-sm mb-4 md:mb-6">
               Pilih satu <strong className="text-[#4E0B11]">Gambar Makanan</strong> dan pasangkan dengan <strong className="text-[#4E0B11]">Nama Makanan</strong> yang tepat! Temukan fakta menarik setiap kali berhasil mencocokkannya.
             </p>
@@ -198,8 +198,8 @@ export default function KulinerGamePage() {
               </svg>
             </div>
             <div>
-              <h2 className="text-2xl sm:text-3xl font-bold text-[#4E0B11]">Selamat!</h2>
-              <p className="text-sm text-[#4A332B] font-medium mt-1">
+              <h2 className="text-2xl sm:text-3xl font-semibold text-[#4E0B11] leading-tight">Selamat!</h2>
+              <p className="text-sm text-[#4A332B] font-medium mt-1 leading-relaxed">
                 Kamu ahli masakan tradisional Jawa.
               </p>
             </div>
@@ -258,7 +258,7 @@ export default function KulinerGamePage() {
           
           {/* Images Column */}
           <div className="flex flex-col gap-3">
-            <h3 className="text-center text-xs font-bold text-[#4E0B11] uppercase tracking-widest mb-2">Gambar</h3>
+            <h3 className="text-center text-xs font-semibold text-[#4E0B11] uppercase tracking-widest mb-2 leading-tight">Gambar</h3>
             {KULINER_DATA.map((item) => {
               const isMatched = matches.includes(item.id);
               const isSelected = selectedImage === item.id;
@@ -306,7 +306,7 @@ export default function KulinerGamePage() {
 
           {/* Names Column */}
           <div className="flex flex-col gap-3">
-            <h3 className="text-center text-xs font-bold text-[#4E0B11] uppercase tracking-widest mb-2">Nama</h3>
+            <h3 className="text-center text-xs font-semibold text-[#4E0B11] uppercase tracking-widest mb-2 leading-tight">Nama</h3>
             {RANDOM_NAME_ORDER.map((idx) => {
               const item = KULINER_DATA[idx];
               const isMatched = matches.includes(item.id);

@@ -65,7 +65,7 @@ export default function KulinerAboutSection() {
                   <Image src="/Assets/RightMegaMendung.svg" alt="Mega Mendung" fill className="object-contain object-right-top" />
                 </div>
                 
-                <h3 className="text-2xl md:text-[32px] font-bold text-[#4E0B11] mb-4">
+                <h3 className="text-2xl md:text-[32px] font-semibold text-[#4E0B11] mb-4 leading-tight">
                   Tahukah Kamu?
                 </h3>
                 
@@ -83,10 +83,10 @@ export default function KulinerAboutSection() {
 
           {/* Right Column: Aneka Kuliner Jawa */}
           <div className="lg:col-span-6 flex flex-col text-white pt-10">
-            <h2 className="text-3xl sm:text-4xl md:text-[42px] font-bold text-[#FFC832] mb-4 md:mb-6 text-center lg:text-right">
+            <h2 className="text-3xl sm:text-4xl md:text-[42px] font-semibold text-[#FFC832] mb-4 md:mb-6 text-center lg:text-right leading-tight">
               Aneka Kuliner Jawa
             </h2>
-            <p className="text-sm sm:text-base md:text-lg leading-relaxed text-gray-100 max-w-lg mb-8 md:mb-12 text-center lg:text-right ml-auto">
+            <p className="text-sm sm:text-base md:text-lg leading-relaxed text-gray-100 max-w-lg mb-8 md:mb-12 text-center lg:text-right ml-auto font-normal">
               Kuliner Jawa bukan sekadar hidangan pengisi perut, melainkan karya seni yang memadukan kekayaan rempah Nusantara dengan warisan leluhur yang tak lekang oleh waktu. Setiap resep adalah warisan budaya yang penuh filosofi.
             </p>
 
@@ -102,7 +102,7 @@ export default function KulinerAboutSection() {
                       className="object-contain"
                     />
                   </div>
-                  <p className="text-[13px] text-gray-200 leading-relaxed font-['League_Spartan']">
+                  <p className="text-[13px] text-gray-200 leading-relaxed font-normal">
                     {p.desc}
                   </p>
                 </div>

@@ -122,7 +122,7 @@ export default function LandingQuotesSection() {
         {/* Title Box */}
         <div className="flex justify-center mb-24 mt-16">
           <div className="bg-white px-8 md:px-12 py-4 rounded-3xl border border-[#61452e] shadow-md">
-            <h2 className="text-2xl md:text-[34px] font-extrabold text-[#111] tracking-tight text-center">
+            <h2 className="text-2xl md:text-[34px] font-extrabold text-[#111] tracking-tight text-center leading-tight">
               Kata Budayawan <br className="block md:hidden" /> Tentang Jawa
             </h2>
           </div>
@@ -170,7 +170,7 @@ export default function LandingQuotesSection() {
                     <div className="flex justify-between items-start mb-4 max-md:mb-3">
                       <div>
                         <h4 className="text-[17px] md:text-2xl font-bold text-[#111] mb-0.5 md:mb-1">{quote.name}</h4>
-                        <p className="text-[13px] md:text-base text-gray-500 font-medium">{quote.title}</p>
+                        <p className="text-[13px] md:text-base text-gray-500 font-medium leading-relaxed">{quote.title}</p>
                       </div>
                       <div className="relative w-10 h-10 md:w-12 md:h-12 rounded-full overflow-hidden bg-gray-200 shrink-0 max-md:mt-1">
                         {quote.image && (

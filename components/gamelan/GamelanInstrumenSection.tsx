@@ -78,10 +78,10 @@ export default function GamelanInstrumenSection() {
         {/* Header Row */}
         <div className="flex flex-col justify-between gap-6 sm:flex-row sm:items-end">
           <div className="space-y-2">
-            <h2 className="font-['League_Spartan'] text-3xl font-bold text-[#4e0b11] sm:text-4xl md:text-5xl">
+            <h2 className="text-3xl font-semibold text-[#4e0b11] sm:text-4xl md:text-5xl leading-tight">
               Ragam Instrumen Gamelan
             </h2>
-            <p className="max-w-[700px] font-['League_Spartan'] text-sm sm:text-lg text-[#4A332B]">
+            <p className="max-w-[700px] text-sm sm:text-lg text-[#4A332B] font-normal leading-relaxed">
               Kenali instrumen-instrumen utama dalam ansambel gamelan Jawa beserta peran dan filosofinya
             </p>
           </div>
@@ -138,7 +138,7 @@ export default function GamelanInstrumenSection() {
                 </div>
 
                 {/* Text Details */}
-                <h3 className="text-xl font-bold text-[#4E0B11] mb-3">
+                <h3 className="text-xl font-semibold text-[#4E0B11] mb-3 leading-tight">
                   {item.name}
                 </h3>
                 

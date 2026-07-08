@@ -23,7 +23,7 @@ export default function TentangKamiCTASection() {
 
         {/* Content */}
         <div className="relative z-10 w-full md:w-[55%] lg:w-[50%] py-10 pl-10 md:py-12 md:pl-16 lg:py-[52px] lg:pl-[100px] pr-4 flex flex-col justify-center items-start gap-4">
-          <h2 className="text-3xl md:text-[36px] lg:text-[42px] font-bold text-white leading-[1.1] font-sans tracking-tight">
+          <h2 className="text-3xl md:text-[36px] lg:text-[42px] font-semibold text-white leading-[1.1] font-sans tracking-tight leading-tight">
             Siap Menjelajahi{" "}
             <br />
             Kekayaan{" "}

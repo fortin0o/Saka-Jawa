@@ -50,7 +50,7 @@ export default function HasilAkhirPage() {
           <div className="w-20 h-20 bg-[#4E0B11] text-[#FFC832] rounded-full flex items-center justify-center mx-auto mb-6 text-4xl shadow-inner font-bold">
             !
           </div>
-          <h1 className="text-2xl font-bold text-[#4E0B11] mb-2">Petualangan Belum Selesai!</h1>
+          <h1 className="text-2xl font-bold text-[#4E0B11] mb-2 leading-tight">Petualangan Belum Selesai!</h1>
           <p className="text-[#4A332B] mb-6 font-medium leading-relaxed">
             Kamu belum menyelesaikan <strong className="text-[#4E0B11]">Pendhapa {pendhapaName}</strong>. Mari selesaikan seluruh tantangan sebelum melihat hasil akhir gelar budayamu!
           </p>
@@ -140,7 +140,7 @@ export default function HasilAkhirPage() {
             {icon}
           </div>
 
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#4E0B11] mb-3 font-['League_Spartan'] drop-shadow-sm">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#4E0B11] mb-3 drop-shadow-sm leading-tight">
             {title}
           </h1>
 
@@ -154,7 +154,7 @@ export default function HasilAkhirPage() {
             <div className="absolute top-0 right-0 w-32 h-32 bg-[#FFC832] opacity-5 rounded-full blur-2xl -translate-y-1/2 translate-x-1/4" />
             <div className="absolute bottom-0 left-0 w-32 h-32 bg-[#FFC832] opacity-5 rounded-full blur-2xl translate-y-1/2 -translate-x-1/4" />
             
-            <h2 className="text-[#FFC832] text-xs font-bold uppercase tracking-[0.2em] mb-2 relative z-10">
+            <h2 className="text-[#FFC832] text-xs font-semibold uppercase tracking-[0.2em] mb-2 relative z-10 leading-tight">
               Total Skor Keseluruhan
             </h2>
             <div className="flex items-end justify-center gap-2 relative z-10">
@@ -169,7 +169,7 @@ export default function HasilAkhirPage() {
 
           {/* Breakdown List */}
           <div className="w-full">
-            <h3 className="text-left text-sm font-bold text-[#4E0B11] uppercase tracking-wider mb-4 border-b-2 border-[#4E0B11]/10 pb-2">
+            <h3 className="text-left text-sm font-semibold text-[#4E0B11] uppercase tracking-wider mb-4 border-b-2 border-[#4E0B11]/10 pb-2 leading-tight">
               Rincian Perjalananmu
             </h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 w-full text-left">

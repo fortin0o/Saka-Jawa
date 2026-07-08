@@ -55,13 +55,13 @@ export default function TentangKamiNilaiSection() {
       <div className="mx-auto w-full max-w-[var(--container-lg)]">
         {/* Header */}
         <div className="text-center mb-14">
-          <p className="text-[#FFC832] text-sm font-bold tracking-[0.18em] uppercase mb-3">
+          <p className="text-[#FFC832] text-sm font-bold tracking-[0.18em] uppercase mb-3 leading-relaxed">
             Pondasi Kami
           </p>
-          <h2 className="text-3xl md:text-[40px] font-bold text-white">
+          <h2 className="text-3xl md:text-[40px] font-semibold text-white leading-tight">
             Nilai-Nilai Kami
           </h2>
-          <p className="text-white/70 text-base mt-3 max-w-xl mx-auto leading-relaxed">
+          <p className="text-white/70 text-base mt-3 max-w-xl mx-auto leading-relaxed font-normal">
             Empat prinsip utama yang menjadi landasan setiap langkah Tim Golek Howo
           </p>
         </div>
@@ -75,10 +75,10 @@ export default function TentangKamiNilaiSection() {
                 {nilai.icon}
               </div>
               <div>
-                <p className="text-white font-bold text-base md:text-lg mb-1">
+                <p className="text-white font-bold text-base md:text-lg mb-1 leading-relaxed">
                   {nilai.label}
                 </p>
-                <p className="text-white/60 text-[13px] leading-relaxed max-w-[160px] mx-auto">
+                <p className="text-white/60 text-[13px] leading-relaxed max-w-[160px] mx-auto font-normal">
                   {nilai.description}
                 </p>
               </div>

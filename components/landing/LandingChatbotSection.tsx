@@ -88,13 +88,13 @@ export default function LandingChatbotSection() {
           <div
             className="bg-white border-2 border-[#601c23] rounded-3xl p-8 md:p-10 lg:p-12 shadow-sm flex flex-col gap-6 w-full"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-black tracking-wide min-h-[1.2em]">
+            <h2 className="text-4xl md:text-5xl font-semibold text-black tracking-wide min-h-[1.2em] leading-tight">
               {displayedHeading}
               {visible && !headingDone && (
                 <span className="animate-pulse">|</span>
               )}
             </h2>
-            <p className="text-gray-800 text-lg md:text-xl leading-relaxed min-h-[6rem]">
+            <p className="text-gray-800 text-lg md:text-xl leading-relaxed min-h-[6rem] font-normal">
               {displayedParagraph}
               {headingDone && !paragraphDone && (
                 <span className="animate-pulse">|</span>

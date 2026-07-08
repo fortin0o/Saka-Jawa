@@ -152,7 +152,7 @@ export default function LandingHeroSection() {
         <div ref={textRef} className="will-change-transform">
           <h1
             id="landing-hero-title"
-            className="text-[2.25rem] sm:text-[clamp(2.25rem,4.7vw,4.25rem)] leading-[1] sm:leading-[0.92] font-black text-[#512402] drop-shadow-[0_4px_0_#FFCA98]"
+            className="text-[2.25rem] sm:text-[clamp(2.25rem,4.7vw,4.25rem)] leading-[1] sm:leading-[0.92] font-black text-[#512402] drop-shadow-[0_4px_0_#FFCA98] leading-tight"
           >
             <span className="block sm:hidden">
               Jelajahi Jiwa

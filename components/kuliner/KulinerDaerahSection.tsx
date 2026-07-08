@@ -140,10 +140,10 @@ export default function KulinerDaerahSection() {
 
           {/* Header */}
           <div className="text-center mb-16 max-w-2xl">
-            <h2 className="font-['League_Spartan'] text-2xl sm:text-3xl md:text-4xl lg:text-[42px] font-bold text-[#4e0b11] mb-4">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[42px] font-semibold text-[#4e0b11] mb-4 leading-tight">
               Jelajahi Berdasarkan Daerah Bagian
             </h2>
-            <p className="font-['League_Spartan'] text-sm sm:text-base md:text-lg text-stone-900 font-medium">
+            <p className="text-sm sm:text-base md:text-lg text-stone-900 font-medium leading-relaxed">
               Temukan hidangan khas Jawa berdasarkan daerah asalnya
             </p>
           </div>
@@ -166,7 +166,7 @@ export default function KulinerDaerahSection() {
 
                 <div className="p-6 h-full flex flex-col justify-between w-[70%] z-10 relative">
                   <div>
-                    <h3 className="font-['League_Spartan'] text-xl font-bold text-[#FFC832] mb-2">
+                    <h3 className="text-xl font-medium text-[#FFC832] mb-2 leading-tight">
                       {item.title}
                     </h3>
                     <p className="text-xs text-gray-300 leading-relaxed font-medium">
@@ -176,7 +176,7 @@ export default function KulinerDaerahSection() {
                   <div className="mt-6">
                     <button
                       onClick={() => setSelectedDaerahId(item.id)}
-                      className="inline-flex items-center gap-2 text-white text-xs font-bold border border-white rounded-full px-4 py-1.5 hover:bg-[#FFC832] hover:text-[#4e0b11] hover:border-transparent transition-all duration-300"
+                      className="inline-flex items-center gap-2 text-white text-xs font-semibold border border-white rounded-full px-4 py-1.5 hover:bg-[#FFC832] hover:text-[#4e0b11] hover:border-transparent transition-all duration-300"
                     >
                       Lihat Detail
                       <svg

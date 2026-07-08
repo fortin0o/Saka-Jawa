@@ -65,7 +65,7 @@ export default function Footer() {
               />
               <span className="text-2xl font-extrabold text-[#FFC832]">SakaJawa</span>
             </div>
-            <p className="text-gray-900 font-semibold leading-[1.8] max-w-sm text-sm sm:text-base mb-8">
+            <p className="text-gray-900 leading-[1.8] max-w-sm text-sm sm:text-base mb-8 font-normal leading-relaxed">
               Kami hadir untuk menghubungkan generasi muda dengan akar budayanya melalui pengalaman digital yang interaktif dan bermakna.
             </p>
             <div className="flex items-center gap-4">
@@ -86,8 +86,8 @@ export default function Footer() {
 
           {/* Navigation Column 1 - Eksplorasi */}
           <div className="md:col-span-6 lg:col-span-3 lg:col-start-7">
-            <h3 className="text-xl font-bold text-[#FFC832] mb-6">Eksplorasi</h3>
-            <ul className="space-y-3 text-gray-900 font-semibold text-sm sm:text-base">
+            <h3 className="text-xl font-semibold text-[#FFC832] mb-6 leading-tight">Eksplorasi</h3>
+            <ul className="space-y-3 text-gray-900 font-medium text-sm sm:text-base">
               <li><Link href="/" className="hover:text-[#4E0B11] transition-colors">Beranda</Link></li>
               <li><Link href="/tentang-kami" className="hover:text-[#4E0B11] transition-colors">Tentang Kami</Link></li>
               <li><Link href="/permainan" className="hover:text-[#4E0B11] transition-colors">Permainan</Link></li>
@@ -96,8 +96,8 @@ export default function Footer() {
 
           {/* Navigation Column 2 - Budaya */}
           <div className="md:col-span-6 lg:col-span-3">
-            <h3 className="text-xl font-bold text-[#FFC832] mb-6">Budaya</h3>
-            <ul className="space-y-3 text-gray-900 font-semibold text-sm sm:text-base">
+            <h3 className="text-xl font-semibold text-[#FFC832] mb-6 leading-tight">Budaya</h3>
+            <ul className="space-y-3 text-gray-900 font-medium text-sm sm:text-base">
               <li><Link href="/batik" className="hover:text-[#4E0B11] transition-colors">Batik Jawa</Link></li>
               <li><Link href="/wayang" className="hover:text-[#4E0B11] transition-colors">Wayang Kulit</Link></li>
               <li><Link href="/gamelan" className="hover:text-[#4E0B11] transition-colors">Gamelan</Link></li>

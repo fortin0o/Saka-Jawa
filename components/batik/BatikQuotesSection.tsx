@@ -6,7 +6,7 @@ export default function BatikQuotesSection() {
       <div className="mx-auto w-full max-w-[1400px] flex flex-col md:flex-row items-center justify-between md:min-h-[450px] lg:min-h-[600px] relative">
         {/* Quote text */}
         <div className="flex flex-col text-center md:text-left justify-center w-full md:w-[55%] z-20 py-8 md:py-0">
-          <blockquote className="font-['League_Spartan'] text-2xl sm:text-3xl md:text-3xl lg:text-[42px] font-bold text-[#4e0b11] leading-relaxed drop-shadow-sm">
+          <blockquote className="text-2xl sm:text-3xl md:text-3xl lg:text-[42px] font-bold text-[#4e0b11] leading-relaxed drop-shadow-sm">
             “Batik bukan sekadar selembar kain bermotif, melainkan sebuah doa dan harapan yang dilukis dengan malam, menceritakan filosofi kehidupan.”
           </blockquote>
         </div>

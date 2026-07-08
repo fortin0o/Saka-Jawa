@@ -139,7 +139,7 @@ export default function HeroSection({ content }: HeroSectionProps) {
             </div>
 
             {/* Headline */}
-            <h1 className="mt-6 animate-fade-in-up text-3xl sm:text-[2.5rem] leading-[1.1] font-bold tracking-tight text-black [animation-delay:0.1s] lg:text-[3rem] xl:text-[3.75rem]">
+            <h1 className="mt-6 animate-fade-in-up text-3xl sm:text-[2.5rem] leading-[1.1] font-bold tracking-tight text-black [animation-delay:0.1s] lg:text-[3rem] xl:text-[3.75rem] leading-tight">
               {headline}
             </h1>
 
@@ -149,7 +149,7 @@ export default function HeroSection({ content }: HeroSectionProps) {
             </p>
 
             {/* Description */}
-            <p className="mt-4 animate-fade-in-up text-base leading-[1.8] text-gray-600 [animation-delay:0.3s]">
+            <p className="mt-4 animate-fade-in-up text-base leading-[1.8] text-gray-600 [animation-delay:0.3s] font-normal leading-relaxed">
               {description}
             </p>
 

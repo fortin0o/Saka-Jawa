@@ -138,7 +138,7 @@ export default function ChatBubble({
           </div>
           <div className="flex-1 min-w-0">
             <p className="text-white font-bold text-sm leading-tight">Suro</p>
-            <p className="text-[#FFC832] text-xs">Pemandu Budaya Jawa</p>
+            <p className="text-[#FFC832] text-xs font-normal leading-relaxed">Pemandu Budaya Jawa</p>
           </div>
           <button
             onClick={onClose}

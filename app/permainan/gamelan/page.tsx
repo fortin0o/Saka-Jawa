@@ -301,8 +301,8 @@ export default function GamelanGamePage() {
           <div className="mb-5 flex items-start gap-3 bg-[#FFC832]/15 border border-[#FFC832]/50 rounded-xl px-4 py-3 shadow-sm">
             <span className="text-xl shrink-0 mt-0.5 font-bold text-[#FFC832] bg-[#4E0B11] w-8 h-8 flex items-center justify-center rounded-full">!</span>
             <div className="flex-1">
-              <p className="text-sm font-bold text-[#4E0B11]">Aktifkan Suara!</p>
-              <p className="text-xs text-[#4A332B] mt-0.5 leading-relaxed">
+              <p className="text-sm font-bold text-[#4E0B11] leading-relaxed">Aktifkan Suara!</p>
+              <p className="text-xs text-[#4A332B] mt-0.5 leading-relaxed font-normal">
                 Game ini menggunakan efek suara untuk membantu mengingat pola ritme. Pastikan volume perangkat Anda sudah dinyalakan sebelum mulai bermain.
               </p>
             </div>
@@ -324,7 +324,7 @@ export default function GamelanGamePage() {
           </div>
 
           <div className="flex flex-col items-center md:items-start text-center md:text-left max-w-lg gap-4 md:gap-6">
-            <h2 className="text-2xl md:text-3xl font-bold text-[#4E0B11]">Cara Bermain</h2>
+            <h2 className="text-2xl md:text-3xl font-semibold text-[#4E0B11] leading-tight">Cara Bermain</h2>
             <ul className="text-sm md:text-base text-[#4A332B] leading-relaxed space-y-2 bg-white border border-[#4E0B11]/20 rounded-xl p-4 md:p-5 shadow-sm w-full text-left">
               <li className="flex gap-2"><span className="text-[#FFC832] font-bold shrink-0">1.</span>Perhatikan instrumen mana yang menyala secara berurutan.</li>
               <li className="flex gap-2"><span className="text-[#FFC832] font-bold shrink-0">2.</span>Setelah selesai, tekan instrumen dalam urutan yang <strong>sama persis</strong>.</li>
@@ -371,10 +371,10 @@ export default function GamelanGamePage() {
               {isWin ? "!" : "G"}
             </div>
             <div>
-              <h2 className="text-2xl sm:text-3xl font-bold text-[#4E0B11]">
+              <h2 className="text-2xl sm:text-3xl font-semibold text-[#4E0B11] leading-tight">
                 {isWin ? "Luar Biasa!" : "Game Over!"}
               </h2>
-              <p className="text-sm text-[#4A332B] font-medium mt-1 max-w-[200px]">
+              <p className="text-sm text-[#4A332B] font-medium mt-1 max-w-[200px] leading-relaxed">
                 {isWin
                   ? `Kamu berhasil melewati ${round - 1} ronde penuh!`
                   : `Kamu sampai di ronde ${round}. Pola yang benar ada ${pattern.length} langkah.`}
@@ -588,12 +588,12 @@ export default function GamelanGamePage() {
 
         {/* Target hint */}
         {round <= MIN_ROUND_TO_WIN && (
-          <p className="text-center text-[10px] text-[#4A332B]/60 font-medium">
+          <p className="text-center text-[10px] text-[#4A332B]/60 font-medium leading-relaxed">
             Target: selesaikan hingga ronde <strong className="text-[#4E0B11]">{MIN_ROUND_TO_WIN}</strong> untuk menyelesaikan Pendhapa Gamelan
           </p>
         )}
         {round > MIN_ROUND_TO_WIN && (
-          <p className="text-center text-[10px] font-bold text-[#4E0B11] bg-[#FFC832]/20 py-1 rounded-full">
+          <p className="text-center text-[10px] font-bold text-[#4E0B11] bg-[#FFC832]/20 py-1 rounded-full leading-relaxed">
             Target tercapai! Terus bermain untuk skor lebih tinggi!
           </p>
         )}

@@ -89,7 +89,7 @@ export default function PermainanIntroPage() {
 
         <div className="relative z-10 max-w-3xl mx-auto px-4 sm:px-6 pt-28 pb-24 sm:pt-32 sm:pb-32 md:pt-40 md:pb-40 text-center">
           {/* Subtle text label instead of pill button */}
-          <p className="text-[#FFC832] font-bold uppercase tracking-widest text-sm mb-4">
+          <p className="text-[#FFC832] font-bold uppercase tracking-widest text-sm mb-4 leading-relaxed">
             Game Edukasi
           </p>
 
@@ -144,10 +144,10 @@ export default function PermainanIntroPage() {
       <section id="pilih-pendhapa" className="max-w-3xl mx-auto px-4 sm:px-6 py-12 sm:py-16 scroll-mt-10">
         {/* Label section */}
         <div className="text-center mb-8 sm:mb-10">
-          <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-[#4E0B11]">
+          <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold text-[#4E0B11] leading-tight">
             {isAllCompleted ? "Semua Pendhapa Selesai!" : "Pilih Pendhapa Menantimu"}
           </h2>
-          <p className="text-sm sm:text-base text-[#4A332B] font-medium mt-2">
+          <p className="text-sm sm:text-base text-[#4A332B] font-medium mt-2 leading-relaxed">
             Progress: {completedCount} dari 4 Pendhapa
           </p>
         </div>
@@ -174,7 +174,7 @@ export default function PermainanIntroPage() {
                 <span className="text-[10px] sm:text-xs font-bold text-[#FFC832] uppercase tracking-widest">
                   #{i + 1}
                 </span>
-                <h3 className="text-xs sm:text-sm font-bold text-[#4E0B11] leading-tight">
+                <h3 className="text-xs sm:text-sm font-semibold text-[#4E0B11] leading-tight">
                   {p.label}
                 </h3>
                 <p className="text-[10px] sm:text-xs text-[#4A332B] font-medium leading-snug">
@@ -194,7 +194,7 @@ export default function PermainanIntroPage() {
 
         {/* Info cara bermain */}
         <div className="mt-8 sm:mt-10 bg-white border border-[#4E0B11]/20 rounded-xl sm:rounded-2xl p-5 sm:p-6">
-          <h3 className="text-base sm:text-lg font-bold text-[#4E0B11] mb-3 sm:mb-4">
+          <h3 className="text-base sm:text-lg font-semibold text-[#4E0B11] mb-3 sm:mb-4 leading-tight">
             Cara Bermain
           </h3>
           <ol className="space-y-2.5">

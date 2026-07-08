@@ -12,10 +12,10 @@ export default function TentangKamiCeritaSection() {
 
           {/* Left: Text */}
           <div className="flex flex-col">
-            <p className="text-[#5B0917] text-sm font-bold tracking-[0.18em] uppercase mb-3">
+            <p className="text-[#5B0917] text-sm font-bold tracking-[0.18em] uppercase mb-3 leading-relaxed">
               Cerita Kami
             </p>
-            <h2 className="text-3xl md:text-[40px] font-bold text-[#4E0B11] leading-[1.15] mb-6">
+            <h2 className="text-3xl md:text-[40px] font-semibold text-[#4E0B11] leading-[1.15] mb-6 leading-tight">
               Mengapa Saka Jawa Lahir?
             </h2>
             <div className="space-y-4 text-[#4A332B] text-base md:text-[17px] leading-relaxed">

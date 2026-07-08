@@ -22,13 +22,13 @@ export default function NotFound() {
 
       {/* Text Content */}
       <div className="text-center relative z-10 flex flex-col items-center animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-        <h1 className="text-7xl md:text-9xl font-bold text-maroon mb-2 drop-shadow-sm">
+        <h1 className="text-7xl md:text-9xl font-bold text-maroon mb-2 drop-shadow-sm leading-tight">
           404
         </h1>
-        <h2 className="text-2xl md:text-4xl font-semibold text-gray-900 mb-4">
+        <h2 className="text-2xl md:text-4xl font-semibold text-gray-900 mb-4 leading-tight">
           Waduh, Kesasar Ya?
         </h2>
-        <p className="text-base md:text-lg text-gray-600 max-w-lg mb-10 leading-relaxed">
+        <p className="text-base md:text-lg text-gray-600 max-w-lg mb-10 leading-relaxed font-normal">
           Sepertinya halaman yang kamu cari sedang merantau atau memang tidak pernah ada. Mari kita kembali ke jalan yang benar.
         </p>
         
