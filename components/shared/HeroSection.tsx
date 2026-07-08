@@ -72,7 +72,7 @@ export default function HeroSection({ content }: HeroSectionProps) {
       <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-0">
         
         {/* Column 1: Image */}
-        <div className={`flex flex-col items-start w-full gap-5 lg:gap-6 ${content.imagePosition === 'right' ? 'order-1 lg:order-2 lg:items-end' : 'order-1'}`}>
+        <div className={`flex flex-col w-full gap-5 lg:gap-6 ${content.imagePosition === 'right' ? 'items-end order-1 lg:order-2' : 'items-start order-1'}`}>
           {content.customImageRender ? (
             content.customImageRender()
           ) : (
