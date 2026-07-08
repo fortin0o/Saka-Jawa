@@ -122,7 +122,7 @@ export default function LandingQuotesSection() {
         {/* Title Box */}
         <div className="flex justify-center mb-24 mt-16">
           <div className="bg-white px-8 md:px-12 py-4 rounded-3xl border border-[#61452e] shadow-md">
-            <h2 className="text-2xl md:text-[34px] font-extrabold text-[#111] tracking-tight text-center leading-tight">
+            <h2 className="text-2xl md:text-[34px] font-bold text-[#111] tracking-tight text-center leading-tight">
               Kata Budayawan <br className="block md:hidden" /> Tentang Jawa
             </h2>
           </div>
