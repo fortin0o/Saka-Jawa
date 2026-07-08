@@ -3,6 +3,7 @@
 import { useState, useEffect, useCallback } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useLenis } from "lenis/react";
 
 const navLeft = [
@@ -63,6 +64,11 @@ export default function LandingNavbar() {
   const [lastScrollY, setLastScrollY] = useState(0);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const lenis = useLenis();
+  const pathname = usePathname();
+
+  const isAltTheme = pathname?.startsWith("/permainan") || pathname?.startsWith("/tentang-kami");
+  const staticTextClass = isAltTheme ? "text-white" : "text-black";
+  const glassBgClass = "bg-white/50 border-white/50 text-black";
 
   const handleScrollToExplore = useCallback(() => {
     const target = document.getElementById("explore-section");
@@ -105,7 +111,7 @@ export default function LandingNavbar() {
       <header className="absolute left-1/2 top-5 z-[100] w-full max-w-[1024px] -translate-x-1/2 px-5 sm:top-8 pointer-events-none">
         {/* Desktop */}
         <nav
-          className="hidden md:grid grid-cols-[1fr_auto_1fr] items-center gap-8 sm:gap-16 text-[0.8rem] font-bold text-black sm:text-base pointer-events-auto"
+          className={`hidden md:grid grid-cols-[1fr_auto_1fr] items-center gap-8 sm:gap-16 text-[0.8rem] font-bold sm:text-base pointer-events-auto ${staticTextClass}`}
           aria-label="Navigasi utama statis desktop"
         >
           <NavContent onKekayaanBudayaClick={handleScrollToExplore} />
@@ -113,7 +119,7 @@ export default function LandingNavbar() {
 
         {/* Mobile */}
         <nav
-          className="md:hidden flex items-center justify-between w-full pointer-events-auto"
+          className={`md:hidden flex items-center justify-between w-full pointer-events-auto ${staticTextClass}`}
           aria-label="Navigasi utama statis mobile"
         >
           <Link href="/" aria-label="Saka Jawa" className="flex items-center gap-2">
@@ -129,9 +135,9 @@ export default function LandingNavbar() {
                 className="object-contain"
               />
             </div>
-            <span className="text-xl font-bold text-black tracking-tight">SakaJawa</span>
+            <span className="text-xl font-bold tracking-tight">SakaJawa</span>
           </Link>
-          <button onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} aria-label="Menu" className="p-2 -mr-2 cursor-pointer transition-transform hover:scale-105 active:scale-95 text-black">
+          <button onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} aria-label="Menu" className="p-2 -mr-2 cursor-pointer transition-transform hover:scale-105 active:scale-95">
             <div className="flex flex-col items-end justify-between w-6 h-[16px]">
               <span className="block h-[2.5px] w-full bg-current rounded-full" />
               <span className="block h-[2.5px] w-4.5 bg-current rounded-full" />
@@ -149,7 +155,7 @@ export default function LandingNavbar() {
       >
         {/* Desktop */}
         <nav
-          className="hidden md:grid grid-cols-[1fr_auto_1fr] items-center rounded-full bg-white/50 backdrop-blur-md border border-white/50 px-10 py-2 shadow-lg text-sm sm:text-[15px] font-semibold text-black pointer-events-auto"
+          className={`hidden md:grid grid-cols-[1fr_auto_1fr] items-center rounded-full backdrop-blur-md border px-10 py-2 shadow-lg text-sm sm:text-[15px] font-semibold pointer-events-auto ${glassBgClass}`}
           aria-label="Navigasi utama scroll desktop"
         >
           <div className="flex items-center justify-end gap-6 sm:gap-16 pr-8 sm:pr-16">
@@ -194,7 +200,7 @@ export default function LandingNavbar() {
 
         {/* Mobile */}
         <nav
-          className="md:hidden flex items-center justify-between w-full rounded-full bg-white/50 backdrop-blur-md border border-white/50 px-6 py-2.5 shadow-lg pointer-events-auto"
+          className={`md:hidden flex items-center justify-between w-full rounded-full backdrop-blur-md border px-6 py-2.5 shadow-lg pointer-events-auto ${glassBgClass}`}
           aria-label="Navigasi utama scroll mobile"
         >
           <Link href="/" aria-label="Saka Jawa" className="flex items-center gap-2">
@@ -210,9 +216,9 @@ export default function LandingNavbar() {
                 className="object-contain"
               />
             </div>
-            <span className="text-lg font-bold text-black tracking-tight">SakaJawa</span>
+            <span className="text-lg font-bold tracking-tight">SakaJawa</span>
           </Link>
-          <button onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} aria-label="Menu" className="p-2 -mr-1 cursor-pointer transition-transform hover:scale-105 active:scale-95 text-black">
+          <button onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} aria-label="Menu" className="p-2 -mr-1 cursor-pointer transition-transform hover:scale-105 active:scale-95">
             <div className="flex flex-col items-end justify-between w-6 h-[16px]">
               <span className="block h-[2.5px] w-full bg-current rounded-full" />
               <span className="block h-[2.5px] w-4.5 bg-current rounded-full" />
@@ -232,7 +238,7 @@ export default function LandingNavbar() {
       )}
       
       <div 
-        className={`fixed left-1/2 top-[80px] sm:top-[90px] z-[200] w-[calc(100%-2.5rem)] max-w-[400px] -translate-x-1/2 flex flex-col items-center gap-6 rounded-[2.5rem] bg-white/50 backdrop-blur-md border border-white/50 px-6 py-8 shadow-lg transition-all duration-300 pointer-events-auto md:hidden text-lg font-semibold ${
+        className={`fixed left-1/2 top-[80px] sm:top-[90px] z-[200] w-[calc(100%-2.5rem)] max-w-[400px] -translate-x-1/2 flex flex-col items-center gap-6 rounded-[2.5rem] backdrop-blur-md border px-6 py-8 shadow-lg transition-all duration-300 pointer-events-auto md:hidden text-lg font-semibold ${glassBgClass} ${
           isMobileMenuOpen ? "translate-y-0 opacity-100 visible" : "-translate-y-4 opacity-0 invisible"
         }`}
       >
