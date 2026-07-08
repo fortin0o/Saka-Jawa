@@ -16,7 +16,7 @@ const teamMembers = [
   {
     name: "Mohamad Hilmi Azzam",
     role: "Frontend Designer",
-    image: "/Assets/ProfilTim/RPLDonald.webp",
+    image: "/Assets/ProfilTim/RPLHilmi.webp",
     bgColor: "#6B1520",
   },
 ];

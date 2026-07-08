@@ -5,6 +5,7 @@ import DetailGaleri from "../shared/DetailGaleri";
 
 export default function KulinerDaerahSection() {
   const [selectedDaerahId, setSelectedDaerahId] = useState<string | null>(null);
+  const [scrollIndex, setScrollIndex] = useState(0);
 
   const daerahList = [
     {
@@ -26,6 +27,18 @@ export default function KulinerDaerahSection() {
       bgImage: "/Assets/Gambar-Kuliner/JawaTimur/lontong-balap.webp",
     },
   ];
+
+  const handleNext = () => {
+    if (scrollIndex < daerahList.length - 1) {
+      setScrollIndex(scrollIndex + 1);
+    }
+  };
+
+  const handlePrev = () => {
+    if (scrollIndex > 0) {
+      setScrollIndex(scrollIndex - 1);
+    }
+  };
 
   // Data galeri per daerah
   const galleryData: Record<string, { gallery: { id: string; src: string; title: string; description: string }[] }> = {
@@ -139,66 +152,100 @@ export default function KulinerDaerahSection() {
         <div className="mx-auto w-full max-w-[var(--container-lg)] flex flex-col items-center">
 
           {/* Header */}
-          <div className="text-center mb-16 max-w-2xl">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[42px] font-semibold text-[#4e0b11] mb-4 leading-tight">
-              Jelajahi Berdasarkan Daerah Bagian
-            </h2>
-            <p className="text-sm sm:text-base md:text-lg text-stone-900 font-medium leading-relaxed">
-              Temukan hidangan khas Jawa berdasarkan daerah asalnya
-            </p>
+          <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end mb-12 w-full max-w-5xl">
+            <div>
+              <h2 className="text-3xl sm:text-4xl md:text-[42px] font-semibold text-[#4e0b11] mb-3 leading-tight">
+                Jelajahi Berdasarkan Daerah Bagian
+              </h2>
+              <p className="text-sm sm:text-base md:text-lg text-stone-900 font-medium max-w-2xl leading-relaxed">
+                Temukan hidangan khas Jawa berdasarkan daerah asalnya
+              </p>
+            </div>
+
+            {/* Slider Navigation Buttons - Mobile Only */}
+            <div className="flex gap-4 shrink-0 md:hidden">
+              <button
+                onClick={handlePrev}
+                disabled={scrollIndex === 0}
+                className={`flex h-12 w-12 items-center justify-center rounded-lg border border-[#4e0b11] text-xl font-bold transition-all ${
+                  scrollIndex === 0
+                    ? "border-stone-300 text-stone-400 bg-transparent cursor-not-allowed"
+                    : "bg-[#4e0b11] text-white hover:bg-[#3d080d]"
+                }`}
+                aria-label="Previous items"
+              >
+                &lt;
+              </button>
+              <button
+                onClick={handleNext}
+                disabled={scrollIndex >= daerahList.length - 1}
+                className={`flex h-12 w-12 items-center justify-center rounded-lg border border-[#4e0b11] text-xl font-bold transition-all ${
+                  scrollIndex >= daerahList.length - 1
+                    ? "border-stone-300 text-stone-400 bg-transparent cursor-not-allowed"
+                    : "bg-[#4e0b11] text-white hover:bg-[#3d080d]"
+                }`}
+                aria-label="Next items"
+              >
+                &gt;
+              </button>
+            </div>
           </div>
 
           {/* Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 w-full max-w-5xl">
-            {daerahList.map((item) => (
-              <div
-                key={item.id}
-                className="rounded-xl border border-[#4e0b11] overflow-hidden shadow-sm relative min-h-[220px] transition-all duration-300 hover:-translate-y-1 hover:shadow-xl block text-left w-full group"
-              >
-                {/* Background Image */}
-                <div 
-                  className="absolute inset-0 z-0 bg-cover bg-right transition-transform duration-500 group-hover:scale-110"
-                  style={{ backgroundImage: `url('${item.bgImage}')` }}
-                />
-                
-                {/* Gradient Overlay */}
-                <div className="absolute inset-0 z-0 bg-gradient-to-r from-[#4e0b11] from-45% to-transparent" />
+          <div className="overflow-hidden md:overflow-visible -mx-4 px-4 md:mx-0 md:px-0 w-full max-w-5xl">
+            <div
+              className="flex md:grid md:grid-cols-3 gap-6 md:gap-8 transition-transform duration-500 ease-in-out md:!transform-none"
+              style={{ transform: `translateX(-${scrollIndex * 344}px)` }}
+            >
+              {daerahList.map((item) => (
+                <div
+                  key={item.id}
+                  className="w-[320px] md:w-auto shrink-0 md:shrink rounded-xl border border-[#4e0b11] overflow-hidden shadow-sm relative min-h-[220px] transition-all duration-300 hover:-translate-y-1 hover:shadow-xl block text-left group"
+                >
+                  {/* Background Image */}
+                  <div 
+                    className="absolute inset-0 z-0 bg-cover bg-right transition-transform duration-500 group-hover:scale-110"
+                    style={{ backgroundImage: `url('${item.bgImage}')` }}
+                  />
+                  
+                  {/* Gradient Overlay */}
+                  <div className="absolute inset-0 z-0 bg-gradient-to-r from-[#4e0b11] from-45% to-transparent" />
 
-                <div className="p-6 h-full flex flex-col justify-between w-[70%] z-10 relative">
-                  <div>
-                    <h3 className="text-xl font-medium text-[#FFC832] mb-2 leading-tight">
-                      {item.title}
-                    </h3>
-                    <p className="text-xs text-gray-300 leading-relaxed font-medium">
-                      {item.desc}
-                    </p>
-                  </div>
-                  <div className="mt-6">
-                    <button
-                      onClick={() => setSelectedDaerahId(item.id)}
-                      className="inline-flex items-center gap-2 text-white text-xs font-semibold border border-white rounded-full px-4 py-1.5 hover:bg-[#FFC832] hover:text-[#4e0b11] hover:border-transparent transition-all duration-300"
-                    >
-                      Lihat Detail
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="12"
-                        height="12"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="2.5"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
+                  <div className="p-6 h-full flex flex-col justify-between w-[70%] z-10 relative">
+                    <div>
+                      <h3 className="text-xl font-medium text-[#FFC832] mb-2 leading-tight">
+                        {item.title}
+                      </h3>
+                      <p className="text-xs text-gray-300 leading-relaxed font-medium">
+                        {item.desc}
+                      </p>
+                    </div>
+                    <div className="mt-6">
+                      <button
+                        onClick={() => setSelectedDaerahId(item.id)}
+                        className="inline-flex items-center gap-2 text-white text-xs font-semibold border border-white rounded-full px-4 py-1.5 hover:bg-[#FFC832] hover:text-[#4e0b11] hover:border-transparent transition-all duration-300"
                       >
-                        <path d="M5 12h14M12 5l7 7-7 7" />
-                      </svg>
-                    </button>
+                        Lihat Detail
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="12"
+                          height="12"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          strokeWidth="2.5"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        >
+                          <path d="M5 12h14M12 5l7 7-7 7" />
+                        </svg>
+                      </button>
+                    </div>
                   </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
-
         </div>
       </section>
 
