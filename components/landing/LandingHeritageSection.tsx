@@ -5,21 +5,25 @@ export default function LandingHeritageSection() {
     {
       src: "/Assets/kulinerHeroAsset.webp",
       alt: "Kuliner Tradisional",
+      desc: "Cita rasa warisan leluhur yang kaya rempah dan sarat akan cerita sejarah.",
       className: "w-[240px] md:w-[280px] h-[340px] md:h-[420px]",
     },
     {
       src: "/Assets/gamelanHeroAsset.webp",
       alt: "Gamelan",
+      desc: "Alat musik ansambel tradisional Jawa yang menciptakan harmoni dan ketenangan.",
       className: "w-[240px] md:w-[280px] h-[280px] md:h-[360px]",
     },
     {
       src: "/Assets/wayangHeroAsset.webp",
       alt: "Wayang",
+      desc: "Seni pertunjukan epik yang membawa pesan moral dan filosofi kehidupan secara mendalam.",
       className: "w-[240px] md:w-[280px] h-[240px] md:h-[280px]",
     },
     {
       src: "/Assets/batikHeroAsset.webp",
       alt: "Batik",
+      desc: "Mahakarya lukis di atas kain dengan motif indah yang memiliki makna filosofis khas Nusantara.",
       className: "w-[240px] md:w-[280px] h-[300px] md:h-[400px]",
     },
   ];
@@ -46,16 +50,36 @@ export default function LandingHeritageSection() {
           {/* First set */}
           <div className="flex gap-4 md:gap-6 pr-4 md:pr-6 items-start ml-6 md:ml-12 lg:ml-24">
             {images.map((img, idx) => (
-              <div key={`set1-${idx}`} className={`${img.className} rounded-2xl md:rounded-3xl overflow-hidden relative shadow-lg shrink-0`}>
-                <Image src={img.src} fill className="object-cover" alt={img.alt} unoptimized />
+              <div key={`set1-${idx}`} className={`${img.className} group/card [perspective:1000px] shrink-0`}>
+                <div className="relative w-full h-full transition-transform duration-700 [transform-style:preserve-3d] group-hover/card:[transform:rotateY(180deg)]">
+                  {/* Front Card */}
+                  <div className="absolute inset-0 [backface-visibility:hidden] rounded-2xl md:rounded-3xl overflow-hidden shadow-lg">
+                    <Image src={img.src} fill className="object-cover" alt={img.alt} unoptimized />
+                  </div>
+                  {/* Back Card */}
+                  <div className="absolute inset-0 [backface-visibility:hidden] [transform:rotateY(180deg)] rounded-2xl md:rounded-3xl overflow-hidden shadow-lg bg-[#F9F1E4] border border-[#E5D5C1] p-6 flex flex-col justify-center items-center text-center">
+                    <h3 className="text-2xl font-bold text-[var(--color-maroon)] mb-3" style={{ fontFamily: 'var(--font-league-spartan)' }}>{img.alt}</h3>
+                    <p className="text-[15px] font-medium text-gray-700 leading-relaxed">{img.desc}</p>
+                  </div>
+                </div>
               </div>
             ))}
           </div>
           {/* Second set for seamless loop */}
           <div className="flex gap-4 md:gap-6 pr-4 md:pr-6 items-start">
             {images.map((img, idx) => (
-              <div key={`set2-${idx}`} className={`${img.className} rounded-2xl md:rounded-3xl overflow-hidden relative shadow-lg shrink-0`}>
-                <Image src={img.src} fill className="object-cover" alt={img.alt} unoptimized />
+              <div key={`set2-${idx}`} className={`${img.className} group/card [perspective:1000px] shrink-0`}>
+                <div className="relative w-full h-full transition-transform duration-700 [transform-style:preserve-3d] group-hover/card:[transform:rotateY(180deg)]">
+                  {/* Front Card */}
+                  <div className="absolute inset-0 [backface-visibility:hidden] rounded-2xl md:rounded-3xl overflow-hidden shadow-lg">
+                    <Image src={img.src} fill className="object-cover" alt={img.alt} unoptimized />
+                  </div>
+                  {/* Back Card */}
+                  <div className="absolute inset-0 [backface-visibility:hidden] [transform:rotateY(180deg)] rounded-2xl md:rounded-3xl overflow-hidden shadow-lg bg-[#F9F1E4] border border-[#E5D5C1] p-6 flex flex-col justify-center items-center text-center">
+                    <h3 className="text-2xl font-bold text-[var(--color-maroon)] mb-3" style={{ fontFamily: 'var(--font-league-spartan)' }}>{img.alt}</h3>
+                    <p className="text-[15px] font-medium text-gray-700 leading-relaxed">{img.desc}</p>
+                  </div>
+                </div>
               </div>
             ))}
           </div>
