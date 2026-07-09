@@ -112,5 +112,12 @@ function LoadingScreenInner() {
 // tanpa perlu memanggil setState secara sinkron di dalam useEffect.
 export default function LoadingScreen() {
   const pathname = usePathname();
+
+  // Hilangkan loading screen untuk halaman game (misal: /permainan/batik, /permainan/gamelan)
+  // tetapi tetap pertahankan loading screen untuk halaman utama /permainan
+  if (pathname?.startsWith("/permainan/")) {
+    return null;
+  }
+
   return <LoadingScreenInner key={pathname} />;
 }
