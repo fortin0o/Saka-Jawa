@@ -175,6 +175,7 @@ export default function BatikMotifSection() {
           initialImageId={`${selectedMotifId}-1`} 
           images={galleryData[selectedMotifId]?.gallery || []} 
           onClose={() => setSelectedMotifId(null)} 
+          category={motifs.find(m => m.id === selectedMotifId)?.title || "Motif Batik"}
         />
       )}
     </>

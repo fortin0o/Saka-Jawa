@@ -67,6 +67,7 @@ export default function GamelanInstrumenSection() {
         images={gongGalleryImages} 
         onClose={() => setShowGongGallery(false)} 
         initialImageId={1} 
+        category="Gong Ageng"
       />
     );
   }

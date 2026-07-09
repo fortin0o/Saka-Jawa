@@ -255,6 +255,7 @@ export default function KulinerDaerahSection() {
           initialImageId={`${selectedDaerahId}-1`} 
           images={galleryData[selectedDaerahId]?.gallery || []} 
           onClose={() => setSelectedDaerahId(null)} 
+          category={daerahList.find(d => d.id === selectedDaerahId)?.title || "Kuliner Daerah"}
         />
       )}
     </>

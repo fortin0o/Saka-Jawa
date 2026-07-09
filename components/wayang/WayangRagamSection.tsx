@@ -129,6 +129,7 @@ export default function WayangRagamSection() {
           initialImageId="wk-1" 
           images={wayangKulitGallery} 
           onClose={() => setSelectedWayangId(null)} 
+          category="Wayang Kulit"
         />
       )}
     </>

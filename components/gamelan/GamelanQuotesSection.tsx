@@ -12,7 +12,7 @@ export default function GamelanQuotesSection() {
           </blockquote>
         </div>
         {/* Gamelan di bawah teks */}
-        <div className="relative w-full h-[280px] pointer-events-none mb-1">
+        <div className="relative w-full h-[280px] pointer-events-none mb-0">
           <Image
             src="/Assets/Gamelan.svg"
             alt="Ilustrasi Gamelan"

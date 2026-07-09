@@ -11,12 +11,14 @@ export interface GalleryImage {
   src: string;
   title: string;
   description: string;
+  category?: string;
 }
 
 interface DetailGaleriProps {
   initialImageId?: string | number;
   images: GalleryImage[];
   onClose?: () => void;
+  category?: string;
 }
 
 const Frame = ({
@@ -53,7 +55,7 @@ const Frame = ({
   </div>
 );
 
-export default function DetailGaleri({ initialImageId, images, onClose }: DetailGaleriProps) {
+export default function DetailGaleri({ initialImageId, images, onClose, category }: DetailGaleriProps) {
   const router = useRouter();
   const containerRef = useRef<HTMLDivElement>(null);
   
@@ -172,6 +174,14 @@ export default function DetailGaleri({ initialImageId, images, onClose }: Detail
 
             {/* Description */}
             <div className="flex-1 text-white max-w-xl">
+              {/* Category Chip */}
+              <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-white/50 mb-4">
+                <span className="w-2 h-2 rounded-full bg-[#FFC832]"></span>
+                <span className="text-sm font-medium text-white tracking-wide">
+                  {currentImage?.category || category || "Galeri Budaya"}
+                </span>
+              </div>
+
               <h1 className="text-4xl lg:text-[44px] font-extrabold mb-6 text-[#FFC832] leading-tight">
                 {currentImage?.title}
               </h1>
