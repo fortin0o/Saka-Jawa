@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { useEffect, useRef } from "react";
-
+import Link from "next/link";
 const heroLayers = {
   base: "/Assets/DasaranHero.svg",
   mountain: "/Assets/GunungHero.svg",
@@ -173,12 +173,16 @@ export default function LandingHeroSection() {
           </h1>
           
           <div className="mt-4 flex flex-row items-center justify-center gap-4 sm:gap-4">
-            <button className="rounded-full border-2 border-[#512402] px-6 py-3 text-sm font-bold text-[#512402] shadow-sm transition-colors hover:bg-[#512402] hover:text-[#F9F1E4] md:px-8 md:py-2 md:text-base cursor-pointer active:scale-98 transition-transform duration-300">
+            <button 
+              onClick={() => document.getElementById('explore-section')?.scrollIntoView({ behavior: 'smooth' })}
+              className="rounded-full border-2 border-[#512402] px-6 py-3 text-sm font-bold text-[#512402] shadow-sm transition-colors hover:bg-[#512402] hover:text-[#F9F1E4] md:px-8 md:py-2 md:text-base cursor-pointer active:scale-98 transition-transform duration-300">
               Jelajahi Kami
             </button>
-            <button className="rounded-full border-2 border-[#ffc62e] bg-[#ffc62e] px-6 py-3 text-sm font-bold text-[#5B0917] shadow-sm transition-colors md:px-8 md:py-2 md:text-base hover:scale-103 cursor-pointer active:scale-98 transition-transform duration-300">
+            <Link 
+              href="/tentang-kami"
+              className="flex items-center justify-center rounded-full border-2 border-[#ffc62e] bg-[#ffc62e] px-6 py-3 text-sm font-bold text-[#5B0917] shadow-sm transition-colors md:px-8 md:py-2 md:text-base hover:scale-103 cursor-pointer active:scale-98 transition-transform duration-300">
               Tentang Kami
-            </button>
+            </Link>
           </div>
         </div>
       </div>
