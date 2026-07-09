@@ -11,10 +11,10 @@ export default function GamelanQuotesSection() {
             &ldquo;Gamelan adalah bahasa jiwa yang melampaui kata-kata — menyatukan hati manusia dengan keagungan alam semesta dan leluhur.&rdquo;
           </blockquote>
         </div>
-        {/* Gamelan di bawah teks */}
-        <div className="relative w-full h-[280px] pointer-events-none mb-0">
+        {/* Gamelan di bawah teks (digeser sedikit ke kanan agar center secara visual) */}
+        <div className="relative w-full h-[280px] pointer-events-none -mt-6 mb-6 translate-x-6">
           <Image
-            src="/Assets/Gamelan.svg"
+            src="/Assets/Gong Quotes.png"
             alt="Ilustrasi Gamelan"
             fill
             className="object-contain object-bottom"
@@ -25,9 +25,9 @@ export default function GamelanQuotesSection() {
       {/* ===== DESKTOP LAYOUT (hidden on mobile) — TIDAK DIUBAH ===== */}
       <div className="hidden md:grid mx-auto w-full max-w-[1400px] grid-cols-2 gap-8 items-center min-h-[450px] lg:min-h-[600px] relative">
         {/* Gamelan.svg graphic sticking to the LEFT */}
-        <div className="flex justify-start absolute left-[-15px] lg:left-[-30px] top-24 h-[250px] lg:h-[500px] w-full md:w-1/2 pointer-events-none z-30">
+        <div className="flex justify-start absolute left-[-15px] lg:left-[-30px] top-8 lg:top-4 h-[250px] lg:h-[500px] w-full md:w-1/2 pointer-events-none z-30">
           <Image
-            src="/Assets/Gamelan.svg"
+            src="/Assets/Gong Quotes.png"
             alt="Ilustrasi Gamelan"
             fill
             className="object-contain object-top object-left"
