@@ -64,7 +64,7 @@ function LoadingScreenInner() {
       >
         <div className="relative w-24 h-24 md:w-32 md:h-32 mb-4">
           <Image
-            src="/Assets/LogoUtama.svg"
+            src="/Assets/LogoUtama.webp"
             alt="Saka Jawa Logo"
             fill
             priority

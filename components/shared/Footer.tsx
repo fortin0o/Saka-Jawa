@@ -57,7 +57,7 @@ export default function Footer() {
           <div className="md:col-span-12 lg:col-span-5 flex flex-col">
             <div className="flex items-center gap-3 mb-6">
               <Image
-                src="/Assets/LogoUtama.svg"
+                src="/Assets/LogoUtama.webp"
                 alt="SakaJawa Logo"
                 width={40}
                 height={40}
@@ -118,14 +118,17 @@ export default function Footer() {
         </div>
 
         {/* The Landscape Image */}
-        <Image
-          src="/Assets/FooterAssets.webp"
-          alt="Footer Landscape"
-          width={1920}
-          height={1080}
-          className="w-full h-auto object-cover object-top"
-          priority
-        />
+        <div className="relative w-full aspect-[1920/1080]">
+          <Image
+            src="/Assets/FooterAssets.webp"
+            alt="Footer Landscape"
+            fill
+            sizes="(max-width: 1200px) 100vw, 1200px"
+            quality={65}
+            className="w-full h-auto object-cover object-top"
+            priority
+          />
+        </div>
       </div>
     </footer>
   );

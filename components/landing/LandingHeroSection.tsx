@@ -5,11 +5,11 @@ import { useEffect, useRef } from "react";
 import Link from "next/link";
 const heroLayers = {
   base: "/Assets/DasaranHero.webp",
-  mountain: "/Assets/GunungHero.svg",
-  trees: "/Assets/PepohonanHero.svg",
-  gamelan: "/Assets/GamelanHero.svg",
+  mountain: "/Assets/GunungHero.webp",
+  trees: "/Assets/PepohonanHero.webp",
+  gamelan: "/Assets/GamelanHero.webp",
   kelir: "/Assets/KelirWayangHero.webp",
-  logo: "/Assets/LogoUtama.svg",
+  logo: "/Assets/LogoUtama.webp",
   chatbot: "/Assets/ChatbotAbdiDalem.webp",
 };
 
