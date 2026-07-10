@@ -2,7 +2,7 @@ import { HeroContent } from "../shared/HeroSection";
 
 export const batikHeroContent: HeroContent = {
   badge: {
-    iconSrc: "/Assets/PendhopoBatik.svg",
+    iconSrc: "/Assets/PendhopoBatik.webp",
     iconAlt: "Ikon Pendhapa",
     label: "Pendhapa Batik",
   },

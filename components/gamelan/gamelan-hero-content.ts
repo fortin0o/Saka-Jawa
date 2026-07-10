@@ -2,7 +2,7 @@ import { HeroContent } from "../shared/HeroSection";
 
 export const gamelanHeroContent: HeroContent = {
   badge: {
-    iconSrc: "/Assets/PendhopoGamelan.svg",
+    iconSrc: "/Assets/PendhopoGamelan.webp",
     iconAlt: "Ikon Pendhapa Gamelan",
     label: "Pendhapa Gamelan",
   },

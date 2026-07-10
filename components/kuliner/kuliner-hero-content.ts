@@ -2,7 +2,7 @@ import { HeroContent } from "../shared/HeroSection";
 
 export const kulinerHeroContent: HeroContent = {
   badge: {
-    iconSrc: "/Assets/PendhopoKuliner.svg",
+    iconSrc: "/Assets/PendhopoKuliner.webp",
     iconAlt: "Ikon Pendhapa Kuliner",
     label: "Pendhapa Kuliner",
   },

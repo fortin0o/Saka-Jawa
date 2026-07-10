@@ -174,7 +174,7 @@ export default function LandingQuotesSection() {
                       </div>
                       <div className="relative w-10 h-10 md:w-12 md:h-12 rounded-full overflow-hidden bg-gray-200 shrink-0 max-md:mt-1">
                         {quote.image && (
-                          <Image src={quote.image} alt={quote.name} fill className="object-cover" />
+                          <Image src={quote.image} alt={quote.name} fill className="object-cover" sizes="48px" />
                         )}
                       </div>
                     </div>

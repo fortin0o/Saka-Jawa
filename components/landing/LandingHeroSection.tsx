@@ -44,7 +44,7 @@ function ObjectImage({ src, className = "" }: { src: string; className?: string 
       alt=""
       width={1920}
       height={1080}
-      sizes="(max-width: 768px) 70vw, 45vw"
+      sizes="(max-width: 768px) 80vw, 40vw"
       loading="eager"
       className={`pointer-events-none h-auto w-full select-none ${className}`}
     />

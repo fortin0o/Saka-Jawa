@@ -11,7 +11,7 @@ export default function NotFound() {
       {/* Illustration */}
       <div className="w-20 sm:w-28 mb-6 relative z-10 animate-fade-in-up">
         <Image 
-          src="/Assets/SambutTamuAbout.svg" 
+          src="/Assets/SambutTamuAbout.webp" 
           alt="Sambut Tamu 404" 
           width={200} 
           height={200} 
