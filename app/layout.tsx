@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
 import { League_Spartan } from "next/font/google";
 import "./globals.css";
-import Footer from "../components/shared/Footer";
-import SmoothScrolling from "../components/shared/SmoothScrolling";
+import dynamic from "next/dynamic";
 import LoadingScreen from "../components/shared/LoadingScreen";
+
+const Footer = dynamic(() => import("../components/shared/Footer"));
+const SmoothScrolling = dynamic(() => import("../components/shared/SmoothScrolling"));
 
 const leagueSpartan = League_Spartan({
   variable: "--font-league-spartan",

@@ -21,7 +21,7 @@ export default function KulinerAboutSection() {
       {/* Decorative Flowers (Optional, similar to Batik) */}
       <div className="absolute top-0 left-0 w-56 h-56 md:w-80 md:h-80 pointer-events-none -translate-x-1/4 -translate-y-1/4 opacity-90">
         <Image
-          src="/Assets/BungaKuning.svg"
+          src="/Assets/BungaKuning.webp"
           alt="Bunga Kuning"
           fill
           className="object-contain"
@@ -29,7 +29,7 @@ export default function KulinerAboutSection() {
       </div>
       <div className="absolute top-0 right-0 w-56 h-56 md:w-96 md:h-96 pointer-events-none translate-x-1/4 -translate-y-1/4 opacity-90">
         <Image
-          src="/Assets/BungaKuning2.svg"
+          src="/Assets/BungaKuning2.webp"
           alt="Bunga Kuning 2"
           fill
           className="object-contain"

@@ -13,7 +13,7 @@ export default function TentangKamiHeroSection() {
       {/* Decorative Flowers */}
       <div className="absolute top-0 left-0 w-48 h-48 md:w-72 md:h-72 pointer-events-none -translate-x-1/4 -translate-y-1/4 opacity-80">
         <Image
-          src="/Assets/BungaKuning.svg"
+          src="/Assets/BungaKuning.webp"
           alt=""
           fill
           className="object-contain"
@@ -21,7 +21,7 @@ export default function TentangKamiHeroSection() {
       </div>
       <div className="absolute top-0 right-0 w-48 h-48 md:w-80 md:h-80 pointer-events-none translate-x-1/4 -translate-y-1/4 opacity-80">
         <Image
-          src="/Assets/BungaKuning2.svg"
+          src="/Assets/BungaKuning2.webp"
           alt=""
           fill
           className="object-contain"
@@ -29,7 +29,7 @@ export default function TentangKamiHeroSection() {
       </div>
       <div className="absolute bottom-0 left-0 w-40 h-40 md:w-64 md:h-64 pointer-events-none -translate-x-1/4 translate-y-1/4 opacity-50 rotate-180">
         <Image
-          src="/Assets/BungaKuning2.svg"
+          src="/Assets/BungaKuning2.webp"
           alt=""
           fill
           className="object-contain"
@@ -37,7 +37,7 @@ export default function TentangKamiHeroSection() {
       </div>
       <div className="absolute bottom-0 right-0 w-40 h-40 md:w-64 md:h-64 pointer-events-none translate-x-1/4 translate-y-1/4 opacity-50 rotate-180">
         <Image
-          src="/Assets/BungaKuning.svg"
+          src="/Assets/BungaKuning.webp"
           alt=""
           fill
           className="object-contain"

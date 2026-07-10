@@ -14,7 +14,7 @@ export default function WayangQuotesSection() {
         {/* Quote image overflowing to the next section */}
         <div className="flex justify-center md:justify-end relative md:absolute md:right-0 md:bottom-[-50px] lg:bottom-[-150px] h-[450px] md:h-[550px] lg:h-[800px] w-full md:w-1/2 pointer-events-none z-30 -mb-[50px] md:mb-0">
           <Image
-            src="/Assets/WayangQuotes.svg"
+            src="/Assets/WayangQuotes.webp"
             alt="Ilustrasi Wayang Quotes"
             fill
             className="object-contain object-bottom"
