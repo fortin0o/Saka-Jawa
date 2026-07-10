@@ -56,7 +56,7 @@ const NavContent = ({ onKekayaanBudayaClick }: { onKekayaanBudayaClick: () => vo
     </div>
   </>
 );
-
+//
 export default function LandingNavbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isVisible, setIsVisible] = useState(true);
