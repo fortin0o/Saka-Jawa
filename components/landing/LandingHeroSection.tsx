@@ -32,7 +32,6 @@ function LayerImage({
       sizes="100vw"
       loading={eager ? "eager" : "lazy"}
       fetchPriority={eager ? "high" : "auto"}
-      unoptimized
       className={`pointer-events-none select-none object-cover ${className}`}
     />
   );
@@ -47,7 +46,6 @@ function ObjectImage({ src, className = "" }: { src: string; className?: string 
       height={1080}
       sizes="(max-width: 768px) 70vw, 45vw"
       loading="eager"
-      unoptimized
       className={`pointer-events-none h-auto w-full select-none ${className}`}
     />
   );

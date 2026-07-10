@@ -320,7 +320,7 @@ export default function BatikGamePage() {
             </div>
 
             <div className="w-full max-w-[240px] md:max-w-[280px] rounded-2xl overflow-hidden border-4 border-[#FFC832] shadow-xl aspect-square relative">
-              <Image src={currentMotif.gambarSrc} alt={currentMotif.namaMotif} fill className="object-cover" unoptimized />
+              <Image src={currentMotif.gambarSrc} alt={currentMotif.namaMotif} fill className="object-cover" />
             </div>
             
             <div className="hidden md:block">
@@ -388,7 +388,7 @@ export default function BatikGamePage() {
 
           {/* Full motif image */}
           <div className="w-full max-w-[280px] sm:max-w-[320px] aspect-square relative rounded-xl overflow-hidden border-2 border-[#4E0B11]/30 shadow-lg">
-            <Image src={currentMotif.gambarSrc} alt={currentMotif.namaMotif} fill className="object-cover" unoptimized />
+            <Image src={currentMotif.gambarSrc} alt={currentMotif.namaMotif} fill className="object-cover" />
             {/* Countdown overlay at bottom */}
             <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-[#4E0B11]/80 to-transparent p-4 flex items-end justify-between">
               <div>
@@ -512,7 +512,6 @@ export default function BatikGamePage() {
                     alt="" 
                     fill 
                     className="object-cover" 
-                    unoptimized 
                   />
                 </div>
                 <div className="absolute inset-0 border border-white/30 pointer-events-none" />

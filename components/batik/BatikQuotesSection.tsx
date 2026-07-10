@@ -12,7 +12,6 @@ export default function BatikQuotesSection() {
             alt="Ilustrasi Batik Quotes"
             fill
             className="object-contain object-top"
-            unoptimized
           />
         </div>
         {/* Teks di bawah asset */}
@@ -39,7 +38,6 @@ export default function BatikQuotesSection() {
             alt="Ilustrasi Batik Quotes"
             fill
             className="object-contain object-bottom md:object-right-bottom"
-            unoptimized
           />
         </div>
       </div>

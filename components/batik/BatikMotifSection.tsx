@@ -141,7 +141,6 @@ export default function BatikMotifSection() {
                       alt={motif.title}
                       fill
                       className="object-cover"
-                      unoptimized
                     />
                   </div>
 

@@ -72,7 +72,6 @@ export default function PermainanIntroPage() {
             width={400}
             height={500}
             className="object-contain w-full h-auto"
-            unoptimized
           />
         </div>
         {/* Decorative mega mendung kiri bawah */}
@@ -83,7 +82,6 @@ export default function PermainanIntroPage() {
             width={300}
             height={400}
             className="object-contain w-full h-auto"
-            unoptimized
           />
         </div>
 

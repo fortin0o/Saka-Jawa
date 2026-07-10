@@ -79,7 +79,7 @@ export default function LandingHeritageSection() {
                 <div className={`relative w-full h-full transition-transform duration-700 [transform-style:preserve-3d] ${flippedCard === img.alt ? '[transform:rotateY(180deg)]' : ''}`}>
                   {/* Front Card */}
                   <div className="absolute inset-0 [backface-visibility:hidden] rounded-2xl md:rounded-3xl overflow-hidden shadow-lg">
-                    <Image src={img.src} fill className="object-cover" alt={img.alt} unoptimized />
+                    <Image src={img.src} fill className="object-cover" alt={img.alt} />
                   </div>
                   {/* Back Card */}
                   <div className="absolute inset-0 [backface-visibility:hidden] [transform:rotateY(180deg)] rounded-2xl md:rounded-3xl overflow-hidden shadow-lg bg-[#F9F1E4] border border-[#E5D5C1] p-6 flex flex-col justify-center items-center text-center">
@@ -103,7 +103,7 @@ export default function LandingHeritageSection() {
                 <div className={`relative w-full h-full transition-transform duration-700 [transform-style:preserve-3d] ${flippedCard === img.alt ? '[transform:rotateY(180deg)]' : ''}`}>
                   {/* Front Card */}
                   <div className="absolute inset-0 [backface-visibility:hidden] rounded-2xl md:rounded-3xl overflow-hidden shadow-lg">
-                    <Image src={img.src} fill className="object-cover" alt={img.alt} unoptimized />
+                    <Image src={img.src} fill className="object-cover" alt={img.alt} />
                   </div>
                   {/* Back Card */}
                   <div className="absolute inset-0 [backface-visibility:hidden] [transform:rotateY(180deg)] rounded-2xl md:rounded-3xl overflow-hidden shadow-lg bg-[#F9F1E4] border border-[#E5D5C1] p-6 flex flex-col justify-center items-center text-center">

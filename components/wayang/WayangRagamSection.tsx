@@ -95,7 +95,7 @@ export default function WayangRagamSection() {
               >
                 {/* Image Container */}
                 <div className="w-full aspect-[4/3] bg-[#D9D9D9] rounded-xl overflow-hidden mb-6 relative">
-                  <Image src={item.image} alt={item.name} fill className="object-cover" unoptimized={item.image.endsWith('.webp') || item.image.endsWith('.jpg') || item.image.endsWith('.png')} />
+                  <Image src={item.image} alt={item.name} fill className="object-cover" />
                 </div>
 
                 {/* Text Details */}

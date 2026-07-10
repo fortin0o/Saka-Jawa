@@ -45,7 +45,6 @@ const Frame = ({
           className={`transition-transform duration-700 group-hover:scale-105 ${
             fit === "contain" ? "object-contain" : "object-cover object-top"
           }`}
-          unoptimized
         />
       ) : (
         <div className="w-full h-full bg-gray-400" />

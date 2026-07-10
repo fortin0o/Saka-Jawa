@@ -337,7 +337,7 @@ export default function GamelanGamePage() {
               {INSTRUMEN.map((ins) => (
                 <div key={ins.id} className="flex flex-col items-center gap-1.5 bg-white border border-[#4E0B11]/15 rounded-xl p-2 shadow-sm">
                   <div className="w-10 h-10 rounded-full overflow-hidden border-2 border-[#4E0B11]/20">
-                    <Image src={ins.gambarSrc} alt={ins.nama} width={40} height={40} className="object-cover w-full h-full" unoptimized />
+                    <Image src={ins.gambarSrc} alt={ins.nama} width={40} height={40} className="object-cover w-full h-full" />
                   </div>
                   <span className="text-[9px] font-bold text-[#4E0B11] text-center leading-tight">{ins.nama}</span>
                   <span className="text-[8px] font-bold text-[#FFC832] bg-[#4E0B11] px-1.5 py-0.5 rounded-full">{ins.suaraLabel}</span>
@@ -537,7 +537,7 @@ export default function GamelanGamePage() {
                 )}
 
                 <div className={`relative w-20 h-20 sm:w-24 sm:h-24 md:w-32 md:h-32 rounded-xl overflow-hidden border-2 shadow-sm transition-all duration-150 ${isActive ? "border-white/40 scale-110" : "border-[#4E0B11]/15"}`}>
-                  <Image src={ins.gambarSrc} alt={ins.nama} fill className="object-cover" unoptimized />
+                  <Image src={ins.gambarSrc} alt={ins.nama} fill className="object-cover" />
                   {!isActive && <div className="absolute inset-0 bg-[#4E0B11]/10" />}
                 </div>
 

@@ -132,7 +132,6 @@ export default function ChatBubble({
               alt="Suro"
               fill
               sizes="55px"
-              unoptimized
               className="object-cover object-top scale-[1.05] translate-y-[2px]"
             />
           </div>
@@ -175,7 +174,6 @@ export default function ChatBubble({
                     alt=""
                     fill
                     sizes="38px"
-                    unoptimized
                     className="object-cover object-top scale-[1.05] translate-y-[2px]"
                   />
                 </div>
@@ -201,7 +199,6 @@ export default function ChatBubble({
                   alt=""
                   fill
                   sizes="38px"
-                  unoptimized
                   className="object-cover object-top scale-[1.05] translate-y-[2px]"
                 />
               </div>

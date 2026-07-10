@@ -283,7 +283,6 @@ export default function KulinerGamePage() {
                     alt={item.nama}
                     fill
                     className={`object-cover ${isMatched ? "" : ""}`}
-                    unoptimized
                   />
                   {/* Overlay for matched state - showing description */}
                   {isMatched && (

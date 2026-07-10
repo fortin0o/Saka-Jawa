@@ -48,7 +48,6 @@ export default function LandingFloatingChatbot() {
               fill
               sizes="80px"
               loading="eager"
-              unoptimized
               className={`object-contain transition-transform duration-300 ${
                 isOpen ? "rotate-12" : ""
               }`}

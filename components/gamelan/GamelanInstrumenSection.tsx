@@ -134,7 +134,6 @@ export default function GamelanInstrumenSection() {
                     alt={item.name}
                     fill
                     className="object-cover"
-                    unoptimized={item.image.endsWith('.webp') || item.image.endsWith('.jpg') || item.image.endsWith('.png')}
                   />
                 </div>
 

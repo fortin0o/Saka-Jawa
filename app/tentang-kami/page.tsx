@@ -1,12 +1,14 @@
 import type { Metadata } from "next";
 import LandingNavbar from "@/components/landing/LandingNavbar";
 import TentangKamiHeroSection from "@/components/tentang-kami/TentangKamiHeroSection";
-import TentangKamiCeritaSection from "@/components/tentang-kami/TentangKamiCeritaSection";
-import TentangKamiVisiMisiSection from "@/components/tentang-kami/TentangKamiVisiMisiSection";
-import TentangKamiNilaiSection from "@/components/tentang-kami/TentangKamiNilaiSection";
-import TentangKamiSDGsSection from "@/components/tentang-kami/TentangKamiSDGsSection";
-import TentangKamiTimSection from "@/components/tentang-kami/TentangKamiTimSection";
-import TentangKamiCTASection from "@/components/tentang-kami/TentangKamiCTASection";
+import dynamic from "next/dynamic";
+
+const TentangKamiCeritaSection = dynamic(() => import("@/components/tentang-kami/TentangKamiCeritaSection"));
+const TentangKamiVisiMisiSection = dynamic(() => import("@/components/tentang-kami/TentangKamiVisiMisiSection"));
+const TentangKamiNilaiSection = dynamic(() => import("@/components/tentang-kami/TentangKamiNilaiSection"));
+const TentangKamiSDGsSection = dynamic(() => import("@/components/tentang-kami/TentangKamiSDGsSection"));
+const TentangKamiTimSection = dynamic(() => import("@/components/tentang-kami/TentangKamiTimSection"));
+const TentangKamiCTASection = dynamic(() => import("@/components/tentang-kami/TentangKamiCTASection"));
 
 export const metadata: Metadata = {
   title: "Tentang Kami",

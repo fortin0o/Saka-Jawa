@@ -331,7 +331,6 @@ export default function WayangGamePage() {
                         alt="Siluet Wayang" 
                         fill 
                         className={`object-contain transition-all duration-300 ${card.isMatched ? "brightness-100 opacity-100" : "grayscale opacity-40 contrast-125 brightness-75"}`}
-                        unoptimized
                       />
                     </div>
                   ) : (

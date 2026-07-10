@@ -43,7 +43,6 @@ const NavContent = ({ onKekayaanBudayaClick }: { onKekayaanBudayaClick: () => vo
         sizes="64px"
         loading="eager"
         fetchPriority="high"
-        unoptimized
         className="object-contain"
       />
     </Link>
@@ -137,7 +136,6 @@ export default function LandingNavbar() {
                 sizes="64px"
                 loading="eager"
                 fetchPriority="high"
-                unoptimized
                 className="object-contain"
               />
             </div>
@@ -190,7 +188,6 @@ export default function LandingNavbar() {
               sizes="64px"
               loading="eager"
               fetchPriority="high"
-              unoptimized
               className="object-contain"
             />
           </Link>
@@ -218,7 +215,6 @@ export default function LandingNavbar() {
                 sizes="64px"
                 loading="eager"
                 fetchPriority="high"
-                unoptimized
                 className="object-contain"
               />
             </div>

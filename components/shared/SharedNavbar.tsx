@@ -70,7 +70,6 @@ export default function SharedNavbar({ className }: { className?: string }) {
               sizes="64px"
               loading="eager"
               fetchPriority="high"
-              unoptimized
               className="object-contain"
             />
           </Link>
@@ -98,7 +97,6 @@ export default function SharedNavbar({ className }: { className?: string }) {
                 sizes="64px"
                 loading="eager"
                 fetchPriority="high"
-                unoptimized
                 className="object-contain"
               />
             </div>
