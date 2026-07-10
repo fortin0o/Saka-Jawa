@@ -9,7 +9,7 @@ const heroLayers = {
   trees: "/Assets/PepohonanHero.webp",
   gamelan: "/Assets/GamelanHero.webp",
   kelir: "/Assets/KelirWayangHero.webp",
-  logo: "/Assets/LogoUtama.webp",
+  logo: "/Assets/LogoUtama.svg",
   chatbot: "/Assets/ChatbotAbdiDalem.webp",
 };
 
