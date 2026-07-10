@@ -1,15 +1,17 @@
 import type { Metadata } from "next";
 import BatikHeroSection from "@/components/batik/BatikHeroSection";
-import BatikAboutSection from "@/components/batik/BatikAboutSection";
-import BatikMotifSection from "@/components/batik/BatikMotifSection";
-import BatikQuotesSection from "@/components/batik/BatikQuotesSection";
-import BatikCeritaSection from "@/components/batik/BatikCeritaSection";
-import BatikGallerySection from "@/components/batik/BatikGallerySection";
-import BatikInteractiveMapSection from "@/components/batik/BatikInteractiveMapSection";
+import dynamic from "next/dynamic";
 import { topicPageMetadata } from "@/data/pages";
+import SharedNavbar from "@/components/shared/SharedNavbar";
+
+const BatikAboutSection = dynamic(() => import("@/components/batik/BatikAboutSection"));
+const BatikMotifSection = dynamic(() => import("@/components/batik/BatikMotifSection"));
+const BatikQuotesSection = dynamic(() => import("@/components/batik/BatikQuotesSection"));
+const BatikCeritaSection = dynamic(() => import("@/components/batik/BatikCeritaSection"));
+const BatikGallerySection = dynamic(() => import("@/components/batik/BatikGallerySection"));
+const BatikInteractiveMapSection = dynamic(() => import("@/components/batik/BatikInteractiveMapSection"));
 
 export const metadata: Metadata = topicPageMetadata.batik;
-import SharedNavbar from "@/components/shared/SharedNavbar";
 
 export default function BatikPage() {
   return (
