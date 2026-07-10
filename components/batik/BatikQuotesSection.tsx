@@ -8,7 +8,7 @@ export default function BatikQuotesSection() {
         {/* Asset Batik di paling atas, menggantung */}
         <div className="relative w-full h-[280px] sm:h-[320px] pointer-events-none mt-0 z-10">
           <Image
-            src="/Assets/Selendang Batik.png"
+            src="/Assets/Selendang Batik.webp"
             alt="Ilustrasi Batik Quotes"
             fill
             className="object-contain object-top"
@@ -35,7 +35,7 @@ export default function BatikQuotesSection() {
         {/* Quote image overflowing to the next section on desktop */}
         <div className="relative md:absolute right-0 md:top-0 md:bottom-[-50px] lg:bottom-[-150px] w-full max-w-[300px] sm:max-w-[360px] md:max-w-none md:w-[45%] h-[280px] sm:h-[320px] md:h-[100%] mt-6 md:mt-0 pointer-events-none z-10 self-end md:self-auto">
           <Image
-            src="/Assets/Selendang Batik.png"
+            src="/Assets/Selendang Batik.webp"
             alt="Ilustrasi Batik Quotes"
             fill
             className="object-contain object-bottom md:object-right-bottom"

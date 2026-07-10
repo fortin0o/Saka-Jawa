@@ -2,7 +2,7 @@ import { HeroContent } from "../shared/HeroSection";
 
 export const wayangHeroContent: HeroContent = {
   badge: {
-    iconSrc: "/Assets/PendhopoWayang.svg",
+    iconSrc: "/Assets/PendhopoWayang.webp",
     iconAlt: "Ikon Pendhapa Wayang",
     label: "Pendhapa Wayang",
   },

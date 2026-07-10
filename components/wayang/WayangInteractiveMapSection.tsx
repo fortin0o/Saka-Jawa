@@ -41,7 +41,7 @@ export default function WayangInteractiveMapSection() {
           >
             <div className="relative w-full h-full">
               <Image
-                src="/Assets/PendhopoBatik.svg"
+                src="/Assets/PendhopoBatik.webp"
                 alt="Pendhopo Batik"
                 fill
                 className="object-contain"
@@ -60,7 +60,7 @@ export default function WayangInteractiveMapSection() {
           >
             <div className="relative w-full h-full">
               <Image
-                src="/Assets/PendhopoKuliner.svg"
+                src="/Assets/PendhopoKuliner.webp"
                 alt="Pendhopo Kuliner"
                 fill
                 className="object-contain"
@@ -82,7 +82,7 @@ export default function WayangInteractiveMapSection() {
             </div>
             <div className="relative w-full h-full drop-shadow-[0_0_20px_rgba(255,200,50,0.8)] scale-110">
               <Image
-                src="/Assets/PendhopoWayang.svg"
+                src="/Assets/PendhopoWayang.webp"
                 alt="Pendhopo Wayang"
                 fill
                 className="object-contain"
@@ -101,7 +101,7 @@ export default function WayangInteractiveMapSection() {
           >
             <div className="relative w-full h-full">
               <Image
-                src="/Assets/PendhopoGamelan.svg"
+                src="/Assets/PendhopoGamelan.webp"
                 alt="Pendhopo Gamelan"
                 fill
                 className="object-contain"

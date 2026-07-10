@@ -14,7 +14,7 @@ export default function GamelanQuotesSection() {
         {/* Gamelan di bawah teks (digeser sedikit ke kanan agar center secara visual) */}
         <div className="relative w-full h-[280px] pointer-events-none -mt-6 mb-6 translate-x-6">
           <Image
-            src="/Assets/Gong Quotes.png"
+            src="/Assets/Gong Quotes.webp"
             alt="Ilustrasi Gamelan"
             fill
             className="object-contain object-bottom"
@@ -27,7 +27,7 @@ export default function GamelanQuotesSection() {
         {/* Gamelan.svg graphic sticking to the LEFT */}
         <div className="flex justify-start absolute left-[-15px] lg:left-[-30px] top-8 lg:top-4 h-[250px] lg:h-[500px] w-full md:w-1/2 pointer-events-none z-30">
           <Image
-            src="/Assets/Gong Quotes.png"
+            src="/Assets/Gong Quotes.webp"
             alt="Ilustrasi Gamelan"
             fill
             className="object-contain object-top object-left"

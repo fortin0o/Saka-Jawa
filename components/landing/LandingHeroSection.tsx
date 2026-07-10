@@ -4,13 +4,13 @@ import Image from "next/image";
 import { useEffect, useRef } from "react";
 import Link from "next/link";
 const heroLayers = {
-  base: "/Assets/DasaranHero.svg",
+  base: "/Assets/DasaranHero.webp",
   mountain: "/Assets/GunungHero.svg",
   trees: "/Assets/PepohonanHero.svg",
   gamelan: "/Assets/GamelanHero.svg",
-  kelir: "/Assets/KelirWayangHero.svg",
+  kelir: "/Assets/KelirWayangHero.webp",
   logo: "/Assets/LogoUtama.svg",
-  chatbot: "/Assets/ChatbotAbdiDalem.svg",
+  chatbot: "/Assets/ChatbotAbdiDalem.webp",
 };
 
 

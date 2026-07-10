@@ -84,7 +84,7 @@ function LoadingScreenInner() {
         {/* Batik Kiri (Muncul dari kiri ke tengah) */}
         <div className="w-1/2 h-full relative overflow-hidden">
           <Image 
-            src="/Assets/Batik Sambungan Kuning.png" 
+            src="/Assets/Batik Sambungan Kuning.webp" 
             alt="Batik Kiri" 
             fill 
             priority
@@ -95,7 +95,7 @@ function LoadingScreenInner() {
         {/* Batik Kanan (Muncul dari kanan ke tengah) */}
         <div className="w-1/2 h-full relative overflow-hidden">
           <Image 
-            src="/Assets/Batik Sambungan Kuning.png" 
+            src="/Assets/Batik Sambungan Kuning.webp" 
             alt="Batik Kanan" 
             fill 
             priority

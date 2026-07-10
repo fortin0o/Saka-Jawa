@@ -93,7 +93,7 @@ export default function WayangAboutSection() {
               {/* Character Image */}
               <div className="absolute top-1/2 -translate-y-1/2 right-6 md:right-4 w-[120px] md:w-[180px] flex items-center justify-center pointer-events-none z-20">
                 <Image 
-                  src="/Assets/SambutTamuAbout.svg" 
+                  src="/Assets/SambutTamuAbout.webp" 
                   alt="Karakter Mascot" 
                   width={200} 
                   height={320} 

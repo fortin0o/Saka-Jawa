@@ -33,7 +33,7 @@ export default function LandingExploreSection() {
           >
             <div className="relative w-full h-full">
               <Image
-                src="/Assets/PendhopoBatik.svg"
+                src="/Assets/PendhopoBatik.webp"
                 alt="Pendhopo Batik"
                 fill
                 className="object-contain"
@@ -53,7 +53,7 @@ export default function LandingExploreSection() {
           >
             <div className="relative w-full h-full">
               <Image
-                src="/Assets/PendhopoKuliner.svg"
+                src="/Assets/PendhopoKuliner.webp"
                 alt="Pendhopo Kuliner"
                 fill
                 className="object-contain"
@@ -73,7 +73,7 @@ export default function LandingExploreSection() {
           >
             <div className="relative w-full h-full">
               <Image
-                src="/Assets/PendhopoWayang.svg"
+                src="/Assets/PendhopoWayang.webp"
                 alt="Pendhopo Wayang"
                 fill
                 className="object-contain"
@@ -93,7 +93,7 @@ export default function LandingExploreSection() {
           >
             <div className="relative w-full h-full">
               <Image
-                src="/Assets/PendhopoGamelan.svg"
+                src="/Assets/PendhopoGamelan.webp"
                 alt="Pendhopo Gamelan"
                 fill
                 className="object-contain"

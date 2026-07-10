@@ -3,7 +3,7 @@
 import { useState, useEffect, useCallback } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { useLenis } from "lenis/react";
 
 const navLeft = [
@@ -65,19 +65,25 @@ export default function LandingNavbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const lenis = useLenis();
   const pathname = usePathname();
+  const router = useRouter();
 
   const isAltTheme = pathname?.startsWith("/permainan") || pathname?.startsWith("/tentang-kami");
   const staticTextClass = isAltTheme ? "text-white" : "text-black";
   const glassBgClass = "bg-white/50 border-white/50 text-black";
+  const isOnLandingPage = pathname === "/";
 
   const handleScrollToExplore = useCallback(() => {
+    if (!isOnLandingPage) {
+      router.push("/#explore-section");
+      return;
+    }
     const target = document.getElementById("explore-section");
     if (target && lenis) {
       lenis.scrollTo(target, { offset: -80, duration: 1.5 });
     } else if (target) {
       target.scrollIntoView({ behavior: "smooth", block: "start" });
     }
-  }, [lenis]);
+  }, [lenis, isOnLandingPage, router]);
 
   useEffect(() => {
     const handleScroll = () => {
